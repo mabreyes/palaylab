@@ -54,14 +54,14 @@
         android:textSize="25dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/calibribold"
-        android:text="Results" />
+        android:text="Detection Result" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="70dp"
         android:layout_height="35dp"
         android:layout_below="@+id/imageView3"
-        android:layout_alignEnd="@+id/textView6"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/fbg"
         android:text="Scan" />
 
