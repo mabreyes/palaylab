@@ -29,24 +29,18 @@
         android:textColor="#FFFFFF"
         android:fontFamily="@font/calibribold"/>
 
-    <TextView
-        android:id="@+id/pest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ListView
+        android:id="@+id/pestitem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="125dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="50dp"
-        android:layout_marginTop="130dp"
-        android:scrollbars="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/fbg"/>
+        android:background="#FFFFFF"
+        android:scrollbars="horizontal|vertical" />
+
 
 </RelativeLayout>

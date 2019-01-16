@@ -120,6 +120,7 @@ public class Results extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-
+        Intent intent = new Intent(Results.this, MainActivity.class );
+        startActivity(intent);
     }
 }

@@ -40,9 +40,9 @@
         android:paddingBottom="10dp"
         android:textSize="10dp"
         android:scrollbars="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="50dp"
-        android:layout_below="@+id/imageView3"/>
+        android:layout_below="@+id/button3"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -58,12 +58,15 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="70dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/imageView3"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/fbg"
-        android:text="Scan" />
+        android:background="@drawable/roundbutton"
+        android:text="Scan"
+        android:textSize="15dp"
+        android:fontFamily="@font/calibribold"
+        android:textColor="#FFFFFF"/>
 
     <ImageButton
         android:id="@+id/buttonCamera"

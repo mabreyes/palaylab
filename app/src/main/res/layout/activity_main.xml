@@ -36,18 +36,6 @@
         android:textSize="55dp"
         android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="25dp"
-        android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="90dp"
-        android:layout_marginRight="88dp"
-        android:background="@drawable/sleaf" />
-
 
     <Button
         android:id="@+id/button"
@@ -131,7 +119,14 @@
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
 
-
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="23dp"
+        android:layout_height="66dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp"
+        android:layout_toEndOf="@+id/button4"
+        app:srcCompat="@drawable/sleaf" />
 
 
 </RelativeLayout>

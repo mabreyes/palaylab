@@ -15,10 +15,6 @@ public class Pest extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pest);
 
-        TextView textView = (TextView) findViewById(R.id.pest);
-        String text = "";
-        textView.setText(text);
-        textView.setMovementMethod(new ScrollingMovementMethod());
 
         ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
         androidImageButton.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +31,7 @@ public class Pest extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-
+        Intent intent = new Intent(Pest.this, MainActivity.class );
+        startActivity(intent);
     }
 }
