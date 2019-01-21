@@ -11,15 +11,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class CustomListview extends ArrayAdapter<String> {
-    private String[] diseasename;
+    private String[] name;
     private String[] desc;
     private Integer[] imgid;
     private Activity context;
-    public CustomListview(Activity context, String[] diseasename, String[] desc, Integer[] imgid) {
-        super(context, R.layout.diseaselayout, diseasename);
+    public CustomListview(Activity context, String[] name, String[] desc, Integer[] imgid) {
+        super(context, R.layout.customlayout, name);
 
         this.context=context;
-        this.diseasename=diseasename;
+        this.name=name;
         this.desc=desc;
         this.imgid=imgid;
     }
@@ -31,14 +31,14 @@ public class CustomListview extends ArrayAdapter<String> {
             ViewHolder viewHolder=null;
             if(r==null){
                 LayoutInflater layoutInflater=context.getLayoutInflater();
-                r=layoutInflater.inflate(R.layout.diseaselayout,null,true);
+                r=layoutInflater.inflate(R.layout.customlayout,null,true);
                 viewHolder=new ViewHolder(r);
                 r.setTag(viewHolder);
             }else{
                 viewHolder =(ViewHolder) r.getTag();
             }
                 viewHolder.ivw.setImageResource(imgid[position]);
-                viewHolder.tvw1.setText(diseasename[position]);
+                viewHolder.tvw1.setText(name[position]);
                 viewHolder.tvw2.setText(desc[position]);
                 return r;
     }
@@ -47,7 +47,7 @@ public class CustomListview extends ArrayAdapter<String> {
         TextView tvw2;
         ImageView ivw;
         ViewHolder (View v){
-            tvw1= (TextView) v.findViewById(R.id.tvdiseasename);
+            tvw1= (TextView) v.findViewById(R.id.tvname);
             tvw2=(TextView) v.findViewById(R.id.tvdescription);
             ivw=(ImageView)v.findViewById(R.id.imageView);
         }

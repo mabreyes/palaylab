@@ -17,7 +17,7 @@
             android:layout_weight="0.10" />
 
         <TextView
-            android:id="@+id/tvdiseasename"
+            android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -31,7 +31,7 @@
             android:id="@+id/tvdescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/tvdiseasename"
+            android:layout_below="@+id/tvname"
             android:layout_alignParentTop="true"
             android:layout_marginTop="45dp"
             android:layout_toEndOf="@+id/imageView"
@@ -40,5 +40,4 @@
             android:paddingLeft="5dp"
             android:text="TextView" />
     </RelativeLayout>
-
 </LinearLayout>

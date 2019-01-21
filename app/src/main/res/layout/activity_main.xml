@@ -31,7 +31,7 @@
         android:layout_marginLeft="110dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/calibribold"
-        android:text="SmartR ce"
+        android:text="SmartRice"
         android:textColor="#FFFFFF"
         android:textSize="55dp"
         android:textStyle="bold" />
@@ -119,14 +119,7 @@
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="23dp"
-        android:layout_height="66dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:layout_toEndOf="@+id/button4"
-        app:srcCompat="@drawable/sleaf" />
+
 
 
 </RelativeLayout>

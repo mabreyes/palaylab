@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiseasesDefinition"
+    android:background="@drawable/bg">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/definition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/viewpager"
+        android:textSize="10dp"
+        android:padding="10dp"
+        android:background="@drawable/customshape"/>
+
+    <TextView
+        android:id="@+id/detection"
+        android:layout_below="@+id/viewpager"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:textColor="#FFFFFF"
+        android:padding="10dp"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        android:text="5 Detections"
+        android:background="@drawable/border1"
+        />
+
+
+</RelativeLayout>

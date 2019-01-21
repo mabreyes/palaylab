@@ -24,7 +24,10 @@
         android:text="About"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/calibribold"/>
+        android:fontFamily="@font/calibribold"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/border"/>
 
     <TextView
         android:id="@+id/about"

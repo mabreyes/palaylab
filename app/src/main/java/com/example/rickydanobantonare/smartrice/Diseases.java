@@ -27,9 +27,28 @@ public class Diseases extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                Intent intent = new Intent();
-                intent.setClass(Diseases.this, DiseasesDefinition.class);
-                startActivity(intent);
+                switch (position){
+                    case 0:
+                        Intent intent = new Intent();
+                        intent.setClass(Diseases.this, DiseasesDefinition.class);
+                        startActivity(intent);
+                        break;
+                    case 1:
+                        Intent intent1 = new Intent();
+                        intent1.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition2.class);
+                        startActivity(intent1);
+                        break;
+                    case 2:
+                        Intent intent2 = new Intent();
+                        intent2.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition3.class);
+                        startActivity(intent2);
+                        break;
+                    case 3:
+                        Intent intent3 = new Intent();
+                        intent3.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition4.class);
+                        startActivity(intent3);
+                        break;
+                }
             }
         });
 
