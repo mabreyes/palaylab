@@ -21,7 +21,7 @@ public class Diseases extends AppCompatActivity {
         setContentView(R.layout.activity_diseases);
 
         list = (ListView) findViewById(R.id.disease_list);
-        CustomListview customListview=new CustomListview(this, diseasename,desc,imgid);
+        CustomListView customListview=new CustomListView(this, diseasename,desc,imgid);
         list.setAdapter(customListview);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
