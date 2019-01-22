@@ -22,8 +22,9 @@ import java.io.InputStream;
 public class Results extends AppCompatActivity {
 
     TextView textView;
-    private int IMAGE_GALLERY_REQUEST = 20, CAPTURE_IMAGE_REQUEST=2;
-    private ImageView imgPicture;
+    private int IMAGE_GALLERY_REQUEST = 20;
+    int CAPTURE_IMAGE_REQUEST=20;
+    ImageView imgPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -120,6 +121,7 @@ public class Results extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-
+        Intent intent = new Intent(Results.this, MainActivity.class );
+        startActivity(intent);
     }
 }
