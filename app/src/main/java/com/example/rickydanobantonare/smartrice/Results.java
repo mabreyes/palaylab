@@ -23,7 +23,7 @@ public class Results extends AppCompatActivity {
 
     TextView textView;
     private int IMAGE_GALLERY_REQUEST = 20;
-    int CAPTURE_IMAGE_REQUEST=20;
+    int CAPTURE_IMAGE_REQUEST = 100;
     ImageView imgPicture;
 
     @Override
@@ -31,7 +31,7 @@ public class Results extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        imgPicture = (ImageView) findViewById(R.id.imageView3);
+        imgPicture = (ImageView)findViewById(R.id.imageView3);
 
         textView = (TextView) findViewById(R.id.result);
         String text = "";
@@ -52,9 +52,11 @@ public class Results extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, 0);
+                startActivityForResult(intent, CAPTURE_IMAGE_REQUEST);
             }
         });
+
+
     }
     /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
@@ -67,8 +69,12 @@ public class Results extends AppCompatActivity {
     public void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK)
-            if (requestCode == IMAGE_GALLERY_REQUEST) {
+        if (resultCode == RESULT_OK && requestCode == CAPTURE_IMAGE_REQUEST){
+            Bitmap image = (Bitmap)data.getExtras().get("data");
+            imgPicture.setImageBitmap(image);
+        }
+
+        if (resultCode == RESULT_OK && requestCode == IMAGE_GALLERY_REQUEST) {
                 // if we are here, we are hearing back from the image gallery.
 
                 // the address of the image on the SD Card.
@@ -92,11 +98,8 @@ public class Results extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-            }
-            else if (requestCode == CAPTURE_IMAGE_REQUEST){
-                Bitmap image = (Bitmap)data.getExtras().get("data");
-                imgPicture.setImageBitmap(image);
-            }
+        }
+
 
     }
     public void btnClick(View v){
