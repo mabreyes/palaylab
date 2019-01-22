@@ -58,7 +58,7 @@ jobs:
   test_api_v16:
       working_directory: ~/repo
       docker:
-          - image: circleci/android:api-26-alpha
+          - image: circleci/android@sha256:5cdc8626cc6f13efe5ed982cdcdb432b0472f8740fed8743a6461e025ad6cdfc
       environment:
         JVM_OPTS: -Xmx3200m
       steps:
