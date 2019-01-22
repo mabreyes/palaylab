@@ -18,8 +18,18 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
+import java.util.List;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class Results extends AppCompatActivity {
+
+    private static final String MODEL_PATH = "graph.lite";
+    private static final String LABEL_PATH = "labels.txt";
+    private static final int INPUT_SIZE = 224;
+
+    private Classifier classifier;
+    private Executor executor = Executors.newSingleThreadExecutor();
 
     TextView textView;
     private int IMAGE_GALLERY_REQUEST = 20;
@@ -56,6 +66,10 @@ public class Results extends AppCompatActivity {
             }
         });
 
+        /* TODO:
+        Read ImageView data and show results.
+         */
+
 
     }
     /*@Override
@@ -75,28 +89,28 @@ public class Results extends AppCompatActivity {
         }
 
         if (resultCode == RESULT_OK && requestCode == IMAGE_GALLERY_REQUEST) {
-                // if we are here, we are hearing back from the image gallery.
+            // if we are here, we are hearing back from the image gallery.
 
-                // the address of the image on the SD Card.
-                Uri imageUri = data.getData();
+            // the address of the image on the SD Card.
+            Uri imageUri = data.getData();
 
-                // declare a stream to read the image data from the SD Card.
-                InputStream inputStream;
+            // declare a stream to read the image data from the SD Card.
+            InputStream inputStream;
 
-                // we are getting an input stream, based on the URI of the image.
-                try {
-                    inputStream = getContentResolver().openInputStream(imageUri);
+            // we are getting an input stream, based on the URI of the image.
+            try {
+                inputStream = getContentResolver().openInputStream(imageUri);
 
-                    // get a bitmap from the stream.
-                    Bitmap image = BitmapFactory.decodeStream(inputStream);
+                // get a bitmap from the stream.
+                Bitmap image = BitmapFactory.decodeStream(inputStream);
 
 
-                    // show the image to the user
-                    imgPicture.setImageBitmap(image);
+                // show the image to the user
+                imgPicture.setImageBitmap(image);
 
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
 
         }
 
@@ -126,5 +140,22 @@ public class Results extends AppCompatActivity {
     public void onBackPressed(){
         Intent intent = new Intent(Results.this, MainActivity.class );
         startActivity(intent);
+    }
+
+    private void initTensorFlowAndLoadModel() {
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    classifier = TensorFlowImageClassifier.create(
+                            getAssets(),
+                            MODEL_PATH,
+                            LABEL_PATH,
+                            INPUT_SIZE);
+                } catch (final Exception e) {
+                    throw new RuntimeException("Error initializing TensorFlow!", e);
+                }
+            }
+        });
     }
 }
