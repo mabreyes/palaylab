@@ -3,12 +3,10 @@ package com.example.rickydanobantonare.smartrice;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class Pest extends AppCompatActivity {
     ListView list;
@@ -21,7 +19,7 @@ public class Pest extends AppCompatActivity {
         setContentView(R.layout.activity_pest);
 
         list = (ListView) findViewById(R.id.pestitem);
-        CustomListview customListview=new CustomListview(this, pestename,desc,imgid);
+        CustomListView customListview=new CustomListView(this, pestename,desc,imgid);
         list.setAdapter(customListview);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {

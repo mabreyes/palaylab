@@ -10,12 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class CustomListview extends ArrayAdapter<String> {
+public class CustomListView extends ArrayAdapter<String> {
     private String[] name;
     private String[] desc;
     private Integer[] imgid;
     private Activity context;
-    public CustomListview(Activity context, String[] name, String[] desc, Integer[] imgid) {
+    public CustomListView(Activity context, String[] name, String[] desc, Integer[] imgid) {
         super(context, R.layout.customlayout, name);
 
         this.context=context;
