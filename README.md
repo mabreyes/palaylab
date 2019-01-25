@@ -1,6 +1,6 @@
 | master | marc_version | ricky_version |
 |:------:|:------------:|:-------------:|
-| [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version) |
+| [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version)
 
 # About Project Bukirin
 
