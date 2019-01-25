@@ -4,7 +4,7 @@ Hello, there! We are Project Bukirin, a group of Computer Science students aimin
 
 ## About SmartRice
 
-This repository contains the source codes of the mobile application for SmartRice, a mobile application powered with Deep Convolutional Neural Networks (DCNN) for detecting and mapping rice plant diseases and infestation. This repository is under MIT license. Please read the LICENSE file for more details.
+This repository contains the source codes of the mobile application for SmartRice, a mobile application powered with Deep Convolutional Neural Networks (DCNN) for detecting and mapping rice plant diseases and infestations. This repository is under MIT license. Please read the LICENSE file for more details.
 
 ## Support or Contact
 
