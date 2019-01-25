@@ -7,6 +7,15 @@
     android:background="@drawable/bg"
     tools:context=".Results">
 
+    <com.wonderkiln.camerakit.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="363dp"
+        android:layout_height="294dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="52dp" />
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="50dp"
@@ -16,33 +25,6 @@
         android:layout_marginLeft="11dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/arrow" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:padding="20dp"
-        android:background="@drawable/fbg" />
-
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="300dp"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/fbg"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:textSize="10dp"
-        android:scrollbars="vertical"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="50dp"
-        android:layout_below="@+id/button3"/>
 
     <TextView
         android:id="@+id/textView6"
@@ -54,43 +36,51 @@
         android:textSize="25dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/calibribold"
-        android:text="Detection Result"
+        android:text="Detect Diseases"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:background="@drawable/border"/>
 
+    <ImageView
+        android:id="@+id/imageViewResult"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_alignTop="@+id/textViewResult"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:padding="2dp"
+        android:background="@drawable/fbg"/>
+
+    <TextView
+        android:id="@+id/textViewResult"
+        android:layout_width="299dp"
+        android:layout_height="75dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="82dp"
+        android:layout_marginBottom="130dp"
+        android:fadeScrollbars="false"
+        android:gravity="center"
+        android:maxLines="15"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/white"
+        android:background="@drawable/fbg"/>
+
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnDetectObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView3"
+        android:layout_below="@+id/imageViewResult"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/roundbutton"
-        android:text="Scan"
-        android:textSize="15dp"
         android:fontFamily="@font/calibribold"
-        android:textColor="#FFFFFF"/>
-
-    <ImageButton
-        android:id="@+id/buttonCamera"
-        android:layout_width="50dip"
-        android:layout_height="40dip"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/camera" />
-
-    <ImageButton
-        android:id="@+id/buttonGallery"
-        android:layout_width="45dip"
-        android:layout_height="40dip"
-        android:layout_alignTop="@+id/buttonCamera"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginLeft="29dp"
-        android:onClick="btnClick"
-        android:background="@drawable/gallery" />
-
-
+        android:padding="10dp"
+        android:text="Capture and Analyze"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="15dp" />
 </RelativeLayout>
