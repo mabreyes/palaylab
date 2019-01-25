@@ -1,7 +1,3 @@
-| master | marc_version | ricky_version |
-|:------:|:------------:|:-------------:|
-| [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/master) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/marc_version) | [![CircleCI](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version.svg?style=shield)](https://circleci.com/gh/marcreyesph/smartrice-mobile/tree/ricky_version) |
-
 # About Project Bukirin
 
 Hello, there! We are Project Bukirin, a group of Computer Science students aiming to develop applications with the use of emerging technologies such as Artificial Intelligence and Machine Learning to help advance farming specifically on rice pest and disease management.
