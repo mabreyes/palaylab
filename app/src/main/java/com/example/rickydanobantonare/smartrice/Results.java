@@ -3,6 +3,7 @@ package com.example.rickydanobantonare.smartrice;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -10,10 +11,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -70,8 +74,20 @@ public class Results extends AppCompatActivity {
         Read ImageView data and show results.
          */
 
+        Button detectButton = (Button) findViewById(R.id.button3);
+        detectButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bitmap bitmap = ((BitmapDrawable)imgPicture.getDrawable()).getBitmap();
+                bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
+                final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
+                textView.setText(results.toString());
+                initTensorFlowAndLoadModel();
+            }
+        });
 
     }
+
     /*@Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
