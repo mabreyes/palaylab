@@ -1,22 +1,20 @@
 package com.example.rickydanobantonare.smartrice;
 
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
-import android.os.Environment;
-import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
-import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.InputStream;
+import com.wonderkiln.camerakit.CameraKitError;
+import com.wonderkiln.camerakit.CameraKitEvent;
+import com.wonderkiln.camerakit.CameraKitEventListener;
+import com.wonderkiln.camerakit.CameraKitImage;
+import com.wonderkiln.camerakit.CameraKitVideo;
+import com.wonderkiln.camerakit.CameraView;
 
 import java.util.List;
 import java.util.concurrent.Executor;
@@ -24,122 +22,92 @@ import java.util.concurrent.Executors;
 
 public class Results extends AppCompatActivity {
 
-    private static final String MODEL_PATH = "graph.lite";
+    private static final String MODEL_PATH = "graph.tflite";
     private static final String LABEL_PATH = "labels.txt";
     private static final int INPUT_SIZE = 224;
 
     private Classifier classifier;
-    private Executor executor = Executors.newSingleThreadExecutor();
 
-    TextView textView;
-    private int IMAGE_GALLERY_REQUEST = 20;
-    int CAPTURE_IMAGE_REQUEST = 100;
-    ImageView imgPicture;
+    private Executor executor = Executors.newSingleThreadExecutor();
+    private TextView textViewResult;
+    private Button btnDetectObject;
+    private ImageView imageViewResult;
+    private CameraView cameraView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
+        cameraView = findViewById(R.id.cameraView);
+        imageViewResult = findViewById(R.id.imageViewResult);
+        textViewResult = findViewById(R.id.textViewResult);
+        textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
-        imgPicture = (ImageView)findViewById(R.id.imageView3);
+        btnDetectObject = findViewById(R.id.btnDetectObject);
 
-        textView = (TextView) findViewById(R.id.result);
-        String text = "";
-        textView.setText(text);
-        textView.setMovementMethod(new ScrollingMovementMethod());
-
-        ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
-        androidImageButton.setOnClickListener(new View.OnClickListener() {
+        cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
-            public void onClick(View view) {
-                backActivity();
+            public void onEvent(CameraKitEvent cameraKitEvent) {
+
+            }
+
+            @Override
+            public void onError(CameraKitError cameraKitError) {
+
+            }
+
+            @Override
+            public void onImage(CameraKitImage cameraKitImage) {
+
+                Bitmap bitmap = cameraKitImage.getBitmap();
+
+                bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
+
+                imageViewResult.setImageBitmap(bitmap);
+
+                final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
+
+                textViewResult.setText(results.toString());
+
+            }
+
+            @Override
+            public void onVideo(CameraKitVideo cameraKitVideo) {
+
             }
         });
 
-
-        androidImageButton = (ImageButton) findViewById(R.id.buttonCamera);
-        androidImageButton.setOnClickListener(new View.OnClickListener() {
+        btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                startActivityForResult(intent, CAPTURE_IMAGE_REQUEST);
+            public void onClick(View v) {
+                cameraView.captureImage();
             }
         });
 
-        /* TODO:
-        Read ImageView data and show results.
-         */
-
-
+        initTensorFlowAndLoadModel();
     }
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        Bitmap bitmap = (Bitmap)data.getExtras().get("data");
-        imgPicture.setImageBitmap(bitmap);
-    }*/
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
+    protected void onResume() {
+        super.onResume();
+        cameraView.start();
+    }
 
-        if (resultCode == RESULT_OK && requestCode == CAPTURE_IMAGE_REQUEST){
-            Bitmap image = (Bitmap)data.getExtras().get("data");
-            imgPicture.setImageBitmap(image);
-        }
+    @Override
+    protected void onPause() {
+        cameraView.stop();
+        super.onPause();
+    }
 
-        if (resultCode == RESULT_OK && requestCode == IMAGE_GALLERY_REQUEST) {
-            // if we are here, we are hearing back from the image gallery.
-
-            // the address of the image on the SD Card.
-            Uri imageUri = data.getData();
-
-            // declare a stream to read the image data from the SD Card.
-            InputStream inputStream;
-
-            // we are getting an input stream, based on the URI of the image.
-            try {
-                inputStream = getContentResolver().openInputStream(imageUri);
-
-                // get a bitmap from the stream.
-                Bitmap image = BitmapFactory.decodeStream(inputStream);
-
-
-                // show the image to the user
-                imgPicture.setImageBitmap(image);
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        executor.execute(new Runnable() {
+            @Override
+            public void run() {
+                classifier.close();
             }
-
-        }
-
-
-    }
-    public void btnClick(View v){
-        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
-
-        // where do we want to find the data?
-        File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        String pictureDirectoryPath = pictureDirectory.getPath();
-        // finally, get a URI representation
-        Uri data = Uri.parse(pictureDirectoryPath);
-
-        // set the data and type.  Get all image types.
-        photoPickerIntent.setDataAndType(data, "image/*");
-
-        // we will invoke this activity, and get something back from it.
-        startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
-    }
-
-    public void backActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-    @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(Results.this, MainActivity.class );
-        startActivity(intent);
+        });
     }
 
     private void initTensorFlowAndLoadModel() {
@@ -152,9 +120,19 @@ public class Results extends AppCompatActivity {
                             MODEL_PATH,
                             LABEL_PATH,
                             INPUT_SIZE);
+                    makeButtonVisible();
                 } catch (final Exception e) {
                     throw new RuntimeException("Error initializing TensorFlow!", e);
                 }
+            }
+        });
+    }
+
+    private void makeButtonVisible() {
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                btnDetectObject.setVisibility(View.VISIBLE);
             }
         });
     }
