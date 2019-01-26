@@ -1,125 +1,134 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<LinearLayout
     android:orientation="vertical"
-    android:background="@drawable/bg">
-
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="105dp"
-        android:layout_height="140dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginLeft="3dp"
-        android:layout_marginTop="0dp"
-        app:srcCompat="@drawable/leaf" />
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="@font/calibribold"
-        android:text="SmartRice"
-        android:textColor="#FFFFFF"
-        android:textSize="55dp"
-        android:textStyle="bold" />
+        android:layout_marginStart="0dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="30dp"
+        android:fontFamily="@font/circularblack"
+        android:text="Home"
+        android:textColor="#ffffff"
+        android:textSize="50dp"
+        android:gravity="left"/>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:text="List of Diseases"
-        android:textColor="#FFFFFF"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button"
+                    android:background="@null"
+                    android:text="Pests"
+                    android:fontFamily="@font/circularmedium"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/mainpest"
+                    android:tint="@android:color/white"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button1"
+                    android:background="@null"
+                    android:text="Diseases"
+                    android:fontFamily="@font/circularmedium"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:singleLine="false"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:tint="@android:color/white"
+                    android:src="@drawable/maininfestation"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </TableRow>
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:text="List of Pests"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:weightSum="1"
+            android:layout_weight="0.5">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button2"
+                    android:background="@null"
+                    android:text="Detect"
+                    android:fontFamily="@font/circularmedium"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:tint="@android:color/white"
+                    android:src="@drawable/mainscan"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/button4"
+                    android:background="@null"
+                    android:text="About"
+                    android:fontFamily="@font/circularmedium"
+                    android:textSize="18sp"
+                    android:gravity="center|bottom"
+                    android:paddingBottom="10dp"
+                    android:textAllCaps="false"/>
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:tint="@android:color/white"
+                    android:src="@drawable/mainabout"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </TableRow>
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:text="Scan"
-        android:paddingLeft="59dp"
-        android:paddingRight="59dp"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+    </TableLayout>
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:text="About"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
-
-
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:padding="10dp"
-        android:fontFamily="@font/calibribold"
-        android:text="A Mobile Application Using DCNN for Detecting and Mapping Rice Plant Diseases"
-        android:textColor="#FFFFFF"
-        android:textSize="15dp" />
-
-
-
-
-</RelativeLayout>
+</LinearLayout>
