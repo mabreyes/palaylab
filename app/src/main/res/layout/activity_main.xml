@@ -2,7 +2,7 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg"
+    android:background="@color/colorPrimaryDark"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
@@ -45,7 +45,8 @@
                     android:gravity="center|bottom"
                     android:singleLine="false"
                     android:paddingBottom="10dp"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -68,7 +69,8 @@
                     android:gravity="center|bottom"
                     android:singleLine="false"
                     android:paddingBottom="10dp"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -97,7 +99,8 @@
                     android:textSize="18sp"
                     android:gravity="center|bottom"
                     android:paddingBottom="10dp"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -119,7 +122,8 @@
                     android:textSize="18sp"
                     android:gravity="center|bottom"
                     android:paddingBottom="10dp"
-                    android:textAllCaps="false"/>
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
@@ -128,6 +132,9 @@
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
         </TableRow>
+
+        <TextView
+            android:layout_height="40dp"/>
 
     </TableLayout>
 
