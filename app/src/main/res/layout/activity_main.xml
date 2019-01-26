@@ -2,7 +2,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorPrimaryDark"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <TextView
@@ -17,7 +16,7 @@
         android:paddingLeft="30dp"
         android:fontFamily="@font/circularblack"
         android:text="Home"
-        android:textColor="#ffffff"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="50dp"
         android:gravity="left"/>
 
@@ -46,12 +45,12 @@
                     android:singleLine="false"
                     android:paddingBottom="10dp"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@color/colorPrimary"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:src="@drawable/mainpest"
-                    android:tint="@android:color/white"
+                    android:tint="@color/colorPrimaryDark"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
             <RelativeLayout
@@ -70,11 +69,11 @@
                     android:singleLine="false"
                     android:paddingBottom="10dp"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@color/colorPrimary"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:tint="@android:color/white"
+                    android:tint="@color/colorPrimaryDark"
                     android:src="@drawable/maininfestation"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
@@ -100,11 +99,11 @@
                     android:gravity="center|bottom"
                     android:paddingBottom="10dp"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@color/colorPrimary"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:tint="@android:color/white"
+                    android:tint="@color/colorPrimaryDark"
                     android:src="@drawable/mainscan"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
@@ -123,11 +122,11 @@
                     android:gravity="center|bottom"
                     android:paddingBottom="10dp"
                     android:textAllCaps="false"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@color/colorPrimary"/>
                 <ImageView
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:tint="@android:color/white"
+                    android:tint="@color/colorPrimaryDark"
                     android:src="@drawable/mainabout"
                     android:layout_centerInParent="true"/>
             </RelativeLayout>
