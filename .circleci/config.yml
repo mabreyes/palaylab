@@ -182,20 +182,3 @@ workflows:
   build_test_and_deploy:
     jobs:
       - build
-      - test_api_v16:
-          requires:
-            - build
-      - deploy_beta:
-          requires:
-            - test_api_v16
-          filters:
-            branches:
-              only:
-                - develop
-      - screenshot_api_16:
-          requires:
-            - test_api_v16
-          filters:
-            branches:
-              only:
-                - develop
