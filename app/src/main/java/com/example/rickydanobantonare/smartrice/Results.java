@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +19,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 
-import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -41,7 +41,7 @@ public class Results extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        imgPicture = (ImageView)findViewById(R.id.imageView3);
+        imgPicture = (ImageView) findViewById(R.id.imageView3);
 
         textView = (TextView) findViewById(R.id.result);
         String text = "";
@@ -56,6 +56,13 @@ public class Results extends AppCompatActivity {
             }
         });
 
+        Button button = (Button) findViewById(R.id.detect);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                initTensorFlowAndLoadModel();
+            }
+        });
 
         androidImageButton = (ImageButton) findViewById(R.id.buttonCamera);
         androidImageButton.setOnClickListener(new View.OnClickListener() {
@@ -65,97 +72,86 @@ public class Results extends AppCompatActivity {
                 startActivityForResult(intent, CAPTURE_IMAGE_REQUEST);
             }
         });
-
-        /* TODO:
-        Read ImageView data and show results.
-         */
-
-
     }
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
-        Bitmap bitmap = (Bitmap)data.getExtras().get("data");
-        imgPicture.setImageBitmap(bitmap);
-    }*/
 
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
-        super.onActivityResult(requestCode, resultCode, data);
+        @Override
+        public void onActivityResult ( int requestCode, int resultCode, Intent data){
+            super.onActivityResult(requestCode, resultCode, data);
 
-        if (resultCode == RESULT_OK && requestCode == CAPTURE_IMAGE_REQUEST){
-            Bitmap image = (Bitmap)data.getExtras().get("data");
-            imgPicture.setImageBitmap(image);
-        }
-
-        if (resultCode == RESULT_OK && requestCode == IMAGE_GALLERY_REQUEST) {
-            // if we are here, we are hearing back from the image gallery.
-
-            // the address of the image on the SD Card.
-            Uri imageUri = data.getData();
-
-            // declare a stream to read the image data from the SD Card.
-            InputStream inputStream;
-
-            // we are getting an input stream, based on the URI of the image.
-            try {
-                inputStream = getContentResolver().openInputStream(imageUri);
-
-                // get a bitmap from the stream.
-                Bitmap image = BitmapFactory.decodeStream(inputStream);
-
-
-                // show the image to the user
+            if (resultCode == RESULT_OK && requestCode == CAPTURE_IMAGE_REQUEST) {
+                Bitmap image = (Bitmap) data.getExtras().get("data");
                 imgPicture.setImageBitmap(image);
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             }
+
+            if (resultCode == RESULT_OK && requestCode == IMAGE_GALLERY_REQUEST) {
+                // if we are here, we are hearing back from the image gallery.
+
+                // the address of the image on the SD Card.
+                Uri imageUri = data.getData();
+
+                // declare a stream to read the image data from the SD Card.
+                InputStream inputStream;
+
+                // we are getting an input stream, based on the URI of the image.
+                try {
+                    inputStream = getContentResolver().openInputStream(imageUri);
+
+                    // get a bitmap from the stream.
+                    Bitmap image = BitmapFactory.decodeStream(inputStream);
+
+
+                    // show the image to the user
+                    imgPicture.setImageBitmap(image);
+
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
 
         }
+        public void btnClick (View v){
+            Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
 
+            // where do we want to find the data?
+            File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            String pictureDirectoryPath = pictureDirectory.getPath();
+            // finally, get a URI representation
+            Uri data = Uri.parse(pictureDirectoryPath);
 
-    }
-    public void btnClick(View v){
-        Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+            // set the data and type.  Get all image types.
+            photoPickerIntent.setDataAndType(data, "image/*");
 
-        // where do we want to find the data?
-        File pictureDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        String pictureDirectoryPath = pictureDirectory.getPath();
-        // finally, get a URI representation
-        Uri data = Uri.parse(pictureDirectoryPath);
+            // we will invoke this activity, and get something back from it.
+            startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
+        }
 
-        // set the data and type.  Get all image types.
-        photoPickerIntent.setDataAndType(data, "image/*");
+        public void backActivity () {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
+        @Override
+        public void onBackPressed () {
+            Intent intent = new Intent(Results.this, MainActivity.class);
+            startActivity(intent);
+        }
 
-        // we will invoke this activity, and get something back from it.
-        startActivityForResult(photoPickerIntent, IMAGE_GALLERY_REQUEST);
-    }
-
-    public void backActivity(){
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
-    @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(Results.this, MainActivity.class );
-        startActivity(intent);
-    }
-
-    private void initTensorFlowAndLoadModel() {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    classifier = TensorFlowImageClassifier.create(
-                            getAssets(),
-                            MODEL_PATH,
-                            LABEL_PATH,
-                            INPUT_SIZE);
-                } catch (final Exception e) {
-                    throw new RuntimeException("Error initializing TensorFlow!", e);
+        private void initTensorFlowAndLoadModel () {
+            executor.execute(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        classifier = TensorFlowImageClassifier.create(
+                                getAssets(),
+                                MODEL_PATH,
+                                LABEL_PATH,
+                                INPUT_SIZE);
+                    } catch (final Exception e) {
+                        throw new RuntimeException("Error initializing TensorFlow!", e);
+                    }
                 }
-            }
-        });
-    }
+            });
+        }
+
 }
