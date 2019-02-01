@@ -1,11 +1,13 @@
 package com.example.rickydanobantonare.smartrice;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +18,7 @@ import com.wonderkiln.camerakit.CameraKitImage;
 import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -44,6 +47,14 @@ public class Results extends AppCompatActivity {
         textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
         btnDetectObject = findViewById(R.id.btnDetectObject);
+
+        ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+        androidImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backActivity();
+            }
+        });
 
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
@@ -85,6 +96,11 @@ public class Results extends AppCompatActivity {
         });
 
         initTensorFlowAndLoadModel();
+    }
+
+    public void backActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
     @Override
