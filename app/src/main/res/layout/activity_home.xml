@@ -26,5 +26,5 @@
         android:text="SmartRice"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/calibribold"/>
+        android:fontFamily="@font/circularblack"/>
 </RelativeLayout>

@@ -30,11 +30,10 @@
         android:layout_marginStart="110dp"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:text="SmartRice"
         android:textColor="#FFFFFF"
-        android:textSize="55dp"
-        android:textStyle="bold" />
+        android:textSize="55dp" />
 
 
     <Button
@@ -45,13 +44,12 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:text="List of Diseases"
         android:textColor="#FFFFFF"
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button1"
@@ -61,13 +59,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:text="List of Pests"
-        android:paddingLeft="25dp"
-        android:paddingRight="25dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button2"
@@ -77,13 +74,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:text="Scan"
-        android:paddingLeft="59dp"
-        android:paddingRight="59dp"
+        android:paddingLeft="67dp"
+        android:paddingRight="67dp"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+        android:textSize="20dp" />
 
     <Button
         android:id="@+id/button4"
@@ -93,13 +89,12 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="12dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:text="About"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="60dp"
         android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textSize="20dp"/>
 
 
 
@@ -114,7 +109,7 @@
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
         android:padding="10dp"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularmedium"
         android:text="A Mobile Application Using DCNN for Detecting and Mapping Rice Plant Diseases"
         android:textColor="#FFFFFF"
         android:textSize="15dp" />
