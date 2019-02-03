@@ -1,8 +1,10 @@
 package com.example.rickydanobantonare.smartrice;
 
-import android.graphics.Bitmap;
 
+import android.graphics.Bitmap;
+import org.apache.commons.lang3.text.WordUtils;
 import java.util.List;
+
 
 public interface Classifier {
 
@@ -45,16 +47,16 @@ public interface Classifier {
         @Override
         public String toString() {
             String resultString = "";
-            if (id != null) {
+            /*if (id != null) {
                 resultString += "[" + id + "] ";
-            }
+            }*/
 
             if (title != null) {
-                resultString += title + " ";
+                resultString += WordUtils.capitalizeFully(title) + ": ";
             }
 
             if (confidence != null) {
-                resultString += String.format("(%.1f%%) ", confidence * 100.0f);
+                resultString += String.format("%.2f%%", confidence * 100.0f);
             }
 
             return resultString.trim();
