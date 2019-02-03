@@ -83,7 +83,11 @@ public class Results extends AppCompatActivity{
                 ArrayList<String> listItems = new ArrayList<String>();
 
                 for (int i=0; i<results.size(); i++) {
-                    listItems.add(results.get(i).toString());
+                    if (results.size() != 0) {
+                        listItems.add(results.get(i).toString());
+                    } else {
+                        listItems.add("No predictions");
+                    }
                 }
 
                 adapter = new ArrayAdapter<String>(
@@ -111,15 +115,15 @@ public class Results extends AppCompatActivity{
 
                 if (status == 1) {
                     cameraView.captureImage();
-                    cameraView.setVisibility(View.INVISIBLE);
-                    imageViewResult.setVisibility(View.VISIBLE);
-                    listView.setVisibility(View.VISIBLE);
+                    cameraView.setVisibility(v.INVISIBLE);
+                    imageViewResult.setVisibility(v.VISIBLE);
+                    listView.setVisibility(v.VISIBLE);
                     btnDetectObject.setText("Detect Again");
                     v.setTag(0);
                 } else {
-                    cameraView.setVisibility(View.VISIBLE);
-                    imageViewResult.setVisibility(View.INVISIBLE);
-                    listView.setVisibility(View.INVISIBLE);
+                    cameraView.setVisibility(v.VISIBLE);
+                    imageViewResult.setVisibility(v.INVISIBLE);
+                    listView.setVisibility(v.INVISIBLE);
                     btnDetectObject.setText("Capture and Analyze");
                     Restart();
                     v.setTag(1);
