@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ListView;
 
 import com.wonderkiln.camerakit.CameraKitError;
 import com.wonderkiln.camerakit.CameraKitEvent;
@@ -23,7 +25,7 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-public class Results extends AppCompatActivity {
+public class Results extends AppCompatActivity{
 
     private static final String MODEL_PATH = "graph.tflite";
     private static final String LABEL_PATH = "labels.txt";
@@ -36,6 +38,7 @@ public class Results extends AppCompatActivity {
     private Button btnDetectObject;
     private ImageView imageViewResult;
     private CameraView cameraView;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +51,8 @@ public class Results extends AppCompatActivity {
 
         btnDetectObject = findViewById(R.id.btnDetectObject);
 
+        listView = findViewById(R.id.listView);
+
         ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +60,10 @@ public class Results extends AppCompatActivity {
                 backActivity();
             }
         });
+
+        imageViewResult.setVisibility(View.INVISIBLE);
+        textViewResult.setVisibility(View.INVISIBLE);
+        listView.setVisibility(View.INVISIBLE);
 
         cameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
@@ -80,6 +89,16 @@ public class Results extends AppCompatActivity {
 
                 textViewResult.setText(results.toString());
 
+                /*List <String> resultsArray = new ArrayList<>();
+
+                for (int i=0; i<=results.size(); i++) {
+                    resultsArray.add(results.get(i).toString());
+                }
+
+                ArrayAdapter adapter = new ArrayAdapter(Results.this,android.R.layout.simple_list_item_1,resultsArray);
+
+                listView.setAdapter(adapter);*/
+
             }
 
             @Override
@@ -88,14 +107,41 @@ public class Results extends AppCompatActivity {
             }
         });
 
+        btnDetectObject.setTag(1);
+        btnDetectObject.setText("Capture and Analyze");
+
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                cameraView.captureImage();
+                final int status = (Integer) v.getTag();
+
+                if (status == 1) {
+                    cameraView.captureImage();
+                    cameraView.setVisibility(View.INVISIBLE);
+                    imageViewResult.setVisibility(View.VISIBLE);
+                    textViewResult.setVisibility(View.VISIBLE);
+                    listView.setVisibility(View.VISIBLE);
+                    btnDetectObject.setText("Detect Again");
+                    v.setTag(0);
+                } else {
+                    cameraView.setVisibility(View.VISIBLE);
+                    imageViewResult.setVisibility(View.INVISIBLE);
+                    textViewResult.setVisibility(View.INVISIBLE);
+                    listView.setVisibility(View.INVISIBLE);
+                    btnDetectObject.setText("Capture and Analyze");
+                    Restart();
+                    v.setTag(1);
+                }
+
             }
         });
 
         initTensorFlowAndLoadModel();
+    }
+
+    public void Restart()
+    {
+        this.recreate();
     }
 
     public void backActivity(){

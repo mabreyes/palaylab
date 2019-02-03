@@ -9,7 +9,7 @@
 
     <com.wonderkiln.camerakit.CameraView
         android:id="@+id/cameraView"
-        android:layout_width="363dp"
+        android:layout_width="match_parent"
         android:layout_height="294dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -43,39 +43,43 @@
 
     <ImageView
         android:id="@+id/imageViewResult"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_alignTop="@+id/textViewResult"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:padding="2dp"
-        android:background="@drawable/fbg"/>
+        android:layout_width="match_parent"
+        android:layout_height="294dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="52dp"
+        />
 
     <TextView
         android:id="@+id/textViewResult"
-        android:layout_width="299dp"
+        android:layout_width="match_parent"
         android:layout_height="75dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="82dp"
-        android:layout_marginBottom="130dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/fbg"
         android:fadeScrollbars="false"
-        android:gravity="center"
         android:maxLines="15"
         android:scrollbars="vertical"
-        android:textColor="@android:color/white"
-        android:background="@drawable/fbg"/>
+        android:textColor="@android:color/white" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewResult"></ListView>
 
     <Button
         android:id="@+id/btnDetectObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/imageViewResult"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginTop="29dp"
         android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
         android:background="@drawable/roundbutton"
         android:fontFamily="@font/calibribold"
         android:padding="10dp"
