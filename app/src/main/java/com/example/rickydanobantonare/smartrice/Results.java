@@ -4,13 +4,11 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.ListView;
 
 import com.wonderkiln.camerakit.CameraKitError;
@@ -34,7 +32,6 @@ public class Results extends AppCompatActivity{
     private Classifier classifier;
 
     private Executor executor = Executors.newSingleThreadExecutor();
-    private TextView textViewResult;
     private Button btnDetectObject;
     private ImageView imageViewResult;
     private CameraView cameraView;
@@ -46,8 +43,6 @@ public class Results extends AppCompatActivity{
         setContentView(R.layout.activity_results);
         cameraView = findViewById(R.id.cameraView);
         imageViewResult = findViewById(R.id.imageViewResult);
-        textViewResult = findViewById(R.id.textViewResult);
-        textViewResult.setMovementMethod(new ScrollingMovementMethod());
 
         btnDetectObject = findViewById(R.id.btnDetectObject);
 
@@ -62,7 +57,6 @@ public class Results extends AppCompatActivity{
         });
 
         imageViewResult.setVisibility(View.INVISIBLE);
-        textViewResult.setVisibility(View.INVISIBLE);
         listView.setVisibility(View.INVISIBLE);
 
         cameraView.addCameraKitListener(new CameraKitEventListener() {
@@ -80,25 +74,25 @@ public class Results extends AppCompatActivity{
             public void onImage(CameraKitImage cameraKitImage) {
 
                 Bitmap bitmap = cameraKitImage.getBitmap();
-
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
-
                 imageViewResult.setImageBitmap(bitmap);
 
                 final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
-                textViewResult.setText(results.toString());
+                ArrayAdapter<String> adapter;
+                ArrayList<String> listItems = new ArrayList<String>();
 
-                /*List <String> resultsArray = new ArrayList<>();
-
-                for (int i=0; i<=results.size(); i++) {
-                    resultsArray.add(results.get(i).toString());
+                for (int i=0; i<results.size(); i++) {
+                    listItems.add(results.get(i).toString());
                 }
 
-                ArrayAdapter adapter = new ArrayAdapter(Results.this,android.R.layout.simple_list_item_1,resultsArray);
+                adapter = new ArrayAdapter<String>(
+                        getApplicationContext(),
+                        android.R.layout.simple_list_item_1,
+                        listItems
+                );
 
-                listView.setAdapter(adapter);*/
-
+                listView.setAdapter(adapter);
             }
 
             @Override
@@ -119,14 +113,12 @@ public class Results extends AppCompatActivity{
                     cameraView.captureImage();
                     cameraView.setVisibility(View.INVISIBLE);
                     imageViewResult.setVisibility(View.VISIBLE);
-                    textViewResult.setVisibility(View.VISIBLE);
                     listView.setVisibility(View.VISIBLE);
                     btnDetectObject.setText("Detect Again");
                     v.setTag(0);
                 } else {
                     cameraView.setVisibility(View.VISIBLE);
                     imageViewResult.setVisibility(View.INVISIBLE);
-                    textViewResult.setVisibility(View.INVISIBLE);
                     listView.setVisibility(View.INVISIBLE);
                     btnDetectObject.setText("Capture and Analyze");
                     Restart();
