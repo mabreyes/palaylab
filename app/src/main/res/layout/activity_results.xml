@@ -38,8 +38,7 @@
         android:fontFamily="@font/calibribold"
         android:text="Detect Diseases"
         android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/border"/>
+        android:paddingEnd="10dp"/>
 
     <ImageView
         android:id="@+id/imageViewResult"

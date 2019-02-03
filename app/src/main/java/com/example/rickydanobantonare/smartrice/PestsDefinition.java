@@ -13,6 +13,9 @@ import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.RelativeSizeSpan;
 import android.text.style.StyleSpan;
+import android.text.style.TypefaceSpan;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class PestsDefinition extends AppCompatActivity {
@@ -47,18 +50,27 @@ public class PestsDefinition extends AppCompatActivity {
                 "the insect and its egg mass.");
         int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
         s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
-        s1.setSpan(new RelativeSizeSpan(2), 0, s1.length(), flag);
-        s1.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s1.length(), flag);
-        ss1.setSpan(new RelativeSizeSpan(0.7f), 0, ss1.length(), flag);
-        ss1.setSpan(new StyleSpan(Typeface.BOLD), 0,ss1.length(),flag);
+        s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
+        s1.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s1.length(), flag);
+        ss1.setSpan(new RelativeSizeSpan(1), 0, ss1.length(), flag);
+        ss1.setSpan(new StyleSpan(Typeface.BOLD), 0, ss1.length(), flag);
         s2.setSpan(new StyleSpan(Typeface.BOLD), 0, s2.length(), flag);
-        s2.setSpan(new RelativeSizeSpan(1), 0, s2.length(), flag);
-        s2.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s2.length(), flag);
+        s2.setSpan(new RelativeSizeSpan(2f), 0, s2.length(), flag);
+        s2.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s2.length(), flag);
+        s3.setSpan(new RelativeSizeSpan(1.5f), 0, s3.length(), flag);
         s3.setSpan(new StyleSpan(Typeface.NORMAL), 0, s3.length(), flag);
         s4.setSpan(new StyleSpan(Typeface.BOLD), 0, s4.length(), flag);
-        s4.setSpan(new RelativeSizeSpan(1), 0, s4.length(), flag);
-        s4.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s4.length(), flag);
+        s4.setSpan(new RelativeSizeSpan(2), 0, s4.length(), flag);
+        s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
         s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
+        s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+
+        s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
+        ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
+        s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
+        s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
+        s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
+        s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(s1);
@@ -69,6 +81,20 @@ public class PestsDefinition extends AppCompatActivity {
         builder.append(s5);
         textView.setText(builder);
         textView.setMovementMethod(new ScrollingMovementMethod());
+
+
+        ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+        androidImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backActivity();
+            }
+        });
+
+    }
+    public void backActivity(){
+        Intent intent = new Intent(this, Diseases.class);
+        startActivity(intent);
 
     }
     @Override
@@ -109,18 +135,27 @@ public class PestsDefinition extends AppCompatActivity {
                     "cut leaves, and cut stems.");
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
-            s1.setSpan(new RelativeSizeSpan(2), 0, s1.length(), flag);
-            s1.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s1.length(), flag);
-            ss1.setSpan(new RelativeSizeSpan(0.7f), 0, ss1.length(), flag);
-            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0,ss1.length(),flag);
+            s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
+            s1.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s1.length(), flag);
+            ss1.setSpan(new RelativeSizeSpan(1), 0, ss1.length(), flag);
+            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0, ss1.length(), flag);
             s2.setSpan(new StyleSpan(Typeface.BOLD), 0, s2.length(), flag);
-            s2.setSpan(new RelativeSizeSpan(1), 0, s2.length(), flag);
-            s2.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s2.length(), flag);
+            s2.setSpan(new RelativeSizeSpan(2f), 0, s2.length(), flag);
+            s2.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s2.length(), flag);
+            s3.setSpan(new RelativeSizeSpan(1.5f), 0, s3.length(), flag);
             s3.setSpan(new StyleSpan(Typeface.NORMAL), 0, s3.length(), flag);
             s4.setSpan(new StyleSpan(Typeface.BOLD), 0, s4.length(), flag);
-            s4.setSpan(new RelativeSizeSpan(1), 0, s4.length(), flag);
-            s4.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s4.length(), flag);
+            s4.setSpan(new RelativeSizeSpan(2), 0, s4.length(), flag);
+            s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
+            s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+
+            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -131,6 +166,20 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s5);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
+
+
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+        }
+        public void backActivity(){
+            Intent intent = new Intent(this, Diseases.class);
+            startActivity(intent);
 
         }
         @Override
@@ -172,18 +221,27 @@ public class PestsDefinition extends AppCompatActivity {
                     "black markings, and pale green adults with or without black markings feeding on upper parts of the crop.");
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
-            s1.setSpan(new RelativeSizeSpan(2), 0, s1.length(), flag);
-            s1.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s1.length(), flag);
-            ss1.setSpan(new RelativeSizeSpan(0.7f), 0, ss1.length(), flag);
-            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0,ss1.length(),flag);
+            s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
+            s1.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s1.length(), flag);
+            ss1.setSpan(new RelativeSizeSpan(1), 0, ss1.length(), flag);
+            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0, ss1.length(), flag);
             s2.setSpan(new StyleSpan(Typeface.BOLD), 0, s2.length(), flag);
-            s2.setSpan(new RelativeSizeSpan(1), 0, s2.length(), flag);
-            s2.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s2.length(), flag);
+            s2.setSpan(new RelativeSizeSpan(2f), 0, s2.length(), flag);
+            s2.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s2.length(), flag);
+            s3.setSpan(new RelativeSizeSpan(1.5f), 0, s3.length(), flag);
             s3.setSpan(new StyleSpan(Typeface.NORMAL), 0, s3.length(), flag);
             s4.setSpan(new StyleSpan(Typeface.BOLD), 0, s4.length(), flag);
-            s4.setSpan(new RelativeSizeSpan(1), 0, s4.length(), flag);
-            s4.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s4.length(), flag);
+            s4.setSpan(new RelativeSizeSpan(2), 0, s4.length(), flag);
+            s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
+            s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+
+            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -194,6 +252,20 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s5);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
+
+
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+        }
+        public void backActivity(){
+            Intent intent = new Intent(this, Diseases.class);
+            startActivity(intent);
 
         }
         @Override
@@ -236,18 +308,27 @@ public class PestsDefinition extends AppCompatActivity {
                     "is usually visible after heading or maturing.");
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
-            s1.setSpan(new RelativeSizeSpan(2), 0, s1.length(), flag);
-            s1.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s1.length(), flag);
-            ss1.setSpan(new RelativeSizeSpan(0.7f), 0, ss1.length(), flag);
-            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0,ss1.length(),flag);
+            s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
+            s1.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s1.length(), flag);
+            ss1.setSpan(new RelativeSizeSpan(1), 0, ss1.length(), flag);
+            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0, ss1.length(), flag);
             s2.setSpan(new StyleSpan(Typeface.BOLD), 0, s2.length(), flag);
-            s2.setSpan(new RelativeSizeSpan(1), 0, s2.length(), flag);
-            s2.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s2.length(), flag);
+            s2.setSpan(new RelativeSizeSpan(2f), 0, s2.length(), flag);
+            s2.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s2.length(), flag);
+            s3.setSpan(new RelativeSizeSpan(1.5f), 0, s3.length(), flag);
             s3.setSpan(new StyleSpan(Typeface.NORMAL), 0, s3.length(), flag);
             s4.setSpan(new StyleSpan(Typeface.BOLD), 0, s4.length(), flag);
-            s4.setSpan(new RelativeSizeSpan(1), 0, s4.length(), flag);
-            s4.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s4.length(), flag);
+            s4.setSpan(new RelativeSizeSpan(2), 0, s4.length(), flag);
+            s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
+            s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+
+            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -258,6 +339,20 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s5);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
+
+
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+        }
+        public void backActivity(){
+            Intent intent = new Intent(this, Diseases.class);
+            startActivity(intent);
 
         }
         @Override
@@ -299,18 +394,27 @@ public class PestsDefinition extends AppCompatActivity {
                     "and brown-green nymphs and adults feeding on endosperm of rice grains; and an offensive smell.");
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
-            s1.setSpan(new RelativeSizeSpan(2), 0, s1.length(), flag);
-            s1.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s1.length(), flag);
-            ss1.setSpan(new RelativeSizeSpan(0.7f), 0, ss1.length(), flag);
-            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0,ss1.length(),flag);
+            s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
+            s1.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s1.length(), flag);
+            ss1.setSpan(new RelativeSizeSpan(1), 0, ss1.length(), flag);
+            ss1.setSpan(new StyleSpan(Typeface.BOLD), 0, ss1.length(), flag);
             s2.setSpan(new StyleSpan(Typeface.BOLD), 0, s2.length(), flag);
-            s2.setSpan(new RelativeSizeSpan(1), 0, s2.length(), flag);
-            s2.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s2.length(), flag);
+            s2.setSpan(new RelativeSizeSpan(2f), 0, s2.length(), flag);
+            s2.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s2.length(), flag);
+            s3.setSpan(new RelativeSizeSpan(1.5f), 0, s3.length(), flag);
             s3.setSpan(new StyleSpan(Typeface.NORMAL), 0, s3.length(), flag);
             s4.setSpan(new StyleSpan(Typeface.BOLD), 0, s4.length(), flag);
-            s4.setSpan(new RelativeSizeSpan(1), 0, s4.length(), flag);
-            s4.setSpan(new ForegroundColorSpan(Color.rgb(11,102,35)), 0, s4.length(), flag);
+            s4.setSpan(new RelativeSizeSpan(2), 0, s4.length(), flag);
+            s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
+            s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+
+            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -321,6 +425,20 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s5);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
+
+
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+        }
+        public void backActivity(){
+            Intent intent = new Intent(this, Diseases.class);
+            startActivity(intent);
 
         }
         @Override
