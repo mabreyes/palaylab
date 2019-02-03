@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
+import android.widget.SimpleAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -20,6 +20,8 @@ import com.wonderkiln.camerakit.CameraView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
@@ -79,22 +81,39 @@ public class Results extends AppCompatActivity{
 
                 final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
-                ArrayAdapter<String> adapter;
-                ArrayList<String> listItems = new ArrayList<String>();
+                // ArrayAdapter<String> adapter;
+                // ArrayList<String> listItems = new ArrayList<String>();
+
+                ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
+                HashMap<String, String> listItemData;
 
                 for (int i=0; i<results.size(); i++) {
+
                     if (results.size() != 0) {
-                        listItems.add(results.get(i).toString());
+                        listItemData = new HashMap<String, String>();
+                        String resultStr = results.get(i).toString();
+                        String[] resultStrVar = resultStr.split(",");
+
+                        listItemData.put(resultStrVar[0], resultStrVar[1]);
+                        listItems.add(listItemData);
+
                     } else {
-                        listItems.add("No predictions");
+                        listItemData = new HashMap<String, String>();
+                        listItemData.put("No predictions found", "Kindly shot again");
+                        listItems.add(listItemData);
                     }
                 }
 
-                adapter = new ArrayAdapter<String>(
+                /*adapter = new ArrayAdapter<String>(
                         getApplicationContext(),
                         android.R.layout.simple_list_item_1,
                         listItems
-                );
+                );*/
+
+                SimpleAdapter adapter = new SimpleAdapter(Results.this, listItems,
+                        android.R.layout.simple_list_item_2,
+                        new String[] {"First Line", "Second Line"},
+                        new int[] {android.R.id.text1, android.R.id.text2 });
 
                 listView.setAdapter(adapter);
             }
