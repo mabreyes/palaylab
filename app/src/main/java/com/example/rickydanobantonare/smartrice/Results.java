@@ -118,14 +118,9 @@ public class Results extends AppCompatActivity{
 
                 for (int i=0; i<listItems.size(); i++) {
                     stringNames[i] = listItems.get(i).get("disease_name");
-                }
-
-                for (int i=0; i<listItems.size(); i++) {
                     stringConfidence[i] = listItems.get(i).get("confidence");
-                }
-
-                for (int i=0; i<listItems.size(); i++) {
                     String current = listItems.get(i).get("disease_name");
+
                     if (current.equals("Army Worm")) {
                         intImage[i] = R.drawable.armyworm;
                     } else if (current.equals("Bacterial Leaf Blight")) {
