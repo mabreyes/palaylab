@@ -81,9 +81,6 @@ public class Results extends AppCompatActivity{
 
                 final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
-                // ArrayAdapter<String> adapter;
-                // ArrayList<String> listItems = new ArrayList<String>();
-
                 ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
                 HashMap<String, String> listItemData;
 
@@ -94,25 +91,23 @@ public class Results extends AppCompatActivity{
                         String resultStr = results.get(i).toString();
                         String[] resultStrVar = resultStr.split(",");
 
-                        listItemData.put(resultStrVar[0], resultStrVar[1]);
+                        listItemData.put("disease_name", resultStrVar[0]);
+                        listItemData.put("confidence", resultStrVar[1]);
+
                         listItems.add(listItemData);
 
                     } else {
                         listItemData = new HashMap<String, String>();
-                        listItemData.put("No predictions found", "Kindly shot again");
+                        listItemData.put("disease_name", "No predictions found");
+                        listItemData.put("confidence", "Kindly shot again");
+
                         listItems.add(listItemData);
                     }
                 }
 
-                /*adapter = new ArrayAdapter<String>(
-                        getApplicationContext(),
-                        android.R.layout.simple_list_item_1,
-                        listItems
-                );*/
-
                 SimpleAdapter adapter = new SimpleAdapter(Results.this, listItems,
                         android.R.layout.simple_list_item_2,
-                        new String[] {"First Line", "Second Line"},
+                        new String[] {"disease_name", "confidence"},
                         new int[] {android.R.id.text1, android.R.id.text2 });
 
                 listView.setAdapter(adapter);
