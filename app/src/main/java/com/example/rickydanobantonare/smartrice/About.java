@@ -17,7 +17,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         textView = (TextView) findViewById(R.id.about);
-        String text = "";
+        String text = "Developers\n\nRicky D Bantonare\nMarc Anthony B Reyes\nPaul Arnold M Simbajon\n\n\nAdviser\n\nCristina Amor Cajilla, MIT";
         textView.setText(text);
         textView.setMovementMethod(new ScrollingMovementMethod());
 

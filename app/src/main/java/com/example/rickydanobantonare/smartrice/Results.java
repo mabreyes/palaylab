@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -122,22 +123,94 @@ public class Results extends AppCompatActivity{
 
                         if (current.equals("Army Worm")) {
                             intImage[i] = R.drawable.armyworm;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, PestsDefinition.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Bacterial Leaf Blight")) {
                             intImage[i] = R.drawable.bacterialblight;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, DiseasesDefinition.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Black Bug")) {
                             intImage[i] = R.drawable.riceblackbug;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, PestsDefinition.PestDefinition4.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Blast")) {
                             intImage[i] = R.drawable.riceblast;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition2.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Ear Bug")) {
                             intImage[i] = R.drawable.riceearbug;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, PestsDefinition.PestDefinition5.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Golden Apple Snail")) {
                             intImage[i] = R.drawable.goldenapplesnail;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, PestsDefinition.PestDefinition2.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Green Leafhopper")) {
                             intImage[i] = R.drawable.greenleafhopper;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, PestsDefinition.PestDefinition3.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Sheath Blight")) {
                             intImage[i] = R.drawable.sheathblight;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition3.class);
+                                    startActivity(intent);
+                                }
+                            });
                         } else if (current.equals("Tungro")) {
                             intImage[i] = R.drawable.tungro;
+                            listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    Intent intent = new Intent();
+                                    intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition4.class);
+                                    startActivity(intent);
+                                }
+                            });
                         }
                     } else {
                         // Change this into something blank
