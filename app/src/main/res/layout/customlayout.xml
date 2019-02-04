@@ -21,11 +21,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="12dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:paddingLeft="5dp"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="20dp"
+            android:textColor="#115533"
+            android:fontFamily="@font/circularblack"/>
 
         <TextView
             android:id="@+id/tvdescription"
@@ -33,11 +36,26 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvname"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="45dp"
+            android:layout_marginTop="35dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:layout_weight="1"
             android:paddingLeft="5dp"
-            android:text="TextView" />
+            android:textSize="12dp"
+            android:text="TextView"
+            android:fontFamily="@font/circularbook"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvdescription"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@id/imageView"
+            android:layout_toRightOf="@+id/imageView"
+            android:paddingLeft="5dp"
+            android:text="LEARN MORE"
+            android:textColor="#429448"
+            android:textSize="13dp"
+            android:layout_marginTop="61dp"
+            android:fontFamily="@font/circularmedium"/>
     </RelativeLayout>
 </LinearLayout>

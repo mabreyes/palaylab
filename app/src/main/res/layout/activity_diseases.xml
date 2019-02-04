@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Diseases"
     android:orientation="vertical"
-    android:background="@drawable/bg">
+    android:background="@drawable/bg2">
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="50dp"
+        android:layout_width="40dp"
         android:layout_height="30dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/arrow" />
 
     <TextView
@@ -24,14 +24,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:text="List of Diseases"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:paddingStart="10dp"
-        android:paddingEnd="10dp"
-        android:background="@drawable/border"/>
+        android:paddingEnd="10dp"/>
 
     <ListView
         android:divider="#00000000"
