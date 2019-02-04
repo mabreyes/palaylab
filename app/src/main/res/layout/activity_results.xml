@@ -41,7 +41,8 @@
         android:textColor="#FFFFFF"
         android:fontFamily="@font/circularblack"
         android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
+        android:paddingEnd="10dp"
+        android:layout_marginBottom="200dp"/>
 
     <ImageView
         android:id="@+id/imageViewResult"
@@ -58,30 +59,32 @@
 
     <ListView
         android:id="@+id/listView"
+        android:dividerHeight="15dp"
+        android:divider="#00000000"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageViewResult"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         ></ListView>
 
     <Button
         android:id="@+id/btnDetectObject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginTop="29dp"
-        android:layout_marginBottom="10dp"
-        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:padding="10dp"
-        android:text="Capture and Analyze"
+        android:fontFamily="@font/circularblack"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Capture"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="15dp" />
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/btnDetectObject2"
@@ -91,10 +94,11 @@
         android:layout_marginTop="340dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/calibribold"
-        android:padding="10dp"
+        android:fontFamily="@font/circularblack"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
         android:text="Detect Again"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="15dp" />
+        android:textSize="20sp" />
 </RelativeLayout>

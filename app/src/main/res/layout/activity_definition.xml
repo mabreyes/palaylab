@@ -7,15 +7,6 @@
     tools:context=".DiseasesDefinition"
     android:background="@drawable/bg2">
 
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_marginTop="70dp"
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
-
-    </android.support.v4.view.ViewPager>
-
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="35dp"
@@ -39,6 +30,15 @@
         android:fontFamily="@font/circularblack"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+    </android.support.v4.view.ViewPager>
+
     <TextView
         android:id="@+id/definition"
         android:layout_width="match_parent"

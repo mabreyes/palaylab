@@ -10,7 +10,7 @@ import android.widget.ListView;
 
 public class Pest extends AppCompatActivity {
     ListView list;
-    String[] pestename = {"Army worm","Golden Apple-Snail","Green Leaf Hopper","Rice Black-bug", "Rice Ear-bug"};
+    String[] pestename = {"Army Worm","Golden Apple Snail","Green Leafhopper","Rice Black Bug", "Rice Ear Bug"};
     String[] desc= {"Pest","Pest","Pest","Pest","Pest"};
     Integer[] imgid={R.drawable.armyworm,R.drawable.goldenapplesnail,R.drawable.greenleafhopper,R.drawable.riceblackbug, R.drawable.riceearbug};
     @Override

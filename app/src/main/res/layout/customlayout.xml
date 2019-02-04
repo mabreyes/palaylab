@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/customshape">
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
         android:padding="10dp">
 
         <ImageView
@@ -20,13 +20,14 @@
             android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:letterSpacing="-0.04"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="5dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:paddingLeft="5dp"
             android:text="TextView"
-            android:textSize="20dp"
+            android:textSize="25sp"
             android:textColor="#115533"
             android:fontFamily="@font/circularblack"/>
 
@@ -41,7 +42,7 @@
             android:layout_toRightOf="@+id/imageView"
             android:layout_weight="1"
             android:paddingLeft="5dp"
-            android:textSize="12dp"
+            android:textSize="15sp"
             android:text="TextView"
             android:fontFamily="@font/circularbook"/>
         <TextView
