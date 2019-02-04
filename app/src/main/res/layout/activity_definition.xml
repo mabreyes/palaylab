@@ -36,7 +36,7 @@
         android:text="About"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/calibribold"
+        android:fontFamily="@font/circularblack"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"/>
     <TextView

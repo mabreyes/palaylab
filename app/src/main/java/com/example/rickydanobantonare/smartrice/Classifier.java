@@ -52,7 +52,7 @@ public interface Classifier {
             }*/
 
             if (title != null) {
-                resultString += WordUtils.capitalizeFully(title) + ": ";
+                resultString += WordUtils.capitalizeFully(title) + ",";
             }
 
             if (confidence != null) {

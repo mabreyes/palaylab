@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:text="List of Pests"
+        android:text="Pests"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
         android:fontFamily="@font/circularblack"
