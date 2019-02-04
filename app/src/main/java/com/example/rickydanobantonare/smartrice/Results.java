@@ -9,6 +9,7 @@ import android.widget.SimpleAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ListView;
 
 import com.wonderkiln.camerakit.CameraKitError;
@@ -20,7 +21,6 @@ import com.wonderkiln.camerakit.CameraView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.HashMap;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
@@ -38,6 +38,7 @@ public class Results extends AppCompatActivity{
     private ImageView imageViewResult;
     private CameraView cameraView;
     private ListView listView;
+    private TextView textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +58,8 @@ public class Results extends AppCompatActivity{
                 backActivity();
             }
         });
+
+        textView = findViewById(R.id.textView3);
 
         imageViewResult.setVisibility(View.INVISIBLE);
         listView.setVisibility(View.INVISIBLE);
@@ -132,12 +135,14 @@ public class Results extends AppCompatActivity{
                     cameraView.setVisibility(v.INVISIBLE);
                     imageViewResult.setVisibility(v.VISIBLE);
                     listView.setVisibility(v.VISIBLE);
+                    textView.setText("Results");
                     btnDetectObject.setText("Detect Again");
                     v.setTag(0);
                 } else {
                     cameraView.setVisibility(v.VISIBLE);
                     imageViewResult.setVisibility(v.INVISIBLE);
                     listView.setVisibility(v.INVISIBLE);
+                    textView.setText("Detect");
                     btnDetectObject.setText("Capture and Analyze");
                     Restart();
                     v.setTag(1);
