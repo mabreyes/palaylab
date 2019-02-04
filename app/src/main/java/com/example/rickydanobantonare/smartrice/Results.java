@@ -117,29 +117,35 @@ public class Results extends AppCompatActivity{
                 Integer[] intImage = new Integer[listItems.size()];
 
                 for (int i=0; i<listItems.size(); i++) {
-                    stringNames[i] = listItems.get(i).get("disease_name");
-                    stringConfidence[i] = listItems.get(i).get("confidence");
-                    String current = listItems.get(i).get("disease_name");
+                    if (listItems.size() != 0) {
+                        stringNames[i] = listItems.get(i).get("disease_name");
+                        stringConfidence[i] = listItems.get(i).get("confidence");
+                        String current = listItems.get(i).get("disease_name");
 
-                    if (current.equals("Army Worm")) {
-                        intImage[i] = R.drawable.armyworm;
-                    } else if (current.equals("Bacterial Leaf Blight")) {
-                        intImage[i] = R.drawable.bacterialblight;
-                    } else if (current.equals("Black Bug")) {
-                        intImage[i] = R.drawable.riceblackbug;
-                    } else if (current.equals("Blast")) {
-                        intImage[i] = R.drawable.riceblast;
-                    } else if (current.equals("Ear Bug")) {
-                        intImage[i] = R.drawable.riceearbug;
-                    } else if (current.equals("Golden Apple Snail")) {
-                        intImage[i] = R.drawable.goldenapplesnail;
-                    } else if (current.equals("Green Leafhopper")) {
-                        intImage[i] = R.drawable.greenleafhopper;
-                    } else if (current.equals("Sheath Blight")) {
-                        intImage[i] = R.drawable.sheathblight;
-                    } else if (current.equals("Tungro")) {
-                        intImage[i] = R.drawable.tungro;
+                        if (current.equals("Army Worm")) {
+                            intImage[i] = R.drawable.armyworm;
+                        } else if (current.equals("Bacterial Leaf Blight")) {
+                            intImage[i] = R.drawable.bacterialblight;
+                        } else if (current.equals("Black Bug")) {
+                            intImage[i] = R.drawable.riceblackbug;
+                        } else if (current.equals("Blast")) {
+                            intImage[i] = R.drawable.riceblast;
+                        } else if (current.equals("Ear Bug")) {
+                            intImage[i] = R.drawable.riceearbug;
+                        } else if (current.equals("Golden Apple Snail")) {
+                            intImage[i] = R.drawable.goldenapplesnail;
+                        } else if (current.equals("Green Leafhopper")) {
+                            intImage[i] = R.drawable.greenleafhopper;
+                        } else if (current.equals("Sheath Blight")) {
+                            intImage[i] = R.drawable.sheathblight;
+                        } else if (current.equals("Tungro")) {
+                            intImage[i] = R.drawable.tungro;
+                        }
+                    } else {
+                        // Change this into something blank
+                        intImage[i] = R.drawable.roundbutton;
                     }
+
                 }
 
                 CustomListView customListView = new CustomListView(Results.this,
