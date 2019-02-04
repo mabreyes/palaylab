@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -34,7 +35,7 @@ public class Results extends AppCompatActivity{
     private Classifier classifier;
 
     private Executor executor = Executors.newSingleThreadExecutor();
-    private Button btnDetectObject;
+    private Button btnDetectObject, btnDetectObject2;
     private ImageView imageViewResult;
     private CameraView cameraView;
     private ListView listView;
@@ -48,6 +49,7 @@ public class Results extends AppCompatActivity{
         imageViewResult = findViewById(R.id.imageViewResult);
 
         btnDetectObject = findViewById(R.id.btnDetectObject);
+        btnDetectObject2 = findViewById(R.id.btnDetectObject2);
 
         listView = findViewById(R.id.listView);
 
@@ -61,6 +63,7 @@ public class Results extends AppCompatActivity{
 
         textView = findViewById(R.id.textView3);
 
+        btnDetectObject2.setVisibility(View.INVISIBLE);
         imageViewResult.setVisibility(View.INVISIBLE);
         listView.setVisibility(View.INVISIBLE);
 
@@ -87,6 +90,7 @@ public class Results extends AppCompatActivity{
                 ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
                 HashMap<String, String> listItemData;
 
+
                 for (int i=0; i<results.size(); i++) {
 
                     if (results.size() != 0) {
@@ -108,12 +112,49 @@ public class Results extends AppCompatActivity{
                     }
                 }
 
-                SimpleAdapter adapter = new SimpleAdapter(Results.this, listItems,
-                        android.R.layout.simple_list_item_2,
-                        new String[] {"disease_name", "confidence"},
-                        new int[] {android.R.id.text1, android.R.id.text2 });
+                String[] stringNames = new String[listItems.size()];
+                String[] stringConfidence = new String[listItems.size()];
+                Integer[] intImage = new Integer[listItems.size()];
 
-                listView.setAdapter(adapter);
+                for (int i=0; i<listItems.size(); i++) {
+                    stringNames[i] = listItems.get(i).get("disease_name");
+                }
+
+                for (int i=0; i<listItems.size(); i++) {
+                    stringConfidence[i] = listItems.get(i).get("confidence");
+                }
+
+                for (int i=0; i<listItems.size(); i++) {
+                    String current = listItems.get(i).get("disease_name");
+                    if (current.equals("Army Worm")) {
+                        intImage[i] = R.drawable.armyworm;
+                    } else if (current.equals("Bacterial Leaf Blight")) {
+                        intImage[i] = R.drawable.bacterialblight;
+                    } else if (current.equals("Black Bug")) {
+                        intImage[i] = R.drawable.riceblackbug;
+                    } else if (current.equals("Blast")) {
+                        intImage[i] = R.drawable.riceblast;
+                    } else if (current.equals("Ear Bug")) {
+                        intImage[i] = R.drawable.riceearbug;
+                    } else if (current.equals("Golden Apple Snail")) {
+                        intImage[i] = R.drawable.goldenapplesnail;
+                    } else if (current.equals("Green Leafhopper")) {
+                        intImage[i] = R.drawable.greenleafhopper;
+                    } else if (current.equals("Sheath Blight")) {
+                        intImage[i] = R.drawable.sheathblight;
+                    } else if (current.equals("Tungro")) {
+                        intImage[i] = R.drawable.tungro;
+                    }
+                }
+
+                CustomListView customListView = new CustomListView(Results.this,
+                        stringNames,
+                        stringConfidence,
+                        intImage);
+
+                listView.setAdapter(customListView);
+
+
             }
 
             @Override
@@ -122,31 +163,23 @@ public class Results extends AppCompatActivity{
             }
         });
 
-        btnDetectObject.setTag(1);
-        btnDetectObject.setText("Capture and Analyze");
+        btnDetectObject2.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Restart();
+            }
+        });
 
         btnDetectObject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final int status = (Integer) v.getTag();
-
-                if (status == 1) {
                     cameraView.captureImage();
                     cameraView.setVisibility(v.INVISIBLE);
                     imageViewResult.setVisibility(v.VISIBLE);
                     listView.setVisibility(v.VISIBLE);
+                    btnDetectObject.setVisibility(View.INVISIBLE);
+                    btnDetectObject2.setVisibility(View.VISIBLE);
                     textView.setText("Results");
-                    btnDetectObject.setText("Detect Again");
-                    v.setTag(0);
-                } else {
-                    cameraView.setVisibility(v.VISIBLE);
-                    imageViewResult.setVisibility(v.INVISIBLE);
-                    listView.setVisibility(v.INVISIBLE);
-                    textView.setText("Detect");
-                    btnDetectObject.setText("Capture and Analyze");
-                    Restart();
-                    v.setTag(1);
-                }
 
             }
         });
