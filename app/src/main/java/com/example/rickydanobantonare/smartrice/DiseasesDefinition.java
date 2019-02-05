@@ -353,14 +353,12 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition4.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }
