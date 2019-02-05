@@ -5,11 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
-
-import org.w3c.dom.Text;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -81,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void aboutActivity(){
-        Intent intent = new Intent(MainActivity.this, About.class);
+        Intent intent = new Intent(MainActivity.this, Statistics.class);
         startActivity(intent);
     }
     @Override

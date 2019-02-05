@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class About extends AppCompatActivity {
+public class Statistics extends AppCompatActivity {
 
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about);
+        setContentView(R.layout.activity_statistics);
 
         textView = (TextView) findViewById(R.id.about);
         String text = "";
@@ -38,7 +38,7 @@ public class About extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(About.this, MainActivity.class );
+        Intent intent = new Intent(Statistics.this, MainActivity.class );
         startActivity(intent);
     }
 }

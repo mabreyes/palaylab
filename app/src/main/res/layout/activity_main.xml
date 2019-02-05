@@ -124,7 +124,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/button4"
                     android:background="@null"
-                    android:text="About"
+                    android:text="Statistics"
                     android:fontFamily="@font/circularblack"
                     android:textSize="20sp"
                     android:gravity="center|bottom"
@@ -134,7 +134,7 @@
                 <ImageView
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/mainabout"
+                    android:src="@drawable/mainstatistics"
                     android:tint="#115533"
                     android:layout_centerInParent="true"
                     android:background="@drawable/customshape"

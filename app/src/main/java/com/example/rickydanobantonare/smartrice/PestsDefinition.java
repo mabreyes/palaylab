@@ -35,7 +35,7 @@ public class PestsDefinition extends AppCompatActivity {
 
         SpannableString s1 = new SpannableString("Armyworm\n");
         SpannableString ss1 = new SpannableString("Infestation\n\n");
-        SpannableString s2 = new SpannableString("About\n");
+        SpannableString s2 = new SpannableString("Statistics\n");
         SpannableString s3 = new SpannableString("Armyworms are caterpillars that attack rice. A single armyworm egg mass " +
                 "contains hundreds of eggs. Each female lays 800−1000 eggs during its lifetime of about one week. Armyworm " +
                 "feeds on rice by cutting off leaves and young seedlings at the plant's base. They can also cut off rice panicles " +
@@ -128,7 +128,7 @@ public class PestsDefinition extends AppCompatActivity {
 
             SpannableString s1 = new SpannableString("Golden Apple-snail\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("There are more than 100 species of apple snail that exists. Two species, " +
                     "Pomacea canaliculata and Pomacea maculata, commonly known as Golden Apple Snails, are highly invasive and cause " +
                     "damage to rice crops. They were introduced to Asia, from South America, in the 1980s as potential food for people, " +
@@ -223,7 +223,7 @@ public class PestsDefinition extends AppCompatActivity {
 
             SpannableString s1 = new SpannableString("Green Leaf Hopper\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("Two species of green leafhoppers (GLH) can spread tungro: Nephotettix malayanus " +
                     "and Nephotettix virescens. Green leafhoppers are the most common leafhoppers in rice fields and are primarily critical " +
                     "because they spread the viral disease tungro. Both nymphs and adults feed by extracting plant sap with their needle-shaped " +
@@ -318,7 +318,7 @@ public class PestsDefinition extends AppCompatActivity {
 
             SpannableString s1 = new SpannableString("Rice Black-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("In the Philippines’ setup, there are three (3) species of bugs that attack rice. " +
                     "They are common black bug, Malayan black bug, and Japanese black bug. Black bugs remove the sap of the plant. They can " +
                     "cause browning of leaves, deadheart, and bugburn. Their damage also causes stunting in plants, reduced tiller number, and " +
@@ -414,7 +414,7 @@ public class PestsDefinition extends AppCompatActivity {
 
             SpannableString s1 = new SpannableString("Rice Ear-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("The most common species of rice bug are Leptocorisa oratorius F. and Leptocorisa acuta T., " +
                     "both commonly called ear bug. Ears bugs damage rice by sucking out the contents of developing grains from pre-flowering spikelets " +
                     "to soft dough stage, therefore causing unfilled or empty grains and discoloration. Immature and adult rice bugs both feed on rice grains. " +
