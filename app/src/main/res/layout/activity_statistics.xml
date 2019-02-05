@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2">
 
+
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="35dp"
@@ -28,24 +29,463 @@
         android:paddingStart="10dp"
         android:paddingEnd="10dp"/>
 
-    <TextView
-        android:id="@+id/about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textView3"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_marginTop="130dp"
-        android:scrollbars="vertical"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:paddingRight="10dp"
-        android:paddingLeft="20dp"
-        android:background="@drawable/fbg"/>
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/customshape" />
+
+    <TableLayout
+        android:id="@+id/tableView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/graph"
+        android:weightSum="1"
+        android:layout_weight="0.5"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/customshape"
+        android:padding="15dp">
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Disease"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/circularblack"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/circularblack"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/circularblack"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bacterial Blight"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/blbThisWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/blbTotalDetections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rice Blast"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/rbThisWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/rbTotalDetections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Sheath Blight"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/sbThisWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/sbTotalDetections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+        </TableRow>
+        <TableRow android:layout_marginBottom="10dp">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tungro"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/tunThisWeek"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+                <TextView
+                    android:id="@+id/tunTotalDetections"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This Week"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/circularbook"/>
+            </RelativeLayout>
+        </TableRow>
+
+    </TableLayout>
+
+            <TableLayout
+                android:id="@+id/tableView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableView"
+                android:weightSum="1"
+                android:layout_weight="0.5"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="15dp">
+                <TableRow
+                    android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Pests"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/circularblack"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/circularblack"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="20dp"
+                            android:fontFamily="@font/circularblack"/>
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Army Worm"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/awThisWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/awTotalDetections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Golden Apple Snail"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/gasThisWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/gasTotalDetections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Green Leafhopper"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/glhThisWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/glhTotalDetections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rice Black Bug"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/rbbThisWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/rbbTotalDetections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                </TableRow>
+                <TableRow android:layout_marginBottom="10dp">
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Rice Ear Bug"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/rebThisWeek"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Total"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5">
+                        <TextView
+                            android:id="@+id/rebTotalDetections"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="This Week"
+                            android:textSize="15dp"
+                            android:fontFamily="@font/circularbook"/>
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+        </RelativeLayout>
+
+    </ScrollView>
 
 </RelativeLayout>
