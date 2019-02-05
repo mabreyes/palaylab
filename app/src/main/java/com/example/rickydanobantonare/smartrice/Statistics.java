@@ -258,7 +258,7 @@ public class Statistics extends AppCompatActivity {
                         new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                finish();
+                                Restart();
                             }
                         });
 
