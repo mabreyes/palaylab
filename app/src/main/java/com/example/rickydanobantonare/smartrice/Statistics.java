@@ -7,10 +7,18 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.helper.StaticLabelsFormatter;
-import com.jjoe64.graphview.series.BarGraphSeries;
-import com.jjoe64.graphview.series.DataPoint;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
 public class Statistics extends AppCompatActivity {
 
@@ -108,23 +116,90 @@ public class Statistics extends AppCompatActivity {
         rebThisWeek.setText(String.valueOf(earBugDataTW));
         rebTotalDetections.setText(String.valueOf(earBugData));
 
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[]{
-                new DataPoint(1, armyWormData),
-                new DataPoint(2, bacterialLeafBlightData),
-                new DataPoint(3, blackBugData),
-                new DataPoint(4, blastData),
-                new DataPoint(5, earBugData),
-                new DataPoint(6, goldenAppleSnailData),
-                new DataPoint(7, greenLeafhopperData),
-                new DataPoint(8, sheathBlightData),
-                new DataPoint(9, tungroData),
-        });
-        graph.addSeries(series);
+        BarChart chart = findViewById(R.id.barchart);
 
-        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
-        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+        ArrayList DetectionItem = new ArrayList();
+
+        DetectionItem.add(new BarEntry(armyWormData, 0));
+        DetectionItem.add(new BarEntry(bacterialLeafBlightData, 1));
+        DetectionItem.add(new BarEntry(blackBugData, 2));
+        DetectionItem.add(new BarEntry(blastData, 3));
+        DetectionItem.add(new BarEntry(earBugData, 4));
+        DetectionItem.add(new BarEntry(goldenAppleSnailData, 5));
+        DetectionItem.add(new BarEntry(greenLeafhopperData, 6));
+        DetectionItem.add(new BarEntry(sheathBlightData, 7));
+        DetectionItem.add(new BarEntry(tungroData, 8));
+
+        ArrayList DetectionItemLabel = new ArrayList();
+
+        DetectionItemLabel.add("Army Worm");
+        DetectionItemLabel.add("BLB");
+        DetectionItemLabel.add("RBB");
+        DetectionItemLabel.add("Blast");
+        DetectionItemLabel.add("Ear Bug");
+        DetectionItemLabel.add("GAS");
+        DetectionItemLabel.add("GLH");
+        DetectionItemLabel.add("Sheath Blight");
+        DetectionItemLabel.add("Tungro");
+
+        ArrayList DetectionDiseases = new ArrayList();
+
+        DetectionDiseases.add(new BarEntry(bacterialLeafBlightData, 1));
+        DetectionDiseases.add(new BarEntry(blastData, 2));
+        DetectionDiseases.add(new BarEntry(sheathBlightData, 3));
+        DetectionDiseases.add(new BarEntry(tungroData, 4));
+
+        ArrayList DetectionDiseasesItemLabel = new ArrayList();
+
+        DetectionDiseasesItemLabel.add("BLB");
+        DetectionDiseasesItemLabel.add("Blast");
+        DetectionDiseasesItemLabel.add("Sheath Blight");
+        DetectionDiseasesItemLabel.add("Tungro");
+
+        BarDataSet bardataset = new BarDataSet(DetectionItem, "Total Detections");
+        chart.animateY(1000);
+        BarData data = new BarData(DetectionItemLabel, bardataset);
+        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        chart.setData(data);
+
+        PieChart diseasesPieChart = findViewById(R.id.piechart);
+
+        PieDataSet diseasesDataset = new PieDataSet(DetectionDiseases, "Diseases");
+
+        PieData dataDiseasesDataset = new PieData(DetectionDiseasesItemLabel, diseasesDataset);
+        diseasesPieChart.setData(dataDiseasesDataset);
+        diseasesDataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        diseasesPieChart.animateXY(1000, 1000);
+
+        diseasesPieChart.setUsePercentValues(true);
+
+        ArrayList DetectionPests = new ArrayList();
+
+        DetectionPests.add(new BarEntry(armyWormData, 1));
+        DetectionPests.add(new BarEntry(goldenAppleSnailData, 2));
+        DetectionPests.add(new BarEntry(greenLeafhopperData, 3));
+        DetectionPests.add(new BarEntry(blackBugData, 4));
+        DetectionPests.add(new BarEntry(tungroData, 5));
+
+        ArrayList DetectionPestsItemLabel = new ArrayList();
+
+        DetectionPestsItemLabel.add("Army Worm");
+        DetectionPestsItemLabel.add("GAS");
+        DetectionPestsItemLabel.add("GLH");
+        DetectionPestsItemLabel.add("RBB");
+        DetectionPestsItemLabel.add("Tungro");
+
+        PieChart pestsPieChart = findViewById(R.id.piechart2);
+
+        PieDataSet pestsDataset = new PieDataSet(DetectionPests, "Pests");
+
+        PieData dataPestsDataset = new PieData(DetectionPestsItemLabel, pestsDataset);
+        pestsPieChart.setData(dataPestsDataset);
+        pestsDataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        pestsPieChart.animateXY(1000, 1000);
+
+        pestsPieChart.setUsePercentValues(true);
+
 
     }
 

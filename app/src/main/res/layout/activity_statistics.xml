@@ -40,22 +40,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graph"
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/customshape" />
+                android:background="@drawable/customshape"
+                android:padding="10dp"
+                />
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/barchart"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="10dp" />
 
             <TableLayout
                 android:id="@+id/tableView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/graph"
+                android:layout_below="@+id/piechart"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -284,14 +295,26 @@
 
             </TableLayout>
 
-            <TableLayout
-                android:id="@+id/tableView2"
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart2"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="300dp"
                 android:layout_below="@+id/tableView"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="10dp" />
+
+            <TableLayout
+                android:id="@+id/tableView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/piechart2"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/customshape"
                 android:padding="15dp"
@@ -559,6 +582,7 @@
                     </RelativeLayout>
                 </TableRow>
             </TableLayout>
+
         </RelativeLayout>
 
     </ScrollView>
