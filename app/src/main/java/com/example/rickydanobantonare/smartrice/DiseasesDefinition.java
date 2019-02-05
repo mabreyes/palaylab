@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DiseasesDefinition extends AppCompatActivity {
-    TextView textView;
+    TextView textView, textViewDetection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,8 @@ public class DiseasesDefinition extends AppCompatActivity {
         viewPager.setAdapter(diseasesViewPager);
 
         textView = (TextView) findViewById(R.id.definition);
+
+        textViewDetection = (TextView) findViewById(R.id.detection);
         SpannableString s1 = new SpannableString("Bacterial Blight\n");
         SpannableString ss1 = new SpannableString("Disease\n\n");
         SpannableString s2 = new SpannableString("About\n");
@@ -92,6 +94,12 @@ public class DiseasesDefinition extends AppCompatActivity {
             }
         });
 
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        String count = String.valueOf(db.countInfo("Bacterial Leaf Blight"));
+
+        textViewDetection.setText(count + " Detections");
+
     }
     public void backActivity(){
         finish();
@@ -104,7 +112,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
 
     public static class DiseaseDefinition2 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -115,6 +123,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
             SpannableString s1 = new SpannableString("Rice Blast\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -170,6 +179,12 @@ public class DiseasesDefinition extends AppCompatActivity {
                 }
             });
 
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Blast"));
+
+            textViewDetection.setText(count + " Detections");
+
         }
         public void backActivity(){
             finish();
@@ -183,7 +198,7 @@ public class DiseasesDefinition extends AppCompatActivity {
     }
 
     public static class DiseaseDefinition3 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -194,6 +209,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
             SpannableString s1 = new SpannableString("Sheath Blight\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -255,6 +271,12 @@ public class DiseasesDefinition extends AppCompatActivity {
                 }
             });
 
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Sheath Blight"));
+
+            textViewDetection.setText(count + " Detections");
+
         }
         public void backActivity(){
             finish();
@@ -268,7 +290,7 @@ public class DiseasesDefinition extends AppCompatActivity {
     }
 
     public static class DiseaseDefinition4 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -279,6 +301,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
             SpannableString s1 = new SpannableString("Tungro\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -350,6 +373,12 @@ public class DiseasesDefinition extends AppCompatActivity {
                     backActivity();
                 }
             });
+
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Tungro"));
+
+            textViewDetection.setText(count + " Detections");
 
         }
         public void backActivity(){
