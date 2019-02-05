@@ -51,9 +51,17 @@ public class MainActivity extends AppCompatActivity {
 
         List<StatisticsInfo> list = db.getAllInfo();
 
+        // db.deleteInfo(list.get(0));
+
+        /*for (int i=0; i<4; i++) {
+            db.deleteInfo(list.get(i));
+        }*/
+
         TextView textResult = (TextView) findViewById(R.id.textResult);
 
-        textResult.setText(db.getAllInfo().toString());
+        // textResult.setText(db.getAllInfo().toString());
+
+        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
 
 
 

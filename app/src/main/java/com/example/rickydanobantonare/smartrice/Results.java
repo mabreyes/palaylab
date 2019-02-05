@@ -19,6 +19,8 @@ import com.wonderkiln.camerakit.CameraKitImage;
 import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -127,9 +129,13 @@ public class Results extends AppCompatActivity{
                         stringConfidence[i] = listItems.get(i).get("confidence");
                         String current = listItems.get(i).get("disease_name");
 
-                        Date dateToday = Calendar.getInstance().getTime();
+                        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
-                        db.addInfo(new StatisticsInfo(stringNames[i], String.valueOf(dateToday), stringConfidence[i]));
+                        Date date = new Date();
+
+                        String dateToday = dateFormat.format(date);
+
+                        db.addInfo(new StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]));
 
                         if (current.equals("Army Worm")) {
                             intImage[i] = R.drawable.armyworm;
