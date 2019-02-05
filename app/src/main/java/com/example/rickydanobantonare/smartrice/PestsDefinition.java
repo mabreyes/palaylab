@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class PestsDefinition extends AppCompatActivity {
-    TextView textView, textViewDetection;
+    TextView textView, textViewDetection, detectionText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,9 +29,10 @@ public class PestsDefinition extends AppCompatActivity {
         PestsViewPager pestsViewPager = new PestsViewPager(this);
         viewPager.setAdapter(pestsViewPager);
 
-
         textView = (TextView) findViewById(R.id.definition);
         textViewDetection = (TextView) findViewById(R.id.detection);
+        detectionText = (TextView) findViewById(R.id.detectionText);
+
         SpannableString s1 = new SpannableString("Armyworm\n");
         SpannableString ss1 = new SpannableString("Infestation\n\n");
         SpannableString s2 = new SpannableString("About\n");
@@ -83,7 +84,6 @@ public class PestsDefinition extends AppCompatActivity {
         textView.setText(builder);
         textView.setMovementMethod(new ScrollingMovementMethod());
 
-
         ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,8 +95,10 @@ public class PestsDefinition extends AppCompatActivity {
         DatabaseHelper db = new DatabaseHelper(this);
 
         String count = String.valueOf(db.countInfo("Army Worm"));
+        String thisWeek = String.valueOf(db.countThisWeek("Army Worm"));
 
         textViewDetection.setText(count + " Detections");
+        detectionText.setText(thisWeek + " This Week");
 
     }
     public void backActivity(){
@@ -110,7 +112,7 @@ public class PestsDefinition extends AppCompatActivity {
 
 
     public static class PestDefinition2 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -122,6 +124,8 @@ public class PestsDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Golden Apple-snail\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -185,8 +189,10 @@ public class PestsDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Golden Apple Snail"));
+            String thisWeek = String.valueOf(db.countThisWeek("Golden Apple Snail"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
@@ -201,7 +207,7 @@ public class PestsDefinition extends AppCompatActivity {
     }
 
     public static class PestDefinition3 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -213,6 +219,8 @@ public class PestsDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Green Leaf Hopper\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -276,8 +284,10 @@ public class PestsDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Green Leafhopper"));
+            String thisWeek = String.valueOf(db.countThisWeek("Green Leafhopper"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
@@ -292,7 +302,7 @@ public class PestsDefinition extends AppCompatActivity {
     }
 
     public static class PestDefinition4 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -304,6 +314,8 @@ public class PestsDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Rice Black-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -368,8 +380,10 @@ public class PestsDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Black Bug"));
+            String thisWeek = String.valueOf(db.countThisWeek("Black Bug"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
@@ -384,7 +398,7 @@ public class PestsDefinition extends AppCompatActivity {
     }
 
     public static class PestDefinition5 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -396,6 +410,8 @@ public class PestsDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Rice Ear-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -459,8 +475,10 @@ public class PestsDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Ear Bug"));
+            String thisWeek = String.valueOf(db.countThisWeek("Ear Bug"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){

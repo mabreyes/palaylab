@@ -108,12 +108,6 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public int countThisWeek(String detectionName) {
         SQLiteDatabase db = getReadableDatabase();
 
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
-        Date date = new Date();
-
-        String dateToday = dateFormat.format(date);
-
         String countThisWeekQuery = "SELECT * FROM " + TABLE_INFO + " WHERE DATE(" + KEY_DETECTION_DATE + ") >= DATE('now', 'weekday 0', '-7 days') AND "+ KEY_DETECTION_NAME  + " = '"+ detectionName +"'";
 
         Cursor cursor = db.rawQuery(countThisWeekQuery, null);

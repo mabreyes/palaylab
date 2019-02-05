@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DiseasesDefinition extends AppCompatActivity {
-    TextView textView, textViewDetection;
+    TextView textView, textViewDetection, detectionText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +32,7 @@ public class DiseasesDefinition extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.definition);
 
         textViewDetection = (TextView) findViewById(R.id.detection);
+        detectionText = (TextView) findViewById(R.id.detectionText);
         SpannableString s1 = new SpannableString("Bacterial Blight\n");
         SpannableString ss1 = new SpannableString("Disease\n\n");
         SpannableString s2 = new SpannableString("About\n");
@@ -71,11 +72,6 @@ public class DiseasesDefinition extends AppCompatActivity {
         s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
         s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
-
-
-
-
-
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(s1);
         builder.append(ss1);
@@ -98,7 +94,10 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         String count = String.valueOf(db.countInfo("Bacterial Leaf Blight"));
 
+        String thisWeek = String.valueOf(db.countThisWeek("Bacterial Leaf Blight"));
+
         textViewDetection.setText(count + " Detections");
+        detectionText.setText(thisWeek + " This Week");
 
     }
     public void backActivity(){
@@ -112,7 +111,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
 
     public static class DiseaseDefinition2 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -124,6 +123,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Rice Blast\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -182,8 +182,10 @@ public class DiseasesDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Blast"));
+            String thisWeek = String.valueOf(db.countThisWeek("Blast"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
@@ -198,7 +200,7 @@ public class DiseasesDefinition extends AppCompatActivity {
     }
 
     public static class DiseaseDefinition3 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -210,6 +212,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Sheath Blight\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -274,8 +277,10 @@ public class DiseasesDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Sheath Blight"));
+            String thisWeek = String.valueOf(db.countThisWeek("Sheath Blight"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
@@ -290,7 +295,7 @@ public class DiseasesDefinition extends AppCompatActivity {
     }
 
     public static class DiseaseDefinition4 extends AppCompatActivity {
-        TextView textView, textViewDetection;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -302,6 +307,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
             textView = (TextView) findViewById(R.id.definition);
             textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Tungro\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
             SpannableString s2 = new SpannableString("About\n");
@@ -377,8 +383,10 @@ public class DiseasesDefinition extends AppCompatActivity {
             DatabaseHelper db = new DatabaseHelper(this);
 
             String count = String.valueOf(db.countInfo("Tungro"));
+            String thisWeek = String.valueOf(db.countThisWeek("Tungro"));
 
             textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
         public void backActivity(){
