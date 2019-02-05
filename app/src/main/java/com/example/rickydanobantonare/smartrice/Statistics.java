@@ -12,12 +12,10 @@ import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Statistics extends AppCompatActivity {
@@ -159,8 +157,9 @@ public class Statistics extends AppCompatActivity {
         BarDataSet bardataset = new BarDataSet(DetectionItem, "Total Detections");
         chart.animateY(1000);
         BarData data = new BarData(DetectionItemLabel, bardataset);
-        bardataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        bardataset.setColors(ColorTemplate.PASTEL_COLORS);
         chart.setData(data);
+        chart.setDescription(null);
 
         PieChart diseasesPieChart = findViewById(R.id.piechart);
 
@@ -168,10 +167,11 @@ public class Statistics extends AppCompatActivity {
 
         PieData dataDiseasesDataset = new PieData(DetectionDiseasesItemLabel, diseasesDataset);
         diseasesPieChart.setData(dataDiseasesDataset);
-        diseasesDataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        diseasesDataset.setColors(ColorTemplate.PASTEL_COLORS);
         diseasesPieChart.animateXY(1000, 1000);
 
         diseasesPieChart.setUsePercentValues(true);
+        diseasesPieChart.setDescription(null);
 
         ArrayList DetectionPests = new ArrayList();
 
@@ -195,11 +195,44 @@ public class Statistics extends AppCompatActivity {
 
         PieData dataPestsDataset = new PieData(DetectionPestsItemLabel, pestsDataset);
         pestsPieChart.setData(dataPestsDataset);
-        pestsDataset.setColors(ColorTemplate.COLORFUL_COLORS);
+        pestsDataset.setColors(ColorTemplate.PASTEL_COLORS);
         pestsPieChart.animateXY(1000, 1000);
 
         pestsPieChart.setUsePercentValues(true);
+        pestsPieChart.setDescription(null);
 
+        ArrayList DetectionThisWeekItem = new ArrayList();
+
+        DetectionThisWeekItem.add(new BarEntry(armyWormDataTW, 0));
+        DetectionThisWeekItem.add(new BarEntry(bacterialLeafBlightDataTW, 1));
+        DetectionThisWeekItem.add(new BarEntry(blackBugDataTW, 2));
+        DetectionThisWeekItem.add(new BarEntry(blastDataTW, 3));
+        DetectionThisWeekItem.add(new BarEntry(earBugDataTW, 4));
+        DetectionThisWeekItem.add(new BarEntry(goldenAppleSnailDataTW, 5));
+        DetectionThisWeekItem.add(new BarEntry(greenLeafhopperDataTW, 6));
+        DetectionThisWeekItem.add(new BarEntry(sheathBlightDataTW, 7));
+        DetectionThisWeekItem.add(new BarEntry(tungroDataTW, 8));
+
+        ArrayList DetectionThisWeekItemLabel = new ArrayList();
+
+        DetectionThisWeekItemLabel.add("Army Worm");
+        DetectionThisWeekItemLabel.add("BLB");
+        DetectionThisWeekItemLabel.add("RBB");
+        DetectionThisWeekItemLabel.add("Blast");
+        DetectionThisWeekItemLabel.add("Ear Bug");
+        DetectionThisWeekItemLabel.add("GAS");
+        DetectionThisWeekItemLabel.add("GLH");
+        DetectionThisWeekItemLabel.add("Sheath Blight");
+        DetectionThisWeekItemLabel.add("Tungro");
+
+        BarChart barChart = findViewById(R.id.thisWeekChart);
+
+        BarDataSet barDataset = new BarDataSet(DetectionThisWeekItem, "Total Detections");
+        barChart.animateY(1000);
+        BarData barDatasetData = new BarData(DetectionThisWeekItemLabel, barDataset);
+        barDataset.setColors(ColorTemplate.PASTEL_COLORS);
+        barChart.setData(barDatasetData);
+        barChart.setDescription(null);
 
     }
 
