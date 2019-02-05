@@ -143,7 +143,8 @@
         </TableRow>
 
         <TextView
-            android:layout_height="20dp"/>
+            android:id="@+id/textResult"
+            android:layout_height="50dp"/>
 
     </TableLayout>
 

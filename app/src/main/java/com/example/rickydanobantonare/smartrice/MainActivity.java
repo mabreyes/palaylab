@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,6 +46,23 @@ public class MainActivity extends AppCompatActivity {
                 aboutActivity();
             }
         });
+
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        db.addInfo(new StatisticsInfo("Tungro", "2019-2-2", "20.50%"));
+        db.addInfo(new StatisticsInfo("Tungro", "2019-2-2", "20.50%"));
+
+        List<StatisticsInfo> list = db.getAllInfo();
+
+        db.deleteInfo(list.get(0));
+
+        db.getAllInfo();
+
+        TextView textResult = (TextView) findViewById(R.id.textResult);
+
+        textResult.setText(db.getAllInfo().toString());
+
+
 
     }
 
