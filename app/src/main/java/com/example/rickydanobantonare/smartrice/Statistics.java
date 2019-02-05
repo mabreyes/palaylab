@@ -1,11 +1,15 @@
 package com.example.rickydanobantonare.smartrice;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -17,27 +21,16 @@ import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Statistics extends AppCompatActivity {
 
-    TextView blbThisWeek,
-            blbTotalDetections,
-            rbThisWeek,
-            rbTotalDetections,
-            sbThisWeek,
-            sbTotalDetections,
-            tunThisWeek,
-            tunTotalDetections,
-            awThisWeek,
-            awTotalDetections,
-            gasThisWeek,
-            gasTotalDetections,
-            glhThisWeek,
-            glhTotalDetections,
-            rbbThisWeek,
-            rbbTotalDetections,
-            rebThisWeek,
-            rebTotalDetections;
+    Button btnClearData;
+
+    TextView blbThisWeek, blbTotalDetections, rbThisWeek, rbTotalDetections, sbThisWeek,
+            sbTotalDetections, tunThisWeek, tunTotalDetections, awThisWeek, awTotalDetections,
+            gasThisWeek, gasTotalDetections, glhThisWeek, glhTotalDetections, rbbThisWeek,
+            rbbTotalDetections, rebThisWeek, rebTotalDetections;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +45,7 @@ public class Statistics extends AppCompatActivity {
             }
         });
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        final DatabaseHelper db = new DatabaseHelper(this);
 
         int armyWormData = db.countInfo("Army Worm");
         int bacterialLeafBlightData = db.countInfo("Bacterial Leaf Blight");
@@ -234,6 +227,50 @@ public class Statistics extends AppCompatActivity {
         barChart.setData(barDatasetData);
         barChart.setDescription(null);
 
+        btnClearData = (Button) findViewById(R.id.btnClearData);
+
+        btnClearData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Statistics.this);
+                alertDialogBuilder.setMessage("Are you sure you wanted to clear the data? " +
+                        "After deleting, you could no longer retrieve it back.");
+                alertDialogBuilder.setPositiveButton("yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                List<StatisticsInfo> dataList = db.getAllInfo();
+
+                                int dataCount = db.countAllData();
+
+                                for (int j=0; j<dataCount; j++) {
+                                    db.deleteInfo(dataList.get(j));
+                                }
+
+                                Toast.makeText(Statistics.this, "All data were cleared",
+                                        Toast.LENGTH_LONG).show();
+
+                                Restart();
+                            }
+                        });
+
+                alertDialogBuilder.setNegativeButton("no",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                finish();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
+        });
+
+    }
+
+    public void Restart() {
+        this.recreate();
     }
 
     public void backActivity() {
