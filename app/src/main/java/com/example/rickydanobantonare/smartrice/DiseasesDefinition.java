@@ -94,14 +94,12 @@ public class DiseasesDefinition extends AppCompatActivity {
 
     }
     public void backActivity(){
-        Intent intent = new Intent(this, Diseases.class);
-        startActivity(intent);
+        finish();
 
     }
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(DiseasesDefinition.this, Diseases.class );
-        startActivity(intent);
+        finish();
     }
 
 
@@ -174,14 +172,12 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition2.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }
@@ -261,14 +257,12 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition3.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }
@@ -349,6 +343,18 @@ public class DiseasesDefinition extends AppCompatActivity {
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+        }
+        public void backActivity(){
+            Intent intent = new Intent(this, Diseases.class);
+            startActivity(intent);
 
         }
         @Override

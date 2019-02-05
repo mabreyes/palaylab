@@ -93,14 +93,12 @@ public class PestsDefinition extends AppCompatActivity {
 
     }
     public void backActivity(){
-        Intent intent = new Intent(this, Diseases.class);
-        startActivity(intent);
+        finish();
 
     }
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(PestsDefinition.this, Pest.class );
-        startActivity(intent);
+        finish();
     }
 
 
@@ -178,14 +176,12 @@ public class PestsDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition2.this, Pest.class );
-            startActivity(intent);
+            finish();
         }
 
     }
@@ -264,14 +260,12 @@ public class PestsDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition3.this, Pest.class );
-            startActivity(intent);
+            finish();
         }
 
     }
@@ -351,14 +345,12 @@ public class PestsDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition4.this, Pest.class );
-            startActivity(intent);
+            finish();
         }
 
     }
@@ -437,14 +429,12 @@ public class PestsDefinition extends AppCompatActivity {
 
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition5.this, Pest.class );
-            startActivity(intent);
+            finish();
         }
 
     }
