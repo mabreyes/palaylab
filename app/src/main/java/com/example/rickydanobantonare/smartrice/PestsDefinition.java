@@ -1,6 +1,5 @@
 package com.example.rickydanobantonare.smartrice;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -20,6 +19,7 @@ import android.widget.TextView;
 
 public class PestsDefinition extends AppCompatActivity {
     TextView textView, textViewDetection, detectionText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,18 +101,21 @@ public class PestsDefinition extends AppCompatActivity {
         detectionText.setText(thisWeek + " This Week");
 
     }
-    public void backActivity(){
+
+    public void backActivity() {
         finish();
 
     }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
     }
 
 
     public static class PestDefinition2 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -195,12 +198,14 @@ public class PestsDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
@@ -208,6 +213,7 @@ public class PestsDefinition extends AppCompatActivity {
 
     public static class PestDefinition3 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -290,12 +296,14 @@ public class PestsDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
@@ -303,6 +311,7 @@ public class PestsDefinition extends AppCompatActivity {
 
     public static class PestDefinition4 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -386,12 +395,14 @@ public class PestsDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
@@ -399,6 +410,7 @@ public class PestsDefinition extends AppCompatActivity {
 
     public static class PestDefinition5 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -481,12 +493,14 @@ public class PestsDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
