@@ -49,14 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
         DatabaseHelper db = new DatabaseHelper(this);
 
-        db.addInfo(new StatisticsInfo("Tungro", "2019-2-2", "20.50%"));
-        db.addInfo(new StatisticsInfo("Tungro", "2019-2-2", "20.50%"));
-
         List<StatisticsInfo> list = db.getAllInfo();
-
-        db.deleteInfo(list.get(0));
-
-        db.getAllInfo();
 
         TextView textResult = (TextView) findViewById(R.id.textResult);
 

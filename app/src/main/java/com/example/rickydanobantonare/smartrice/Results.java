@@ -20,6 +20,8 @@ import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.HashMap;
 import java.util.concurrent.Executor;
@@ -89,6 +91,10 @@ public class Results extends AppCompatActivity{
                 final ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
                 HashMap<String, String> listItemData;
 
+                DatabaseHelper db = new DatabaseHelper(Results.this);
+
+
+
 
                 for (int i=0; i<results.size(); i++) {
 
@@ -120,6 +126,10 @@ public class Results extends AppCompatActivity{
                         stringNames[i] = listItems.get(i).get("disease_name");
                         stringConfidence[i] = listItems.get(i).get("confidence");
                         String current = listItems.get(i).get("disease_name");
+
+                        Date dateToday = Calendar.getInstance().getTime();
+
+                        db.addInfo(new StatisticsInfo(stringNames[i], String.valueOf(dateToday), stringConfidence[i]));
 
                         if (current.equals("Army Worm")) {
                             intImage[i] = R.drawable.armyworm;

@@ -90,6 +90,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
+    public int countInfo(String detectionName) {
+        SQLiteDatabase db = getReadableDatabase();
+
+        String countQuery = "SELECT * FROM " + TABLE_INFO + " WHERE "+ KEY_DETECTION_NAME  + " = '"+ detectionName +"'";
+
+        Cursor cursor = db.rawQuery(countQuery, null);
+
+        int count = cursor.getCount();
+
+        return count;
+    }
+
     public List<StatisticsInfo> getAllInfo() {
         List<StatisticsInfo> infos = new LinkedList<StatisticsInfo>();
 
