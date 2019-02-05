@@ -108,9 +108,8 @@ public class Statistics extends AppCompatActivity {
         rebThisWeek.setText(String.valueOf(earBugDataTW));
         rebTotalDetections.setText(String.valueOf(earBugData));
 
-
         GraphView graph = (GraphView) findViewById(R.id.graph);
-        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
+        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[]{
                 new DataPoint(1, armyWormData),
                 new DataPoint(2, bacterialLeafBlightData),
                 new DataPoint(3, blackBugData),
@@ -124,18 +123,19 @@ public class Statistics extends AppCompatActivity {
         graph.addSeries(series);
 
         StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[] {"1", "2", "3", "4", "5", "6", "7", "8", "9"});
+        staticLabelsFormatter.setHorizontalLabels(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
         graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
 
     }
 
-    public void backActivity(){
+    public void backActivity() {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
     @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(Statistics.this, MainActivity.class );
+    public void onBackPressed() {
+        Intent intent = new Intent(Statistics.this, MainActivity.class);
         startActivity(intent);
     }
 }
