@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -85,7 +86,7 @@ public class Results extends AppCompatActivity{
 
                 final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 
-                ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
+                final ArrayList<HashMap<String, String>> listItems = new ArrayList<>();
                 HashMap<String, String> listItemData;
 
 
@@ -110,7 +111,7 @@ public class Results extends AppCompatActivity{
                     }
                 }
 
-                String[] stringNames = new String[listItems.size()];
+                final String[] stringNames = new String[listItems.size()];
                 String[] stringConfidence = new String[listItems.size()];
                 Integer[] intImage = new Integer[listItems.size()];
 
@@ -152,6 +153,49 @@ public class Results extends AppCompatActivity{
                         intImage);
 
                 listView.setAdapter(customListView);
+
+                listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                        if (stringNames[position].equals("Army Worm")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, PestsDefinition.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Bacterial Leaf Blight")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, DiseasesDefinition.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Black Bug")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, PestsDefinition.PestDefinition4.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Blast")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition2.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Ear Bug")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, PestsDefinition.PestDefinition5.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Golden Apple Snail")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, PestsDefinition.PestDefinition2.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Green Leafhopper")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, PestsDefinition.PestDefinition3.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Sheath Blight")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition3.class);
+                            startActivity(intent);
+                        } else if (stringNames[position].equals("Tungro")) {
+                            Intent intent = new Intent();
+                            intent.setClass(Results.this, DiseasesDefinition.DiseaseDefinition4.class);
+                            startActivity(intent);
+                        }
+                    }
+                });
 
 
             }

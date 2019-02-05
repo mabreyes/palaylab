@@ -53,7 +53,7 @@
                     android:src="@drawable/maininfestation"
                     android:tint="#115533"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/border"
+                    android:background="@drawable/customshape"
                     android:padding="20dp"/>
             </RelativeLayout>
             <RelativeLayout
@@ -80,7 +80,7 @@
                     android:src="@drawable/mainpest"
                     android:tint="#115533"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/border"
+                    android:background="@drawable/customshape"
                     android:padding="20dp"/>
             </RelativeLayout>
         </TableRow>
@@ -112,7 +112,7 @@
                     android:src="@drawable/mainscan"
                     android:tint="#115533"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/border"
+                    android:background="@drawable/customshape"
                     android:padding="20dp"/>
             </RelativeLayout>
             <RelativeLayout
@@ -137,7 +137,7 @@
                     android:src="@drawable/mainabout"
                     android:tint="#115533"
                     android:layout_centerInParent="true"
-                    android:background="@drawable/border"
+                    android:background="@drawable/customshape"
                     android:padding="20dp"/>
             </RelativeLayout>
         </TableRow>
