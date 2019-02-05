@@ -29,15 +29,11 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Diseases" />
         <activity android:name=".Pest" />
         <activity android:name=".Results" />
-        <activity android:name=".About" />
+        <activity android:name=".Statistics" />
         <activity android:name=".DiseasesDefinition"/>
         <activity android:name=".DiseasesDefinition$DiseaseDefinition2"/>
         <activity android:name=".DiseasesDefinition$DiseaseDefinition3"/>

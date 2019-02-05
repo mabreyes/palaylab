@@ -42,6 +42,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        /* Helper code snippets. Don't remove this for now
+
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        List<StatisticsInfo> list = db.getAllInfo();
+
+        db.deleteInfo(list.get(0));
+
+        *for (int i=0; i<4; i++) {
+            db.deleteInfo(list.get(i));
+        }
+
+        TextView textResult = (TextView) findViewById(R.id.textResult);
+
+        textResult.setText(db.getAllInfo().toString());
+
+        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
+        */
+
     }
 
     public void diseaseActivity(){
@@ -57,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void aboutActivity(){
-        Intent intent = new Intent(MainActivity.this, About.class);
+        Intent intent = new Intent(MainActivity.this, Statistics.class);
         startActivity(intent);
     }
     @Override

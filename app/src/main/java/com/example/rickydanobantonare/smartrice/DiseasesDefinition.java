@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class DiseasesDefinition extends AppCompatActivity {
-    TextView textView;
+    TextView textView, textViewDetection, detectionText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,9 +30,12 @@ public class DiseasesDefinition extends AppCompatActivity {
         viewPager.setAdapter(diseasesViewPager);
 
         textView = (TextView) findViewById(R.id.definition);
+
+        textViewDetection = (TextView) findViewById(R.id.detection);
+        detectionText = (TextView) findViewById(R.id.detectionText);
         SpannableString s1 = new SpannableString("Bacterial Blight\n");
         SpannableString ss1 = new SpannableString("Disease\n\n");
-        SpannableString s2 = new SpannableString("About\n");
+        SpannableString s2 = new SpannableString("Statistics\n");
         SpannableString s3 = new SpannableString("Bacterial blight is caused by Xanthomonas oryzae pv. oryzae.  It causes wilting of seedlings and " +
                 "yellowing and drying of leaves. The disease is most likely to develop in areas that have weeds and stubbles of infected plants. It can occur " +
                 "in both tropical and temperate environments, particularly in irrigated and rainfed lowland areas. In general, the disease favors temperatures " +
@@ -69,11 +72,6 @@ public class DiseasesDefinition extends AppCompatActivity {
         s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
         s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
 
-
-
-
-
-
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(s1);
         builder.append(ss1);
@@ -92,21 +90,28 @@ public class DiseasesDefinition extends AppCompatActivity {
             }
         });
 
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        String count = String.valueOf(db.countInfo("Bacterial Leaf Blight"));
+
+        String thisWeek = String.valueOf(db.countThisWeek("Bacterial Leaf Blight"));
+
+        textViewDetection.setText(count + " Detections");
+        detectionText.setText(thisWeek + " This Week");
+
     }
     public void backActivity(){
-        Intent intent = new Intent(this, Diseases.class);
-        startActivity(intent);
+        finish();
 
     }
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(DiseasesDefinition.this, Diseases.class );
-        startActivity(intent);
+        finish();
     }
 
 
     public static class DiseaseDefinition2 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -117,9 +122,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Rice Blast\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("Blast is caused by the fungus Magnaporthe oryzae. It can affect all above ground parts of a rice plant: " +
                     "leaf, collar, node, neck, parts of panicle, and sometimes leaf sheath. Blast can occur wherever blast spores are present. It occurs in areas with " +
                     "low soil moisture, frequent and prolonged periods of rain shower, and cool temperature in the daytime. In upland rice, large day-night temperature " +
@@ -172,22 +179,28 @@ public class DiseasesDefinition extends AppCompatActivity {
                 }
             });
 
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Blast"));
+            String thisWeek = String.valueOf(db.countThisWeek("Blast"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
+
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition2.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }
 
     public static class DiseaseDefinition3 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -198,9 +211,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Sheath Blight\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("Sheath blight is a fungal disease caused by Rhizoctonia solani. Infected leaves senesce or dry out and die " +
                     "more rapidly, young tillers can also be destroyed. As a result, the leaf area of the canopy can significantly be reduced by the disease. " +
                     "This reduction in leaf area, along with the diseased-induced senescence of leaves and young infected tillers are the primary causes of yield reduction. " +
@@ -259,22 +274,28 @@ public class DiseasesDefinition extends AppCompatActivity {
                 }
             });
 
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Sheath Blight"));
+            String thisWeek = String.valueOf(db.countThisWeek("Sheath Blight"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
+
         }
         public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition3.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }
 
     public static class DiseaseDefinition4 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -285,9 +306,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             viewPager.setAdapter(diseasesViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Tungro\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("Rice tungro disease is caused by the combination of two viruses, which are transmitted by leafhoppers. " +
                     "It causes leaf discoloration, stunted growth, reduced tiller numbers and sterile or partly filled grains. Tungro infects cultivated rice, " +
                     "some wild rice relatives and other grassy weeds commonly found in rice paddies. Tungro disease viruses are transmitted from one plant to " +
@@ -349,12 +372,30 @@ public class DiseasesDefinition extends AppCompatActivity {
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
+            ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
+            androidImageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    backActivity();
+                }
+            });
+
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Tungro"));
+            String thisWeek = String.valueOf(db.countThisWeek("Tungro"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
+
+        }
+        public void backActivity(){
+            finish();
 
         }
         @Override
         public void onBackPressed(){
-            Intent intent = new Intent(DiseaseDefinition4.this, Diseases.class );
-            startActivity(intent);
+            finish();
         }
 
     }

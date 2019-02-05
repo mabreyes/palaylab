@@ -1,6 +1,5 @@
 package com.example.rickydanobantonare.smartrice;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -19,7 +18,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class PestsDefinition extends AppCompatActivity {
-    TextView textView;
+    TextView textView, textViewDetection, detectionText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +29,13 @@ public class PestsDefinition extends AppCompatActivity {
         PestsViewPager pestsViewPager = new PestsViewPager(this);
         viewPager.setAdapter(pestsViewPager);
 
-
         textView = (TextView) findViewById(R.id.definition);
+        textViewDetection = (TextView) findViewById(R.id.detection);
+        detectionText = (TextView) findViewById(R.id.detectionText);
+
         SpannableString s1 = new SpannableString("Armyworm\n");
         SpannableString ss1 = new SpannableString("Infestation\n\n");
-        SpannableString s2 = new SpannableString("About\n");
+        SpannableString s2 = new SpannableString("Statistics\n");
         SpannableString s3 = new SpannableString("Armyworms are caterpillars that attack rice. A single armyworm egg mass " +
                 "contains hundreds of eggs. Each female lays 800−1000 eggs during its lifetime of about one week. Armyworm " +
                 "feeds on rice by cutting off leaves and young seedlings at the plant's base. They can also cut off rice panicles " +
@@ -82,7 +84,6 @@ public class PestsDefinition extends AppCompatActivity {
         textView.setText(builder);
         textView.setMovementMethod(new ScrollingMovementMethod());
 
-
         ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
         androidImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,21 +92,30 @@ public class PestsDefinition extends AppCompatActivity {
             }
         });
 
-    }
-    public void backActivity(){
-        Intent intent = new Intent(this, Diseases.class);
-        startActivity(intent);
+        DatabaseHelper db = new DatabaseHelper(this);
+
+        String count = String.valueOf(db.countInfo("Army Worm"));
+        String thisWeek = String.valueOf(db.countThisWeek("Army Worm"));
+
+        textViewDetection.setText(count + " Detections");
+        detectionText.setText(thisWeek + " This Week");
 
     }
+
+    public void backActivity() {
+        finish();
+
+    }
+
     @Override
-    public void onBackPressed(){
-        Intent intent = new Intent(PestsDefinition.this, Pest.class );
-        startActivity(intent);
+    public void onBackPressed() {
+        finish();
     }
 
 
     public static class PestDefinition2 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -116,9 +126,12 @@ public class PestsDefinition extends AppCompatActivity {
             viewPager.setAdapter(pestsViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Golden Apple-snail\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("There are more than 100 species of apple snail that exists. Two species, " +
                     "Pomacea canaliculata and Pomacea maculata, commonly known as Golden Apple Snails, are highly invasive and cause " +
                     "damage to rice crops. They were introduced to Asia, from South America, in the 1980s as potential food for people, " +
@@ -176,22 +189,31 @@ public class PestsDefinition extends AppCompatActivity {
                 }
             });
 
-        }
-        public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Golden Apple Snail"));
+            String thisWeek = String.valueOf(db.countThisWeek("Golden Apple Snail"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
+
+        public void backActivity() {
+            finish();
+
+        }
+
         @Override
-        public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition2.this, Pest.class );
-            startActivity(intent);
+        public void onBackPressed() {
+            finish();
         }
 
     }
 
     public static class PestDefinition3 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -202,9 +224,12 @@ public class PestsDefinition extends AppCompatActivity {
             viewPager.setAdapter(pestsViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Green Leaf Hopper\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("Two species of green leafhoppers (GLH) can spread tungro: Nephotettix malayanus " +
                     "and Nephotettix virescens. Green leafhoppers are the most common leafhoppers in rice fields and are primarily critical " +
                     "because they spread the viral disease tungro. Both nymphs and adults feed by extracting plant sap with their needle-shaped " +
@@ -262,22 +287,31 @@ public class PestsDefinition extends AppCompatActivity {
                 }
             });
 
-        }
-        public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Green Leafhopper"));
+            String thisWeek = String.valueOf(db.countThisWeek("Green Leafhopper"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
+
+        public void backActivity() {
+            finish();
+
+        }
+
         @Override
-        public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition3.this, Pest.class );
-            startActivity(intent);
+        public void onBackPressed() {
+            finish();
         }
 
     }
 
     public static class PestDefinition4 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -288,9 +322,12 @@ public class PestsDefinition extends AppCompatActivity {
             viewPager.setAdapter(pestsViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Rice Black-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("In the Philippines’ setup, there are three (3) species of bugs that attack rice. " +
                     "They are common black bug, Malayan black bug, and Japanese black bug. Black bugs remove the sap of the plant. They can " +
                     "cause browning of leaves, deadheart, and bugburn. Their damage also causes stunting in plants, reduced tiller number, and " +
@@ -349,22 +386,31 @@ public class PestsDefinition extends AppCompatActivity {
                 }
             });
 
-        }
-        public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Black Bug"));
+            String thisWeek = String.valueOf(db.countThisWeek("Black Bug"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
+
+        public void backActivity() {
+            finish();
+
+        }
+
         @Override
-        public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition4.this, Pest.class );
-            startActivity(intent);
+        public void onBackPressed() {
+            finish();
         }
 
     }
 
     public static class PestDefinition5 extends AppCompatActivity {
-        TextView textView;
+        TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -375,9 +421,12 @@ public class PestsDefinition extends AppCompatActivity {
             viewPager.setAdapter(pestsViewPager);
 
             textView = (TextView) findViewById(R.id.definition);
+            textViewDetection = (TextView) findViewById(R.id.detection);
+            detectionText = (TextView) findViewById(R.id.detectionText);
+
             SpannableString s1 = new SpannableString("Rice Ear-bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("About\n");
+            SpannableString s2 = new SpannableString("Statistics\n");
             SpannableString s3 = new SpannableString("The most common species of rice bug are Leptocorisa oratorius F. and Leptocorisa acuta T., " +
                     "both commonly called ear bug. Ears bugs damage rice by sucking out the contents of developing grains from pre-flowering spikelets " +
                     "to soft dough stage, therefore causing unfilled or empty grains and discoloration. Immature and adult rice bugs both feed on rice grains. " +
@@ -435,16 +484,24 @@ public class PestsDefinition extends AppCompatActivity {
                 }
             });
 
-        }
-        public void backActivity(){
-            Intent intent = new Intent(this, Diseases.class);
-            startActivity(intent);
+            DatabaseHelper db = new DatabaseHelper(this);
+
+            String count = String.valueOf(db.countInfo("Ear Bug"));
+            String thisWeek = String.valueOf(db.countThisWeek("Ear Bug"));
+
+            textViewDetection.setText(count + " Detections");
+            detectionText.setText(thisWeek + " This Week");
 
         }
+
+        public void backActivity() {
+            finish();
+
+        }
+
         @Override
-        public void onBackPressed(){
-            Intent intent = new Intent(PestsDefinition.PestDefinition5.this, Pest.class );
-            startActivity(intent);
+        public void onBackPressed() {
+            finish();
         }
 
     }
