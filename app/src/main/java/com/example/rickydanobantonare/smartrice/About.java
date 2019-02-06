@@ -28,6 +28,7 @@ public class About extends AppCompatActivity {
             }
         });
 
+
         TextView textView = (TextView) findViewById(R.id.information);
         SpannableString s1 = new SpannableString("Developers\n");
         SpannableString s2 = new SpannableString("Ricky D Bantonare\nMarc Anthony B Reyes\nPaul Arnold M Simbajon\n\n");
