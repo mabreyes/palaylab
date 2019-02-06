@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void aboutActivity(){
         Intent intent = new Intent(MainActivity.this, About.class);
+        startActivity(intent);
     }
     @Override
     public void onBackPressed(){
