@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,9 +39,17 @@ public class MainActivity extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                statisticsActivity();
+            }
+        });
+        ImageButton imageButton = (ImageButton) findViewById(R.id.about);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 aboutActivity();
             }
         });
+
 
         /* Helper code snippets. Don't remove this for now
 
@@ -75,9 +84,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Results.class);
         startActivity(intent);
     }
-    public void aboutActivity(){
+    public void statisticsActivity(){
         Intent intent = new Intent(MainActivity.this, Statistics.class);
         startActivity(intent);
+    }
+    public void aboutActivity(){
+        Intent intent = new Intent(MainActivity.this, About.class);
     }
     @Override
     public void onBackPressed(){
