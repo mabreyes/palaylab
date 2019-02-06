@@ -117,6 +117,18 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         return count;
     }
 
+    public int countAllData() {
+        SQLiteDatabase db = getReadableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_INFO;
+
+        Cursor cursor = db.rawQuery(query, null);
+
+        int count = cursor.getCount();
+
+        return count;
+    }
+
     public List<StatisticsInfo> getAllInfo() {
         List<StatisticsInfo> infos = new LinkedList<StatisticsInfo>();
 

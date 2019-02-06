@@ -40,22 +40,82 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.jjoe64.graphview.GraphView
-                android:id="@+id/graph"
+            <TextView
+                android:id="@+id/titleBarChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/circularblack"
+                android:text="Total Detections"
+                android:textColor="#115533"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/barchart"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/customshape" />
+                android:background="@drawable/customshape"
+                android:padding="10dp"
+                android:layout_below="@+id/titleBarChart"/>
+
+            <TextView
+                android:id="@+id/titleThisWeekChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/circularblack"
+                android:text="This Week"
+                android:layout_below="@id/barchart"
+                android:textColor="#115533"/>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/thisWeekChart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="10dp"
+                android:layout_below="@+id/titleThisWeekChart"/>
+
+            <TextView
+                android:id="@+id/titleDiseasesPieChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/circularblack"
+                android:text="Disease Detections"
+                android:layout_below="@+id/thisWeekChart"
+                android:textColor="#115533"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/titleDiseasesPieChart"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="10dp" />
 
             <TableLayout
                 android:id="@+id/tableView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/graph"
+                android:layout_below="@+id/piechart"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -76,6 +136,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="Disease"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
 
@@ -89,6 +150,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="This Week"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
 
@@ -102,6 +164,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="Total"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
                 </TableRow>
@@ -284,11 +347,35 @@
 
             </TableLayout>
 
+            <TextView
+                android:id="@+id/titlePestsPieChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:textSize="25dp"
+                android:fontFamily="@font/circularblack"
+                android:text="Pest Detections"
+                android:layout_below="@+id/tableView"
+                android:textColor="#115533"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:id="@+id/piechart2"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@+id/titlePestsPieChart"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/customshape"
+                android:padding="10dp" />
+
             <TableLayout
                 android:id="@+id/tableView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tableView"
+                android:layout_below="@+id/piechart2"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -309,6 +396,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="Pests"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
 
@@ -322,6 +410,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="This Week"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
 
@@ -335,6 +424,7 @@
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/circularblack"
                             android:text="Total"
+                            android:textColor="#115533"
                             android:textSize="20dp" />
                     </RelativeLayout>
                 </TableRow>
@@ -559,8 +649,28 @@
                     </RelativeLayout>
                 </TableRow>
             </TableLayout>
+
+            <Button
+                android:id="@+id/btnClearData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tableView2"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom|center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/roundbutton"
+                android:fontFamily="@font/circularblack"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="Clear Data"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
         </RelativeLayout>
 
     </ScrollView>
+
 
 </RelativeLayout>

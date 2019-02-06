@@ -1,37 +1,36 @@
 package com.example.rickydanobantonare.smartrice;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.jjoe64.graphview.GraphView;
-import com.jjoe64.graphview.helper.StaticLabelsFormatter;
-import com.jjoe64.graphview.series.BarGraphSeries;
-import com.jjoe64.graphview.series.DataPoint;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.utils.ColorTemplate;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Statistics extends AppCompatActivity {
 
-    TextView blbThisWeek,
-            blbTotalDetections,
-            rbThisWeek,
-            rbTotalDetections,
-            sbThisWeek,
-            sbTotalDetections,
-            tunThisWeek,
-            tunTotalDetections,
-            awThisWeek,
-            awTotalDetections,
-            gasThisWeek,
-            gasTotalDetections,
-            glhThisWeek,
-            glhTotalDetections,
-            rbbThisWeek,
-            rbbTotalDetections,
-            rebThisWeek,
-            rebTotalDetections;
+    Button btnClearData;
+
+    TextView blbThisWeek, blbTotalDetections, rbThisWeek, rbTotalDetections, sbThisWeek,
+            sbTotalDetections, tunThisWeek, tunTotalDetections, awThisWeek, awTotalDetections,
+            gasThisWeek, gasTotalDetections, glhThisWeek, glhTotalDetections, rbbThisWeek,
+            rbbTotalDetections, rebThisWeek, rebTotalDetections;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class Statistics extends AppCompatActivity {
             }
         });
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        final DatabaseHelper db = new DatabaseHelper(this);
 
         int armyWormData = db.countInfo("Army Worm");
         int bacterialLeafBlightData = db.countInfo("Bacterial Leaf Blight");
@@ -108,24 +107,170 @@ public class Statistics extends AppCompatActivity {
         rebThisWeek.setText(String.valueOf(earBugDataTW));
         rebTotalDetections.setText(String.valueOf(earBugData));
 
-        GraphView graph = (GraphView) findViewById(R.id.graph);
-        BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[]{
-                new DataPoint(1, armyWormData),
-                new DataPoint(2, bacterialLeafBlightData),
-                new DataPoint(3, blackBugData),
-                new DataPoint(4, blastData),
-                new DataPoint(5, earBugData),
-                new DataPoint(6, goldenAppleSnailData),
-                new DataPoint(7, greenLeafhopperData),
-                new DataPoint(8, sheathBlightData),
-                new DataPoint(9, tungroData),
+        BarChart chart = findViewById(R.id.barchart);
+
+        ArrayList DetectionItem = new ArrayList();
+
+        DetectionItem.add(new BarEntry(armyWormData, 0));
+        DetectionItem.add(new BarEntry(bacterialLeafBlightData, 1));
+        DetectionItem.add(new BarEntry(blackBugData, 2));
+        DetectionItem.add(new BarEntry(blastData, 3));
+        DetectionItem.add(new BarEntry(earBugData, 4));
+        DetectionItem.add(new BarEntry(goldenAppleSnailData, 5));
+        DetectionItem.add(new BarEntry(greenLeafhopperData, 6));
+        DetectionItem.add(new BarEntry(sheathBlightData, 7));
+        DetectionItem.add(new BarEntry(tungroData, 8));
+
+        ArrayList DetectionItemLabel = new ArrayList();
+
+        DetectionItemLabel.add("Army Worm");
+        DetectionItemLabel.add("BLB");
+        DetectionItemLabel.add("RBB");
+        DetectionItemLabel.add("Blast");
+        DetectionItemLabel.add("Ear Bug");
+        DetectionItemLabel.add("GAS");
+        DetectionItemLabel.add("GLH");
+        DetectionItemLabel.add("Sheath Blight");
+        DetectionItemLabel.add("Tungro");
+
+        ArrayList DetectionDiseases = new ArrayList();
+
+        DetectionDiseases.add(new BarEntry(bacterialLeafBlightData, 1));
+        DetectionDiseases.add(new BarEntry(blastData, 2));
+        DetectionDiseases.add(new BarEntry(sheathBlightData, 3));
+        DetectionDiseases.add(new BarEntry(tungroData, 4));
+
+        ArrayList DetectionDiseasesItemLabel = new ArrayList();
+
+        DetectionDiseasesItemLabel.add("BLB");
+        DetectionDiseasesItemLabel.add("Blast");
+        DetectionDiseasesItemLabel.add("Sheath Blight");
+        DetectionDiseasesItemLabel.add("Tungro");
+
+        BarDataSet bardataset = new BarDataSet(DetectionItem, "Total Detections");
+        chart.animateY(1000);
+        BarData data = new BarData(DetectionItemLabel, bardataset);
+        bardataset.setColors(ColorTemplate.PASTEL_COLORS);
+        chart.setData(data);
+        chart.setDescription(null);
+
+        PieChart diseasesPieChart = findViewById(R.id.piechart);
+
+        PieDataSet diseasesDataset = new PieDataSet(DetectionDiseases, "Diseases");
+
+        PieData dataDiseasesDataset = new PieData(DetectionDiseasesItemLabel, diseasesDataset);
+        diseasesPieChart.setData(dataDiseasesDataset);
+        diseasesDataset.setColors(ColorTemplate.PASTEL_COLORS);
+        diseasesPieChart.animateXY(1000, 1000);
+
+        diseasesPieChart.setUsePercentValues(true);
+        diseasesPieChart.setDescription(null);
+
+        ArrayList DetectionPests = new ArrayList();
+
+        DetectionPests.add(new BarEntry(armyWormData, 1));
+        DetectionPests.add(new BarEntry(goldenAppleSnailData, 2));
+        DetectionPests.add(new BarEntry(greenLeafhopperData, 3));
+        DetectionPests.add(new BarEntry(blackBugData, 4));
+        DetectionPests.add(new BarEntry(tungroData, 5));
+
+        ArrayList DetectionPestsItemLabel = new ArrayList();
+
+        DetectionPestsItemLabel.add("Army Worm");
+        DetectionPestsItemLabel.add("GAS");
+        DetectionPestsItemLabel.add("GLH");
+        DetectionPestsItemLabel.add("RBB");
+        DetectionPestsItemLabel.add("Tungro");
+
+        PieChart pestsPieChart = findViewById(R.id.piechart2);
+
+        PieDataSet pestsDataset = new PieDataSet(DetectionPests, "Pests");
+
+        PieData dataPestsDataset = new PieData(DetectionPestsItemLabel, pestsDataset);
+        pestsPieChart.setData(dataPestsDataset);
+        pestsDataset.setColors(ColorTemplate.PASTEL_COLORS);
+        pestsPieChart.animateXY(1000, 1000);
+
+        pestsPieChart.setUsePercentValues(true);
+        pestsPieChart.setDescription(null);
+
+        ArrayList DetectionThisWeekItem = new ArrayList();
+
+        DetectionThisWeekItem.add(new BarEntry(armyWormDataTW, 0));
+        DetectionThisWeekItem.add(new BarEntry(bacterialLeafBlightDataTW, 1));
+        DetectionThisWeekItem.add(new BarEntry(blackBugDataTW, 2));
+        DetectionThisWeekItem.add(new BarEntry(blastDataTW, 3));
+        DetectionThisWeekItem.add(new BarEntry(earBugDataTW, 4));
+        DetectionThisWeekItem.add(new BarEntry(goldenAppleSnailDataTW, 5));
+        DetectionThisWeekItem.add(new BarEntry(greenLeafhopperDataTW, 6));
+        DetectionThisWeekItem.add(new BarEntry(sheathBlightDataTW, 7));
+        DetectionThisWeekItem.add(new BarEntry(tungroDataTW, 8));
+
+        ArrayList DetectionThisWeekItemLabel = new ArrayList();
+
+        DetectionThisWeekItemLabel.add("Army Worm");
+        DetectionThisWeekItemLabel.add("BLB");
+        DetectionThisWeekItemLabel.add("RBB");
+        DetectionThisWeekItemLabel.add("Blast");
+        DetectionThisWeekItemLabel.add("Ear Bug");
+        DetectionThisWeekItemLabel.add("GAS");
+        DetectionThisWeekItemLabel.add("GLH");
+        DetectionThisWeekItemLabel.add("Sheath Blight");
+        DetectionThisWeekItemLabel.add("Tungro");
+
+        BarChart barChart = findViewById(R.id.thisWeekChart);
+
+        BarDataSet barDataset = new BarDataSet(DetectionThisWeekItem, "Total Detections");
+        barChart.animateY(1000);
+        BarData barDatasetData = new BarData(DetectionThisWeekItemLabel, barDataset);
+        barDataset.setColors(ColorTemplate.PASTEL_COLORS);
+        barChart.setData(barDatasetData);
+        barChart.setDescription(null);
+
+        btnClearData = (Button) findViewById(R.id.btnClearData);
+
+        btnClearData.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(Statistics.this);
+                alertDialogBuilder.setMessage("Are you sure you wanted to clear the data? " +
+                        "After deleting, you could no longer retrieve it back.");
+                alertDialogBuilder.setPositiveButton("yes",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                List<StatisticsInfo> dataList = db.getAllInfo();
+
+                                int dataCount = db.countAllData();
+
+                                for (int j=0; j<dataCount; j++) {
+                                    db.deleteInfo(dataList.get(j));
+                                }
+
+                                Toast.makeText(Statistics.this, "All data were cleared",
+                                        Toast.LENGTH_LONG).show();
+
+                                Restart();
+                            }
+                        });
+
+                alertDialogBuilder.setNegativeButton("no",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Restart();
+                            }
+                        });
+
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                alertDialog.show();
+            }
         });
-        graph.addSeries(series);
 
-        StaticLabelsFormatter staticLabelsFormatter = new StaticLabelsFormatter(graph);
-        staticLabelsFormatter.setHorizontalLabels(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9"});
-        graph.getGridLabelRenderer().setLabelFormatter(staticLabelsFormatter);
+    }
 
+    public void Restart() {
+        this.recreate();
     }
 
     public void backActivity() {
