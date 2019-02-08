@@ -16,4 +16,6 @@
     <string name="choose_gallery">Choose from Gallery</string>
     <string name="url_androidwave">https://androidwave.com/</string>
     <string name="url_androidwave_android">https://androidwave.com/category/android/</string>
+    <string name="message">This is an Open Source project. Contribute to this project by visiting
+        <a href="https://github.com/marcreyesph/smartrice-mobile/">https://github.com/marcreyesph/smartrice-mobile/</a></string>
 </resources>
