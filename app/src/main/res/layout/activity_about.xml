@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context=".About">
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/baseline_arrow_back_white_48" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Info"
+        android:textSize="30dp"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/circularblack"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/customshape"
+        android:layout_below="@+id/textView3">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/developer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Developers"
+                android:textColor="#115533"
+                android:textSize="20dp"
+                android:fontFamily="@font/circularblack"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"/>
+            <ImageView
+                android:id="@+id/ricky"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ricky"
+                android:layout_below="@+id/developer"/>
+
+            <TextView
+                android:id="@+id/rickyinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/developer"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/ricky"
+                android:fontFamily="@font/circularmedium"
+                android:text="Ricky D Bantonare"
+                android:textColor="#115533"
+                android:textSize="15dp"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"/>
+            <TextView
+                android:id="@+id/rickycourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rickyinfo"
+                android:layout_toRightOf="@+id/ricky"
+                android:fontFamily="@font/circularmedium"
+                android:text="BS Computer Science"
+                android:textColor="#115533"
+                android:textSize="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/paul"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/marc"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/paul"/>
+
+            <TextView
+                android:id="@+id/marcinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="#115533"
+                android:fontFamily="@font/circularmedium"
+                android:textSize="15dp"
+                android:text="Marc Anthony B Reyes"
+                android:layout_toRightOf="@+id/ricky"
+                android:layout_below="@id/rickycourse"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/marccourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/marcinfo"
+                android:layout_toRightOf="@+id/ricky"
+                android:fontFamily="@font/circularmedium"
+                android:text="BS Computer Science"
+                android:textColor="#115533"
+                android:textSize="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <ImageView
+                android:id="@+id/marc"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/ricky"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/marc"/>
+
+            <TextView
+                android:id="@+id/paulinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="#115533"
+                android:fontFamily="@font/circularmedium"
+                android:textSize="15dp"
+                android:text="Paul Arnold M Simbajon"
+                android:layout_toRightOf="@+id/ricky"
+                android:layout_below="@id/marccourse"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:id="@+id/paulcourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/paulinfo"
+                android:layout_toRightOf="@+id/ricky"
+                android:fontFamily="@font/circularmedium"
+                android:text="BS Computer Science"
+                android:textColor="#115533"
+                android:textSize="10dp"
+                android:layout_marginLeft="15dp"
+                />
+
+            <TextView
+                android:id="@+id/adviser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adviser"
+                android:textColor="#115533"
+                android:textSize="20dp"
+                android:fontFamily="@font/circularblack"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/paul"/>
+
+            <ImageView
+                android:id="@+id/maam"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/adviser"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/maam"/>
+
+            <TextView
+                android:id="@+id/maaminfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#115533"
+                android:fontFamily="@font/circularmedium"
+                android:textSize="15dp"
+                android:text="Cristina Amor T Cajilla, MIT"
+                android:layout_toRightOf="@+id/ricky"
+                android:layout_below="@id/adviser"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maaminfo"
+                android:layout_toRightOf="@+id/ricky"
+                android:fontFamily="@font/circularmedium"
+                android:text="Thesis Adviser"
+                android:textColor="#115533"
+                android:textSize="10dp"
+                android:layout_marginLeft="15dp"
+                />
+            <TextView
+                android:id="@+id/acknowledgement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acknowledgements"
+                android:textColor="#115533"
+                android:textSize="20dp"
+                android:fontFamily="@font/circularblack"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/maam"/>
+
+            <TextView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/acknowledgement"
+                android:fontFamily="@font/circularmedium"
+                android:layout_marginTop="10dp"
+                android:text="TensorFlow Research Cloudn\nOpol Municipal Agricultural Office\nDepartment of Agriculture Regional Field Office 10\nPhilRice Agusan del Norte and\nPhilRice Database and Management Portal (DBMP)"
+                android:textColor="#115533"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_below="@+id/list"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/tensorflow"/>
+
+            <TextView
+                android:id="@+id/TensorFlow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:fontFamily="@font/circularbook"
+                android:layout_marginTop="10dp"
+                android:textColor="#115533"
+                android:text="This project is a proud part of TensorFlow Research Cloud initiative providing free Google Cloud Platform TPU usage to researchers and students everywhere in the world to expand the Machine Learning frontier."
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                />
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TensorFlow"
+                android:fontFamily="@font/circularbook"
+                android:layout_marginTop="20dp"
+                android:text="@string/message"
+                android:linksClickable="true"
+                android:textColor="#115533"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"/>
+
+            <TextView
+                android:id="@+id/copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/link"
+                android:fontFamily="@font/circularbook"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:text="©Copyright 2018-2019"
+                android:textColor="#115533"
+                android:textSize="12dp"
+                android:layout_marginLeft="15dp"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </ScrollView>
+
+
+</RelativeLayout>

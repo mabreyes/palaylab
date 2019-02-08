@@ -48,6 +48,9 @@ public class DiseasesDefinition extends AppCompatActivity {
                 "leading whole seedlings to dry up and die. Kresek on seedlings may sometimes be confused with early rice stem borer damage.  To distinguish " +
                 "kresek symptoms from stem borer damage, squeeze the lower end of infected seedlings between the fingers. Kresek symptoms should show yellowish " +
                 "bacterial ooze coming out of the cut ends. Unlike plants infested with stem borer, rice plants with kresek are not easily pulled out from soil.");
+        SpannableString s6 = new SpannableString("\n\nTreatment\n");
+        SpannableString s7 = new SpannableString("Treatment");
+
         int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
         s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
         s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -64,6 +67,11 @@ public class DiseasesDefinition extends AppCompatActivity {
         s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
         s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
         s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+        s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+        s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+        s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+        s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+        s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
         s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
         ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -79,6 +87,8 @@ public class DiseasesDefinition extends AppCompatActivity {
         builder.append(s3);
         builder.append(s4);
         builder.append(s5);
+        builder.append(s6);
+        builder.append(s7);
         textView.setText(builder);
         textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -137,6 +147,9 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "lesions or spots, with dark green borders; older lesions on the leaves are elliptical or spindle-shaped and whitish to gray centers with red to " +
                     "brownish or necrotic border. Check for other symptoms that include some resemble diamond shape, wide in the center and pointed toward either and " +
                     "lesions can enlarge and coalesce, growing together, to kill the entire leaves.");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -153,6 +166,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -168,6 +186,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -232,6 +252,9 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "dispersed spores; its dispersal is essentially dependent on hyphae running on plant tissues and producing new infections Sheath blight has symptoms similar to stem rot " +
                     "and stemborer infestation. To confirm the cause of disease, check for irregular lesions usually found on the leaf sheaths (initially water-soaked to greenish gray and " +
                     "later becomes grayish white with brown margin). Also check for presence of sclerotia.");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -248,6 +271,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -263,6 +291,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -338,6 +368,9 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "such as stem borer infestation, plant hopper infestation, and rat damage, and other diseases such as grassy stunt virus disease and orange leaf. " +
                     "Where available, Tungro can be confirmed using serological tools such as Latex agglutination test, Enzyme Linked Immunosorbent Assays (ELISA) and " +
                     "Rapid Immunofilter Paper Assays (RIPA).");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -354,6 +387,11 @@ public class DiseasesDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -369,6 +407,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 

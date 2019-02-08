@@ -50,6 +50,9 @@ public class PestsDefinition extends AppCompatActivity {
                 "When they eat whole leaves, they can remove them completely or leave only the midribs. Armyworm damage can be mistaken " +
                 "for cutworm feeding. The characteristic form of armyworm damage is leaf removal. To confirm, check for the presence of " +
                 "the insect and its egg mass.");
+        SpannableString s6 = new SpannableString("\n\nTreatment\n");
+        SpannableString s7 = new SpannableString("Treatment");
+
         int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
         s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
         s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -66,6 +69,11 @@ public class PestsDefinition extends AppCompatActivity {
         s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
         s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
         s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+        s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+        s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+        s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+        s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+        s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
         s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
         ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -81,6 +89,8 @@ public class PestsDefinition extends AppCompatActivity {
         builder.append(s3);
         builder.append(s4);
         builder.append(s5);
+        builder.append(s6);
+        builder.append(s7);
         textView.setText(builder);
         textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -146,6 +156,9 @@ public class PestsDefinition extends AppCompatActivity {
                     "Golden apple snails have muddy brown shell and golden pinkish or orange-yellow flesh. They are bigger and lighter " +
                     "in color compared to native snails. Its eggs are bright pink in color. To confirm snail damage, check for missing hills, " +
                     "cut leaves, and cut stems.");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -162,6 +175,11 @@ public class PestsDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -177,6 +195,8 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -244,6 +264,9 @@ public class PestsDefinition extends AppCompatActivity {
                     "or acid soils. To confirm the cause of the problem, check for virus infected plants in the fields, and the presence of the " +
                     "insect which could be white or pale yellow eggs inside leaf sheaths or midribs, yellow or pale green nymphs with or without " +
                     "black markings, and pale green adults with or without black markings feeding on upper parts of the crop.");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -260,6 +283,11 @@ public class PestsDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -275,6 +303,8 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -343,6 +373,9 @@ public class PestsDefinition extends AppCompatActivity {
                     "panicles, and unfilled spikelets or whiteheads at booting stage. Furthermore, check for deadhearts. Deadhearts can also be caused by stemborer. " +
                     "To confirm cause of damage, pull infected plants. In black bug damage, infected plants cannot be pulled at the bases. Heavy infestation and \"bugburn\" " +
                     "is usually visible after heading or maturing.");
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -359,6 +392,11 @@ public class PestsDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -374,6 +412,8 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
@@ -441,6 +481,10 @@ public class PestsDefinition extends AppCompatActivity {
                     "empty grains, and erect panicles. The symptoms can be confused with the damage caused by nutrient deficiency or flower thrips. To confirm " +
                     "rice bug infestation, check for presence of insects that are usually oval, shiny, and reddish brown eggs along midrib of leaf; slender " +
                     "and brown-green nymphs and adults feeding on endosperm of rice grains; and an offensive smell.");
+
+            SpannableString s6 = new SpannableString("\n\nTreatment\n");
+            SpannableString s7 = new SpannableString("Treatment");
+
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
             s1.setSpan(new RelativeSizeSpan(2.5f), 0, s1.length(), flag);
@@ -457,6 +501,11 @@ public class PestsDefinition extends AppCompatActivity {
             s4.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s4.length(), flag);
             s5.setSpan(new StyleSpan(Typeface.NORMAL), 0, s5.length(), flag);
             s5.setSpan(new RelativeSizeSpan(1.5f), 0, s5.length(), flag);
+            s6.setSpan(new StyleSpan(Typeface.BOLD), 0, s6.length(), flag);
+            s6.setSpan(new RelativeSizeSpan(2), 0, s6.length(), flag);
+            s6.setSpan(new ForegroundColorSpan(Color.rgb(11, 102, 35)), 0, s6.length(), flag);
+            s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
+            s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
             s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
             ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
@@ -472,6 +521,8 @@ public class PestsDefinition extends AppCompatActivity {
             builder.append(s3);
             builder.append(s4);
             builder.append(s5);
+            builder.append(s6);
+            builder.append(s7);
             textView.setText(builder);
             textView.setMovementMethod(new ScrollingMovementMethod());
 
