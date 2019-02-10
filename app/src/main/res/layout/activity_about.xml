@@ -51,7 +51,7 @@
                 android:id="@+id/developer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Developers"
+                android:text="Project Bukirin Developers"
                 android:textColor="#115533"
                 android:textSize="20dp"
                 android:fontFamily="@font/circularblack"

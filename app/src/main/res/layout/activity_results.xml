@@ -72,13 +72,13 @@
 
     <Button
         android:id="@+id/btnDetectObject"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginTop="29dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="90dp"
         android:background="@drawable/roundbutton"
         android:fontFamily="@font/circularblack"
         android:paddingLeft="30dp"
@@ -86,11 +86,12 @@
         android:text="Capture"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        android:layout_above="@id/btnDetectObjectCam"/>
 
     <Button
         android:id="@+id/btnDetectObject2"
-        android:layout_width="wrap_content"
+        android:layout_width="190dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="360dp"
@@ -103,4 +104,63 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnDetectSelectImage"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/circularblack"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Select Image"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="or"
+        android:layout_below="@id/btnDetectObject"
+        android:layout_gravity="bottom|center"/>
+
+    <Button
+        android:id="@+id/btnDetectObjectCam"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/roundbuttonaccent"
+        android:fontFamily="@font/circularblack"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Use Existing Image"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/btnDetectObjectFromCam"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/roundbuttonaccent"
+        android:fontFamily="@font/circularblack"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="Detect"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"/>
 </RelativeLayout>
