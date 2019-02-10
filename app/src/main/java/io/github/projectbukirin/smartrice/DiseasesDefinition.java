@@ -1,6 +1,5 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
@@ -17,6 +16,8 @@ import android.text.style.TypefaceSpan;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.github.projectbukirin.smartrice.R;
 
 public class DiseasesDefinition extends AppCompatActivity {
     TextView textView, textViewDetection, detectionText;
