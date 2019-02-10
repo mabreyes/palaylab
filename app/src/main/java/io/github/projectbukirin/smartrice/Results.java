@@ -107,7 +107,6 @@ public class Results extends AppCompatActivity {
 
                 DatabaseHelper db = new DatabaseHelper(Results.this);
 
-
                 for (int i = 0; i < results.size(); i++) {
 
                     if (results.size() != 0) {
@@ -279,6 +278,7 @@ public class Results extends AppCompatActivity {
                 chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[]{pickIntent});
 
                 startActivityForResult(chooserIntent, PICK_IMAGE);
+
                 btnDetectObjectFromCam.setVisibility(view.VISIBLE);
             }
         });
@@ -289,6 +289,8 @@ public class Results extends AppCompatActivity {
                 btnDetectObject2.setVisibility(view.VISIBLE);
                 btnDetectObjectFromCam.setVisibility(view.INVISIBLE);
                 btnDetectSelectImage.setVisibility(view.INVISIBLE);
+                textView.setText("Results");
+
                 Bitmap bitmap = ((BitmapDrawable) imageViewResult.getDrawable()).getBitmap();
 
                 bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
@@ -300,7 +302,6 @@ public class Results extends AppCompatActivity {
                 HashMap<String, String> listItemData;
 
                 DatabaseHelper db = new DatabaseHelper(Results.this);
-
 
                 for (int i = 0; i < results.size(); i++) {
 
