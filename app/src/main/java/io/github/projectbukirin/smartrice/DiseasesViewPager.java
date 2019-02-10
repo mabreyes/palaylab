@@ -8,8 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class DiseasesViewPager extends PagerAdapter {
     private Context mcontext;
     private int[] images=new int[] {R.drawable.bacterialblight, R.drawable.bacterialblight,R.drawable.bacterialblight,R.drawable.bacterialblight,R.drawable.bacterialblight};

@@ -8,8 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class Diseases extends AppCompatActivity {
 
     ListView list;

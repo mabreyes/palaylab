@@ -18,8 +18,7 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.utils.ColorTemplate;
-import com.github.projectbukirin.smartrice.R;
+import com.github.mikephil.charting.utils.ColorTemplate;;
 
 import java.util.ArrayList;
 import java.util.List;

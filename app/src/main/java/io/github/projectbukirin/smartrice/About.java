@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class About extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

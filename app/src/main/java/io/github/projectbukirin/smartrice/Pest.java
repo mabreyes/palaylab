@@ -8,8 +8,6 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class Pest extends AppCompatActivity {
     ListView list;
     String[] pestename = {"Army Worm","Golden Apple Snail","Green Leafhopper","Rice Black Bug", "Rice Ear Bug"};

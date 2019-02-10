@@ -7,8 +7,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

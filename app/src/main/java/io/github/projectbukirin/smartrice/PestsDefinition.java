@@ -17,8 +17,6 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class PestsDefinition extends AppCompatActivity {
     TextView textView, textViewDetection, detectionText;
 

@@ -10,8 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.github.projectbukirin.smartrice.R;
-
 public class CustomListView extends ArrayAdapter<String> {
     private String[] name;
     private String[] desc;
