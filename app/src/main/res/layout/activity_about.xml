@@ -37,8 +37,10 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/customshape"
-        android:layout_below="@+id/textView3">
+        android:layout_below="@+id/textView3"
+        android:padding="5dp">
 
 
         <RelativeLayout
@@ -61,7 +63,7 @@
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/ricky"
                 android:layout_below="@+id/developer"/>
@@ -73,7 +75,7 @@
                 android:layout_below="@id/developer"
                 android:layout_marginTop="10dp"
                 android:layout_toRightOf="@+id/ricky"
-                android:fontFamily="@font/circularmedium"
+                android:fontFamily="@font/circularblack"
                 android:text="Ricky D Bantonare"
                 android:textColor="#115533"
                 android:textSize="15dp"
@@ -97,7 +99,7 @@
                 android:layout_height="60dp"
                 android:layout_below="@+id/marc"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/paul"/>
 
@@ -107,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:textColor="#115533"
-                android:fontFamily="@font/circularmedium"
+                android:fontFamily="@font/circularblack"
                 android:textSize="15dp"
                 android:text="Marc Anthony B Reyes"
                 android:layout_toRightOf="@+id/ricky"
@@ -133,7 +135,7 @@
                 android:layout_height="60dp"
                 android:layout_below="@+id/ricky"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/marc"/>
 
@@ -143,7 +145,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
                 android:textColor="#115533"
-                android:fontFamily="@font/circularmedium"
+                android:fontFamily="@font/circularblack"
                 android:textSize="15dp"
                 android:text="Paul Arnold M Simbajon"
                 android:layout_toRightOf="@+id/ricky"
@@ -182,7 +184,7 @@
                 android:layout_height="60dp"
                 android:layout_below="@+id/adviser"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/maam"/>
 
@@ -192,7 +194,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textColor="#115533"
-                android:fontFamily="@font/circularmedium"
+                android:fontFamily="@font/circularblack"
                 android:textSize="15dp"
                 android:text="Cristina Amor T Cajilla, MIT"
                 android:layout_toRightOf="@+id/ricky"
@@ -228,24 +230,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/acknowledgement"
-                android:fontFamily="@font/circularmedium"
+                android:fontFamily="@font/circularbook"
                 android:layout_marginTop="10dp"
-                android:text="TensorFlow Research Cloudn\nOpol Municipal Agricultural Office\nDepartment of Agriculture Regional Field Office 10\nPhilRice Agusan del Norte and\nPhilRice Database and Management Portal (DBMP)"
+                android:text="TensorFlow Research Cloud\nOpol Municipal Agricultural Office\nDepartment of Agriculture Regional Field Office 10\nPhilRice Agusan del Norte and\nPhilRice Database and Management Portal (DBMP)"
                 android:textColor="#115533"
                 android:textSize="12dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
                 />
 
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 android:layout_below="@+id/list"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
                 android:src="@drawable/tensorflow"/>
 
             <TextView
@@ -258,7 +260,7 @@
                 android:textColor="#115533"
                 android:text="This project is a proud part of TensorFlow Research Cloud initiative providing free Google Cloud Platform TPU usage to researchers and students everywhere in the world to expand the Machine Learning frontier."
                 android:textSize="12dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"
                 />
 
@@ -273,7 +275,7 @@
                 android:linksClickable="true"
                 android:textColor="#115533"
                 android:textSize="12dp"
-                android:layout_marginLeft="15dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="15dp"/>
 
             <TextView
@@ -283,18 +285,15 @@
                 android:layout_below="@id/link"
                 android:fontFamily="@font/circularbook"
                 android:layout_marginTop="60dp"
+                android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
-                android:text="©Copyright 2018-2019"
+                android:text="© 2018 Project Bukirin"
                 android:textColor="#115533"
                 android:textSize="12dp"
                 android:layout_marginLeft="15dp"/>
 
 
         </RelativeLayout>
-
-
-
-
     </ScrollView>
 
 
