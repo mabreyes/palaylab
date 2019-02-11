@@ -1,4 +1,4 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

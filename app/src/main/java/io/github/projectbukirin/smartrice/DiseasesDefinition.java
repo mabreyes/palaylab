@@ -1,6 +1,5 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v4.view.ViewPager;
@@ -18,8 +17,10 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+
 public class DiseasesDefinition extends AppCompatActivity {
     TextView textView, textViewDetection, detectionText;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +34,10 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         textViewDetection = (TextView) findViewById(R.id.detection);
         detectionText = (TextView) findViewById(R.id.detectionText);
-        SpannableString s1 = new SpannableString("Bacterial Blight\n");
+        SpannableString s1 = new SpannableString("Bacterial Leaf Blight\n");
         SpannableString ss1 = new SpannableString("Disease\n\n");
-        SpannableString s2 = new SpannableString("Statistics\n");
-        SpannableString s3 = new SpannableString("Bacterial blight is caused by Xanthomonas oryzae pv. oryzae.  It causes wilting of seedlings and " +
+        SpannableString s2 = new SpannableString("About\n");
+        SpannableString s3 = new SpannableString("Bacterial leaf blight is caused by Xanthomonas oryzae pv. oryzae.  It causes wilting of seedlings and " +
                 "yellowing and drying of leaves. The disease is most likely to develop in areas that have weeds and stubbles of infected plants. It can occur " +
                 "in both tropical and temperate environments, particularly in irrigated and rainfed lowland areas. In general, the disease favors temperatures " +
                 "at 25−34°C, with relative humidity above 70%. It is commonly observed when strong winds and continuous heavy rains occur, allowing the " +
@@ -48,8 +49,33 @@ public class DiseasesDefinition extends AppCompatActivity {
                 "leading whole seedlings to dry up and die. Kresek on seedlings may sometimes be confused with early rice stem borer damage.  To distinguish " +
                 "kresek symptoms from stem borer damage, squeeze the lower end of infected seedlings between the fingers. Kresek symptoms should show yellowish " +
                 "bacterial ooze coming out of the cut ends. Unlike plants infested with stem borer, rice plants with kresek are not easily pulled out from soil.");
-        SpannableString s6 = new SpannableString("\n\nTreatment\n");
-        SpannableString s7 = new SpannableString("Treatment");
+        SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+        SpannableString s7 = new SpannableString("A. Preventive Methods\n" +
+                "▪ Seed treatment with bleaching powder (100g/l) and zinc sulfate (2%) reduce bacterial blight.\n" +
+                "▪ Seed treatment - seed soaking for 8 hours in Agrimycin (0.025%) and wettable ceresan (0.05%) followed by hot water treatment for 30 min at 52-54oC;\n" +
+                "▪  seed soaking for 8 hours in ceresan (0.1%) and treat with Streptocyclin (3g in 1 liter);\n" +
+                "▪ Spray neem oil 3% or NSKE 5%\n" +
+                "▪ Spray fresh cow dung extract for the control of bacterial blight. Dissolve 20 g cow dung in one liter of water; allow to settle and sieve. Use supernatant liquid. (starting from initial appearance of the disease and another at fortnightly interval)\n" +
+                "\n" +
+                "B. Cultural Methods\n" +
+                "▪ Grow Tolerant varieties (IR 20 IR 72, PONMANI, TKM 6).\n" +
+                "▪ Secure disease free seed\n" +
+                "▪ Grow nurseries preferably in isolated upland conditions\n" +
+                "▪ Avoid clipping of seedlings during transplanting.\n" +
+                "▪ Balanced fertilization, avoid excess N-application\n" +
+                "▪ Skip N-application at booting (if disease is moderate)\n" +
+                "▪ Drain the field (except at flowering stage of the crop)\n" +
+                "▪ Destruction of weeds and collateral hosts\n" +
+                "▪ Avoid flow of water from affected fields\n" +
+                "▪  Maintain proper plant spacing\n" +
+                "\n" +
+                "C. Chemical Methods\n" +
+                "▪ Seed treatment with bleaching powder (100g/l) and zinc sulfate (2%) reduce bacterial blight.\n" +
+                "▪ Seed treatment - seed soaking for 8 hours in Agrimycin (0.025%) and wettable ceresan (0.05%) followed by hot water treatment for 30 min at 52-54oC;\n" +
+                "▪  seed soaking for 8 hours in ceresan (0.1%) and treat with Streptocyclin (3g in 1 liter);\n" +
+                "▪ Spray Streptomycin sulphate + Tetracycline combination 300 g + Copper oxychloride 1.25kg/ha. If necessary, repeat 15 days later.\n" +
+                "▪ Application of bleaching powder @ 5 kg/ha in the irrigation water is recommended in the kresek stage.\n" +
+                "▪  Foliar spray with copper fungicides alternatively with Strepto-cyclin (250 ppm) to check secondary spread.");
 
         int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
         s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -110,18 +136,21 @@ public class DiseasesDefinition extends AppCompatActivity {
         detectionText.setText(thisWeek + " This Week");
 
     }
-    public void backActivity(){
+
+    public void backActivity() {
         finish();
 
     }
+
     @Override
-    public void onBackPressed(){
+    public void onBackPressed() {
         finish();
     }
 
 
     public static class DiseaseDefinition2 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -136,7 +165,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Rice Blast\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("Blast is caused by the fungus Magnaporthe oryzae. It can affect all above ground parts of a rice plant: " +
                     "leaf, collar, node, neck, parts of panicle, and sometimes leaf sheath. Blast can occur wherever blast spores are present. It occurs in areas with " +
                     "low soil moisture, frequent and prolonged periods of rain shower, and cool temperature in the daytime. In upland rice, large day-night temperature " +
@@ -147,8 +176,35 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "lesions or spots, with dark green borders; older lesions on the leaves are elliptical or spindle-shaped and whitish to gray centers with red to " +
                     "brownish or necrotic border. Check for other symptoms that include some resemble diamond shape, wide in the center and pointed toward either and " +
                     "lesions can enlarge and coalesce, growing together, to kill the entire leaves.");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Cultural Methods\n" +
+                    "▪ Planting resistant varieties against the rice blast is the most practical and economical way of controlling rice blast.\n" +
+                    "▪ Use of Tolerant varieties (CO 47, CO 50, ADT 36, ADT 37, ASD 16, ASD 20, ADT 39, ASD 19, TPS 3, White ponni, ADT 44, BPT 5204, CORH, Palghuna, Swarnamukhi, Swathi, Prabhat, IR - 64, IR - 36, Jaya)\n" +
+                    "▪  Avoid excess N - fertilizer application\n" +
+                    "▪ Apply nitrogen in three split doses.\n" +
+                    "▪ Remove weed hosts from bunds.\n" +
+                    "\n" +
+                    "B. Preventive Methodss\n" +
+                    "▪ Avoid dry nurseries.\n" +
+                    "▪ Avoid late planting.\n" +
+                    "▪ Burning of straw and stubbles after harvest\n" +
+                    "▪ Avoid grasses and other weeds on bunds and inside.\n" +
+                    "▪ Dry seed treatment with Pseudomonas fluorescens talc formulation @10g/kg of seed.\n" +
+                    "▪ Stagnate water to a depth of 2.5cm over an area of 25m2 in the nursery. Sprinkle 2.5 kg of P. fluorescens (talc) and mix with stagnated water. Soak the root system of seedlings for 30 min and transplant.\n" +
+                    "▪ Spray P. fluorescens (talc) formulation @ 0.5% from 45 days after transplanting at 10 day intervals, three times.\n" +
+                    "\n" +
+                    "C. Chemical Methods\n" +
+                    "▪ Do not apply lower/higher doses of fungicides.\n" +
+                    "▪ Spray before 11.00 AM/after 3.00 PM.\n" +
+                    "▪ Avoid noon hours for spraying.\n" +
+                    "▪ Seed treatment at 2.0 g/kg seed with Captan or Carbendazim or Thiram or Tricyclazole.\n" +
+                    "▪ Systemic fungicides such as pyroquilon and tricyclazole are possible chemicals for controlling the disease.\n" +
+                    "▪ Spraying of Tricyclazole at 1g/lit of water or Edifenphos at 1 ml/lit of water or Carbendazim at 1.0 gm/lit.\n" +
+                    "▪ 3 to 4 sprays each at nursery, tillering stage and panicle emergence stage may be required for complete control.\n" +
+                    "▪ Nursery stage: Light infection - Spray Carbendazim or Edifenphos @ 1.0 gm/lit.\n" +
+                    "▪ Pre-Tillering to Mid-Tillering: Light at 2 to 5 % disease severities - Apply Edifenphos or Carbendazim @ 1.0 gm/lit. Delay top dressing of N fertilizers when infection is seen.\n" +
+                    "▪ Panicle initiation to booting: At 2 to 5% leaf area damage- spray Edifenphos or Carbendazim or Tricyclazole @ 1.0 gm/lit.\n" +
+                    "▪ Flowering and after: At 5 % leaf area damage or 1 to 2 % neck infection spray Edifenphos or Carbendazim or Tricyclazole @ 1 g /lit of water.");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -208,12 +264,14 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
@@ -221,6 +279,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
     public static class DiseaseDefinition3 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -235,7 +294,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Sheath Blight\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("Sheath blight is a fungal disease caused by Rhizoctonia solani. Infected leaves senesce or dry out and die " +
                     "more rapidly, young tillers can also be destroyed. As a result, the leaf area of the canopy can significantly be reduced by the disease. " +
                     "This reduction in leaf area, along with the diseased-induced senescence of leaves and young infected tillers are the primary causes of yield reduction. " +
@@ -252,8 +311,26 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "dispersed spores; its dispersal is essentially dependent on hyphae running on plant tissues and producing new infections Sheath blight has symptoms similar to stem rot " +
                     "and stemborer infestation. To confirm the cause of disease, check for irregular lesions usually found on the leaf sheaths (initially water-soaked to greenish gray and " +
                     "later becomes grayish white with brown margin). Also check for presence of sclerotia.");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Preventive Methods\n" +
+                    "▪ Seed treatment with Pseudomonas fluorescens @ of 10g/kg of seed followed by seedling dip @ of 2.5 kg or products/ha dissolved in 100 litres and dipping for 30 minutes.\n" +
+                    "▪ Soil application of P.fluorescens @ of 2.5 kg/ha after 30 days of transplanting (This product should be mixed with 50 kg of FYM/Sand and then applied.\n" +
+                    "▪ Foliar spray of Pseudomonas fluorescens at 0.2% concentration, commencing from 45 days after transplanting at 10 days interval for 3 times depending upon the intensity of disease.\n" +
+                    "\n" +
+                    "B. Cultural Methods\n" +
+                    "▪ Apply FYM 12.5 t/ha or green manure 6.25 t/ha to promote antagonistic microflora\n" +
+                    "▪ Avoid excess doses of fertilizers.\n" +
+                    "▪ Adopt optimum spacing.\n" +
+                    "▪ Eliminate weed hosts.\n" +
+                    "▪ Apply organic amendments.\n" +
+                    "▪ Avoid flow of irrigation water from infected fields to healthy fields.\n" +
+                    "▪ Deep ploughing in summer and burning of stubbles.\n" +
+                    "\n" +
+                    "C. Chemical Methods\n" +
+                    "▪ Control of sheath blight has been mainly through the use of foliar fungicides.\n" +
+                    "▪ Carbendazim (1 g/lit), Propiconazole (1ml/lit) may be applied.\n" +
+                    "▪ Spraying of infected plants with fungicides, such as Benomyl and Iprodione, and antibiotics, such as Validamycin and Polyoxin, is effective against the disease\n" +
+                    "▪ Spray Carbendazim 250 g or Chlorothalonil 1 kg or Edifenphos 1 lit/ha.");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -313,12 +390,14 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 
@@ -326,6 +405,7 @@ public class DiseasesDefinition extends AppCompatActivity {
 
     public static class DiseaseDefinition4 extends AppCompatActivity {
         TextView textView, textViewDetection, detectionText;
+
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
@@ -340,7 +420,7 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText = (TextView) findViewById(R.id.detectionText);
             SpannableString s1 = new SpannableString("Tungro\n");
             SpannableString ss1 = new SpannableString("Disease\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("Rice tungro disease is caused by the combination of two viruses, which are transmitted by leafhoppers. " +
                     "It causes leaf discoloration, stunted growth, reduced tiller numbers and sterile or partly filled grains. Tungro infects cultivated rice, " +
                     "some wild rice relatives and other grassy weeds commonly found in rice paddies. Tungro disease viruses are transmitted from one plant to " +
@@ -368,8 +448,34 @@ public class DiseasesDefinition extends AppCompatActivity {
                     "such as stem borer infestation, plant hopper infestation, and rat damage, and other diseases such as grassy stunt virus disease and orange leaf. " +
                     "Where available, Tungro can be confirmed using serological tools such as Latex agglutination test, Enzyme Linked Immunosorbent Assays (ELISA) and " +
                     "Rapid Immunofilter Paper Assays (RIPA).");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Trap methods\n" +
+                    "▪ Light traps are to be set up to attract and control the leaf hopper vectors as well as to monitor the population.\n" +
+                    "▪ In the early morning, the population of leafhopper alighting near the light trap should be killed by spraying/dusting the insecticides.\n" +
+                    "▪ This should be practiced every day.\n" +
+                    "\n" +
+                    "B. Cultural Methods\n" +
+                    "▪ Planting of resistant varieties against tungro virus disease is the most economical means of managing the disease.\n" +
+                    "▪ Use resistant varieties like IR 36, IR 50, ADT 37, Ponmani,Co 45, Co 48, Surekha, Vikramarya, Bharani, IR 36   andwhite ponni .\n" +
+                    "▪ Among the cultural management practices, adjusting the date of planting is recommended.\n" +
+                    "▪  Likewise, observing a fallow period of at least a month to eliminate hosts and viruses and vectors of the disease.\n" +
+                    "▪  In epidemic areas follow rotation with pulses or oil seeds.\n" +
+                    "▪ Apply neem cake @ 12.5 kg/20 cent nursery as basal dose.\n" +
+                    "▪ Ploughing and harrowing the field to destroy stubbles right after harvest in order to eradicate other tungro hosts are also advisable.\n" +
+                    "▪ Destruction of weed hosts on bunds.\n" +
+                    "\n" +
+                    "C. Chemical Methods\n" +
+                    "▪  Leaf yellowing can be minimized by spraying 2 % urea mixed with Mancozeb at 2.5 gm/lit.\n" +
+                    "▪ Instead of urea foliar fertilizer like multi-K (potassium nitrate) can be sprayed at 1 per cent which impart resistance also because of high potassium content.\n" +
+                    "▪ Green leaf hoppers as vectors are to be controlled effectively in time by spraying.\n" +
+                    "▪ Spray insecticides twice, 15 and 30 days after transplanting\n" +
+                    "\n" +
+                    "D. Spray Two rounds of any one of the following insecticides\n" +
+                    "▪ Monocrotophos 36 WSC (40 ml/ha)\n" +
+                    "▪ Fenthion 100 EC (40 ml/ha) may be sprayed 15 and 30 days after transplanting.\n" +
+                    "▪  The vegetation on the bunds should also be sprayed with the insecticides. Maintain 2.5 cm of water in the nursery and broadcast anyone of the following in 20 cents Carbofuran 3 G 3.5 kg (or) Phorate 10 G 1.0 kg (or) Quinalphos 5 G 2.0 kg\n" +
+                    "▪ In nursery when virus infection is low, apply Carbofuran granules @ 1 kg/ha to control vector population.\n" +
+                    "▪ During pre-tillering to mid-tillering when one affected hill/m is observed apply Carbofuran granules @ 3.5kg/ha or spray Monocrotophos @ 1.6 to 2.2ml/lit to control insect vector.");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -429,12 +535,14 @@ public class DiseasesDefinition extends AppCompatActivity {
             detectionText.setText(thisWeek + " This Week");
 
         }
-        public void backActivity(){
+
+        public void backActivity() {
             finish();
 
         }
+
         @Override
-        public void onBackPressed(){
+        public void onBackPressed() {
             finish();
         }
 

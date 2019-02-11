@@ -1,4 +1,4 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,18 +8,20 @@ import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
-public class Pest extends AppCompatActivity {
+public class Diseases extends AppCompatActivity {
+
     ListView list;
-    String[] pestename = {"Army Worm","Golden Apple Snail","Green Leafhopper","Rice Black Bug", "Rice Ear Bug"};
-    String[] desc= {"Pest","Pest","Pest","Pest","Pest"};
-    Integer[] imgid={R.drawable.armyworm,R.drawable.goldenapplesnail,R.drawable.greenleafhopper,R.drawable.riceblackbug, R.drawable.riceearbug};
+    String[] diseasename = {"Bacterial Blight","Rice Blast","Sheath Blight","Tungro"};
+    String[] desc= {"Disease","Disease","Disease","Disease"};
+    Integer[] imgid={R.drawable.bacterialblight,R.drawable.riceblast,R.drawable.sheathblight,R.drawable.tungro};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pest);
+        setContentView(R.layout.activity_diseases);
 
-        list = (ListView) findViewById(R.id.pestitem);
-        CustomListView customListview=new CustomListView(this, pestename,desc,imgid);
+        list = (ListView) findViewById(R.id.disease_list);
+        CustomListView customListview=new CustomListView(this, diseasename,desc,imgid);
         list.setAdapter(customListview);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -28,32 +30,28 @@ public class Pest extends AppCompatActivity {
                 switch (position){
                     case 0:
                         Intent intent = new Intent();
-                        intent.setClass(Pest.this, PestsDefinition.class);
+                        intent.setClass(Diseases.this, DiseasesDefinition.class);
                         startActivity(intent);
                         break;
                     case 1:
                         Intent intent1 = new Intent();
-                        intent1.setClass(Pest.this, PestsDefinition.PestDefinition2.class);
+                        intent1.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition2.class);
                         startActivity(intent1);
                         break;
                     case 2:
                         Intent intent2 = new Intent();
-                        intent2.setClass(Pest.this, PestsDefinition.PestDefinition3.class);
+                        intent2.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition3.class);
                         startActivity(intent2);
                         break;
                     case 3:
                         Intent intent3 = new Intent();
-                        intent3.setClass(Pest.this, PestsDefinition.PestDefinition4.class);
+                        intent3.setClass(Diseases.this, DiseasesDefinition.DiseaseDefinition4.class);
                         startActivity(intent3);
-                        break;
-                    case 4:
-                        Intent intent4 = new Intent();
-                        intent4.setClass(Pest.this, PestsDefinition.PestDefinition5.class);
-                        startActivity(intent4);
                         break;
                 }
             }
         });
+
 
 
         ImageButton androidImageButton = (ImageButton) findViewById(R.id.imageButton3);
@@ -71,7 +69,7 @@ public class Pest extends AppCompatActivity {
     }
     @Override
     public void onBackPressed(){
-        Intent intent = new Intent(Pest.this, MainActivity.class );
+        Intent intent = new Intent(Diseases.this, MainActivity.class );
         startActivity(intent);
     }
 }

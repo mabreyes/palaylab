@@ -1,4 +1,4 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.rickydanobantonare.smartrice", appContext.getPackageName());
+        assertEquals("io.github.projectbukirin.smartrice", appContext.getPackageName());
     }
 }

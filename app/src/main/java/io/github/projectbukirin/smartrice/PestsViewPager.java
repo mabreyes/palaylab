@@ -1,4 +1,4 @@
-package com.example.rickydanobantonare.smartrice;
+package io.github.projectbukirin.smartrice;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
