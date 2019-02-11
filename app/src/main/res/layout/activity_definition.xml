@@ -30,10 +30,17 @@
         android:fontFamily="@font/circularblack"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"/>
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/textView3">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView3">
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager"
-        android:layout_marginTop="80dp"
         android:layout_width="match_parent"
         android:layout_height="250dp">
 
@@ -60,7 +67,7 @@
         android:layout_gravity="center_vertical"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="10dp"
         android:background="@drawable/border1"
         android:fontFamily="@font/circularmedium"
@@ -91,6 +98,7 @@
         android:layout_marginBottom="10dp"
         android:fontFamily="@font/circularmedium"
         />
-
+    </RelativeLayout>
+    </ScrollView>
 
 </RelativeLayout>
