@@ -33,22 +33,22 @@ public class PestsDefinition extends AppCompatActivity {
         textViewDetection = (TextView) findViewById(R.id.detection);
         detectionText = (TextView) findViewById(R.id.detectionText);
 
-        SpannableString s1 = new SpannableString("Armyworm\n");
+        SpannableString s1 = new SpannableString("Army Worm\n");
         SpannableString ss1 = new SpannableString("Infestation\n\n");
-        SpannableString s2 = new SpannableString("Statistics\n");
-        SpannableString s3 = new SpannableString("Armyworms are caterpillars that attack rice. A single armyworm egg mass " +
-                "contains hundreds of eggs. Each female lays 800−1000 eggs during its lifetime of about one week. Armyworm " +
+        SpannableString s2 = new SpannableString("About\n");
+        SpannableString s3 = new SpannableString("Army worms are caterpillars that attack rice. A single army worm egg mass " +
+                "contains hundreds of eggs. Each female lays 800−1000 eggs during its lifetime of about one week. Army worm " +
                 "feeds on rice by cutting off leaves and young seedlings at the plant's base. They can also cut off rice panicles " +
-                "from base. Adult armyworms survive better and produce more eggs when the temperature is at 15°C maximum, " +
+                "from base. Adult army worms survive better and produce more eggs when the temperature is at 15°C maximum, " +
                 "and when plants are naturally fertilized. Periods of drought followed by heavy rains, and the presence of " +
-                "alternate hosts also sustain the development of armyworms. Armyworms are nocturnal. The larvae usually feed " +
+                "alternate hosts also sustain the development of army worms. Army worms are nocturnal. The larvae usually feed " +
                 "in the upper portion of the rice canopy on cloudy days or at night; while the adult feeds, mates, and migrates " +
-                "at night and rests in daytime at the base of the plant. In dryland fields, armyworm pupa can be found in the soil " +
+                "at night and rests in daytime at the base of the plant. In dry land fields, army worm pupa can be found in the soil " +
                 "or at the base of the rice plants. In wetlands, they pupate on the plants or on grassy areas along the field borders.\n");
         SpannableString s4 = new SpannableString("\nSymptoms\n");
-        SpannableString s5 = new SpannableString("Check for feeding damage. Armyworms feed on leaf tips and along leaf margins. " +
-                "When they eat whole leaves, they can remove them completely or leave only the midribs. Armyworm damage can be mistaken " +
-                "for cutworm feeding. The characteristic form of armyworm damage is leaf removal. To confirm, check for the presence of " +
+        SpannableString s5 = new SpannableString("Check for feeding damage. Army worms feed on leaf tips and along leaf margins. " +
+                "When they eat whole leaves, they can remove them completely or leave only the midribs. Army worm damage can be mistaken " +
+                "for cutworm feeding. The characteristic form of army worm damage is leaf removal. To confirm, check for the presence of " +
                 "the insect and its egg mass.");
         SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
         SpannableString s7 = new SpannableString("A. Preventive Methods\n" +
@@ -61,10 +61,10 @@ public class PestsDefinition extends AppCompatActivity {
                 "▪ Place ashes in the trenches to make it more difficult for the caterpillars to escape.\n" +
                 "▪ Place branches around fields to give Army Worms a place to congregate where they are easily collected by hand.\n" +
                 "▪ Avoid killing natural enemies of Army Worms such as wasps and spiders.\n" +
-                "▪ The western yellow-striped army worm is believed to limit its egg laying to broadleaf plants\n" +
+                "▪ The western yellow-striped army worm is believed to limit its egg laying to broad leaf plants\n" +
                 "▪ The early control of broad leaf weeds in rice fields may be important in limiting its populations.\n" +
                 "\n" +
-                "C. Chemical methods\n" +
+                "C. Chemical Methods\n" +
                 "▪ Ambda-Cyhalothrin (Warrior II with Zeon); 1.6–2.56 fl. oz. (amount per acre), 24 hours of restricted entry interval, and 21 hours of pre-harvest interval. Highly toxic to bees; do not spray directly or allow to drift onto blooming crops or weeds where bees are foraging.\n" +
                 "▪ Zeta-Cypermethrin (Mustang); 3.4–4.3 oz. (amount per acre), 12 hours of restricted entry interval, and 14 hours of pre-harvest interval. Make applications at least 7 days apart and do not release flood water within 7 days of application. Do not apply more than 1.1 pt. (0.2 lb. ai.)/acre per season.\n" +
                 "▪ Carbaryl (Sevin 4F); 1-1.5 qtr. (amount per acre), 12 hours of restricted entry interval, and 14 hours of pre-harvest interval; (Sevin XLR Plus) 1-1.5 at (amount per acre), 12 restricted entry interval, and 14 hours of pre-harvest interval. Do not apply 15 days before or after application of the herbicide propanil. Highly toxic to bees; do not spray directly or allow to drift onto blooming crops or weeds where bees are foraging.");
@@ -155,9 +155,9 @@ public class PestsDefinition extends AppCompatActivity {
             textViewDetection = (TextView) findViewById(R.id.detection);
             detectionText = (TextView) findViewById(R.id.detectionText);
 
-            SpannableString s1 = new SpannableString("Golden Apple-snail\n");
+            SpannableString s1 = new SpannableString("Golden Apple Snail\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("There are more than 100 species of apple snail that exists. Two species, " +
                     "Pomacea canaliculata and Pomacea maculata, commonly known as Golden Apple Snails, are highly invasive and cause " +
                     "damage to rice crops. They were introduced to Asia, from South America, in the 1980s as potential food for people, " +
@@ -179,7 +179,7 @@ public class PestsDefinition extends AppCompatActivity {
                     "▪ Handpicking and crushing, staking with bamboo or other wooden stakes before and after transplanting can be practiced to facilitate egg mass collection.\n" +
                     "▪ Use of a hand-operated device to smash egg clusters between two snail egg clappers can also reduce the snail population.\n" +
                     "\n" +
-                    "B. Cultural methods\n" +
+                    "B. Cultural Methods\n" +
                     "▪ Planting older seedlings, planting at higher densities, or planting on ridges above the water line are advised against the golden apple snail.\n" +
                     "▪ The field can be leveled-off or hydrotiller or rototiller to prepare the land.\n" +
                     "▪ An off-season tillage to crush snails can also be employed.\n" +
@@ -190,10 +190,10 @@ public class PestsDefinition extends AppCompatActivity {
                     "▪ Attractants like newspaper can be used.\n" +
                     "▪ Good water management obtained by good levelling for the first two weeks is recommended.\n" +
                     "\n" +
-                    "C. Chemical methods\n" +
+                    "C. Chemical Methods\n" +
                     "▪ Molluscicides such as metaldehyde is recommended\n" +
                     "\n" +
-                    "D. Biological methods\n" +
+                    "D. Biological Methods\n" +
                     "▪ The use of common carp, Japanese crucian, heron, and weasels as biological control agents against the golden apple snail.\n" +
                     "▪ A firefly nymph is also an effective natural enemy of the snail.\n" +
                     "▪ Herding ducks and raising fish in the paddy are also recommended as biological control.\n" +
@@ -287,9 +287,9 @@ public class PestsDefinition extends AppCompatActivity {
             textViewDetection = (TextView) findViewById(R.id.detection);
             detectionText = (TextView) findViewById(R.id.detectionText);
 
-            SpannableString s1 = new SpannableString("Green Leaf Hopper\n");
+            SpannableString s1 = new SpannableString("Green Leafhopper\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("Two species of green leafhoppers (GLH) can spread tungro: Nephotettix malayanus " +
                     "and Nephotettix virescens. Green leafhoppers are the most common leafhoppers in rice fields and are primarily critical " +
                     "because they spread the viral disease tungro. Both nymphs and adults feed by extracting plant sap with their needle-shaped " +
@@ -431,9 +431,9 @@ public class PestsDefinition extends AppCompatActivity {
             textViewDetection = (TextView) findViewById(R.id.detection);
             detectionText = (TextView) findViewById(R.id.detectionText);
 
-            SpannableString s1 = new SpannableString("Rice Black-bug\n");
+            SpannableString s1 = new SpannableString("Rice Black Bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("In the Philippines’ setup, there are three (3) species of bugs that attack rice. " +
                     "They are common black bug, Malayan black bug, and Japanese black bug. Black bugs remove the sap of the plant. They can " +
                     "cause browning of leaves, deadheart, and bugburn. Their damage also causes stunting in plants, reduced tiller number, and " +
@@ -548,9 +548,9 @@ public class PestsDefinition extends AppCompatActivity {
             textViewDetection = (TextView) findViewById(R.id.detection);
             detectionText = (TextView) findViewById(R.id.detectionText);
 
-            SpannableString s1 = new SpannableString("Rice Ear-bug\n");
+            SpannableString s1 = new SpannableString("Rice Ear Bug\n");
             SpannableString ss1 = new SpannableString("Infestation\n\n");
-            SpannableString s2 = new SpannableString("Statistics\n");
+            SpannableString s2 = new SpannableString("About\n");
             SpannableString s3 = new SpannableString("The most common species of rice bug are Leptocorisa oratorius F. and Leptocorisa acuta T., " +
                     "both commonly called ear bug. Ears bugs damage rice by sucking out the contents of developing grains from pre-flowering spikelets " +
                     "to soft dough stage, therefore causing unfilled or empty grains and discoloration. Immature and adult rice bugs both feed on rice grains. " +
