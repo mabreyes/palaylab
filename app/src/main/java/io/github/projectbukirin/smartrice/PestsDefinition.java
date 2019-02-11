@@ -50,8 +50,24 @@ public class PestsDefinition extends AppCompatActivity {
                 "When they eat whole leaves, they can remove them completely or leave only the midribs. Armyworm damage can be mistaken " +
                 "for cutworm feeding. The characteristic form of armyworm damage is leaf removal. To confirm, check for the presence of " +
                 "the insect and its egg mass.");
-        SpannableString s6 = new SpannableString("\n\nTreatment\n");
-        SpannableString s7 = new SpannableString("Treatment");
+        SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+        SpannableString s7 = new SpannableString("A. Preventive Methods\n" +
+                "▪ Flooding seedbeds is the best defense against Army Worms.\n" +
+                "▪ Establish seedbeds far from large areas of weeds.\n" +
+                "▪ Plow fallow land.\n" +
+                "▪ Clean the field and remove weeds.\n" +
+                "\n" +
+                "B. Cultural Methods\n" +
+                "▪ Place ashes in the trenches to make it more difficult for the caterpillars to escape.\n" +
+                "▪ Place branches around fields to give Army Worms a place to congregate where they are easily collected by hand.\n" +
+                "▪ Avoid killing natural enemies of Army Worms such as wasps and spiders.\n" +
+                "▪ The western yellow-striped army worm is believed to limit its egg laying to broadleaf plants\n" +
+                "▪ The early control of broad leaf weeds in rice fields may be important in limiting its populations.\n" +
+                "\n" +
+                "C. Chemical methods\n" +
+                "▪ Ambda-Cyhalothrin (Warrior II with Zeon); 1.6–2.56 fl. oz. (amount per acre), 24 hours of restricted entry interval, and 21 hours of pre-harvest interval. Highly toxic to bees; do not spray directly or allow to drift onto blooming crops or weeds where bees are foraging.\n" +
+                "▪ Zeta-Cypermethrin (Mustang); 3.4–4.3 oz. (amount per acre), 12 hours of restricted entry interval, and 14 hours of pre-harvest interval. Make applications at least 7 days apart and do not release flood water within 7 days of application. Do not apply more than 1.1 pt. (0.2 lb. ai.)/acre per season.\n" +
+                "▪ Carbaryl (Sevin 4F); 1-1.5 qtr. (amount per acre), 12 hours of restricted entry interval, and 14 hours of pre-harvest interval; (Sevin XLR Plus) 1-1.5 at (amount per acre), 12 restricted entry interval, and 14 hours of pre-harvest interval. Do not apply 15 days before or after application of the herbicide propanil. Highly toxic to bees; do not spray directly or allow to drift onto blooming crops or weeds where bees are foraging.");
 
         int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
         s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -156,8 +172,32 @@ public class PestsDefinition extends AppCompatActivity {
                     "Golden apple snails have muddy brown shell and golden pinkish or orange-yellow flesh. They are bigger and lighter " +
                     "in color compared to native snails. Its eggs are bright pink in color. To confirm snail damage, check for missing hills, " +
                     "cut leaves, and cut stems.");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Mechanical Control\n" +
+                    "▪ Increase mortality by mechanical action.\n" +
+                    "▪ Install screens with 5 mm mesh at water inlets. This can minimize the entry of snails into the rice fields and will also facilitate hand-collection.\n" +
+                    "▪ Handpicking and crushing, staking with bamboo or other wooden stakes before and after transplanting can be practiced to facilitate egg mass collection.\n" +
+                    "▪ Use of a hand-operated device to smash egg clusters between two snail egg clappers can also reduce the snail population.\n" +
+                    "\n" +
+                    "B. Cultural methods\n" +
+                    "▪ Planting older seedlings, planting at higher densities, or planting on ridges above the water line are advised against the golden apple snail.\n" +
+                    "▪ The field can be leveled-off or hydrotiller or rototiller to prepare the land.\n" +
+                    "▪ An off-season tillage to crush snails can also be employed.\n" +
+                    "▪ Snails can also be exposed to sun.\n" +
+                    "▪ Draining the field is also advised.\n" +
+                    "▪ Crop rotation with a dryland crop and fallow periods is also recommended as control.\n" +
+                    "▪ For easier drainage and collection of the golden apple snail, canalets can be constructed along bunds and inside paddy field.\n" +
+                    "▪ Attractants like newspaper can be used.\n" +
+                    "▪ Good water management obtained by good levelling for the first two weeks is recommended.\n" +
+                    "\n" +
+                    "C. Chemical methods\n" +
+                    "▪ Molluscicides such as metaldehyde is recommended\n" +
+                    "\n" +
+                    "D. Biological methods\n" +
+                    "▪ The use of common carp, Japanese crucian, heron, and weasels as biological control agents against the golden apple snail.\n" +
+                    "▪ A firefly nymph is also an effective natural enemy of the snail.\n" +
+                    "▪ Herding ducks and raising fish in the paddy are also recommended as biological control.\n" +
+                    "▪ Birds prey on both eggs and neonates. Rats and snakes also feed on them");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -264,8 +304,44 @@ public class PestsDefinition extends AppCompatActivity {
                     "or acid soils. To confirm the cause of the problem, check for virus infected plants in the fields, and the presence of the " +
                     "insect which could be white or pale yellow eggs inside leaf sheaths or midribs, yellow or pale green nymphs with or without " +
                     "black markings, and pale green adults with or without black markings feeding on upper parts of the crop.");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Cultural Methods:\n" +
+                    "▪ The most effective means of GLH management is to use GLH-resistant and Tungro-resistant varieties like IR 50, IR 54, IR 64, CR 1009, PY 3, Co 46 and white ponni.\n" +
+                    "▪ Apply neem cake @ 12.5 kg/20 cent nursery as basal dose.\n" +
+                    "▪ Transplanting older seedlings (>3 weeks) reduces viral disease susceptibility transmitted by leafhoppers.\n" +
+                    "▪ Nitrogen should be applied as needed to avoid contributing to population or hindering plant recovery from plant hopper damage by applying insufficient nitrogen.\n" +
+                    "▪ Good weed control in the field and on the bunds removes the preferred grassy hosts of Green leaf hopper and promotes crop vigor.\n" +
+                    "▪ Crop rotation with a non-rice crop during the dry season decreases alternate hosts for diseases.\n" +
+                    "▪ Upland rice intercropped with soybean reduces the incidence of leafhoppers on rice compared to rice alone\n" +
+                    "\n" +
+                    "B. Chemical Methods: \n" +
+                    "▪ ETL: 60/25 net sweeps (or) 5/hill at vegetative stage (or) 10/hill at flowering (or) 2/hill in tungro endemic area \n" +
+                    "▪ Scout the field for the presence of Tungro and Green leaf hopper. Check 20 hills while walking diagonally across a transplanted field.\n" +
+                    "▪ Spray insecticides twice, 15 and 30 days after transplanting.\n" +
+                    "▪ Spray any one of the following: \n" +
+                    "▪ Fenitrothion 50 EC 80 ml (or) Phosphamidon 40 SL 50 ml (or) Fenthion 100 EC 40 ml (or) Quinalphos 25 EC 80 ml (or) Phosalone 35 EC 120 ml (or) Monocrotophos 36 SL 40 ml.\n" +
+                    "▪ Maintain 2.5 cm of water in the nursery and broadcast anyone of the following in 20 cents Carbofuran 3 G 3.5 kg (or) Phorate 10 G 1.0 kg (or) Quinalphos 5 G 2.0 kg\n" +
+                    "\n" +
+                    "C. Biological Methods:\n" +
+                    "▪ The major egg parasitoids are: \n" +
+                    "a) Oligosita yasumatsui (Hymenoptera: Trichogrammatidae). \n" +
+                    "b) Anagrus spp. (Hymenoptera: Mymaridae). \n" +
+                    "c) Gonatocerus spp. (Hymenoptera: Mymaridae). \n" +
+                    "▪ The most abundant predator is the green mired bug Cyrtorhinus lividipennis which predate on both eggs and nymphs. \n" +
+                    "▪ Strepsipterans, small wasps, pipunculid flies, and nematodes parasitize both the nymphs and adults.\n" +
+                    "▪ They are also attacked by aquatic veliid bugs, nabid bugs, empid flies, damselflies, dragonflies, and spiders. A fungal pathogen infects both the nymphs and adults of the green leafhopper.\n" +
+                    "\n" +
+                    "D. Natural enemies and predators: \n" +
+                    "▪ Natural enemies :\n" +
+                    "a) Itoplectis narangae - Ichnuemonidae Wasp\n" +
+                    "b) Trichomma cnaphalocrocis - Ichnuemonidae Wasp\n" +
+                    "▪ Predators:\n" +
+                    "a) Release of mirid bug Cytorhinus lividipennis @ 50 – 75 egg/ m2\n" +
+                    "\n" +
+                    "E. Trap Methods:\n" +
+                    "▪ Set up light traps to attract and kill the moths. Set up light trap one for at least 5 ha.\n" +
+                    "▪ Set up bird perches (40 to 50/ha) of Insectivorous Birds at vegetative phase of crop.\n" +
+                    "▪ Monitor through pheromone traps (@ 10 to 12/ha for timely control measures. Change the lure at 15-20 days intervals.");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -373,8 +449,16 @@ public class PestsDefinition extends AppCompatActivity {
                     "panicles, and unfilled spikelets or whiteheads at booting stage. Furthermore, check for deadhearts. Deadhearts can also be caused by stemborer. " +
                     "To confirm cause of damage, pull infected plants. In black bug damage, infected plants cannot be pulled at the bases. Heavy infestation and \"bugburn\" " +
                     "is usually visible after heading or maturing.");
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("▪ 10% damage at tillering stage or 5 bugs / hill.\n" +
+                    "▪ Maintain a clean field by removing the weeds and drying the rice field during ploughing. \n" +
+                    "▪ Rice varieties of the same maturity date may be planted to break the insect’s cycle. \n" +
+                    "▪ Direct-seeded rice crops tend to have less tillers in one planting point and thus discourage population growth. \n" +
+                    "▪ Flooding the fields can also cause higher egg mortality. \n" +
+                    "▪ Set up light trap during the full moon period to attract large number of bugs and kill. \n" +
+                    "▪ Conserve the predators viz Spiders, coccinellids and wasps to check the pest.\n" +
+                    "▪ Ducks can be allowed in the field to pick up the bugs.\n" +
+                    "▪ Spray monocrotophos @ 100 ml / ha (or) acephate 625 g / ha (or) Neem seed kernel extract 5% for effective control of black bug.");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
@@ -482,8 +566,34 @@ public class PestsDefinition extends AppCompatActivity {
                     "rice bug infestation, check for presence of insects that are usually oval, shiny, and reddish brown eggs along midrib of leaf; slender " +
                     "and brown-green nymphs and adults feeding on endosperm of rice grains; and an offensive smell.");
 
-            SpannableString s6 = new SpannableString("\n\nTreatment\n");
-            SpannableString s7 = new SpannableString("Treatment");
+            SpannableString s6 = new SpannableString("\n\nManagement Strategies\n");
+            SpannableString s7 = new SpannableString("A. Cultural Methods:\n" +
+                    "▪ Strict vigilance is necessary at milky stage.\n" +
+                    "▪ Cultural control measures include the removal of alternate hosts such as grasses on bunds, early planting, and the use of late-maturing cultivars.\n" +
+                    "▪ Keep the field and bunds free of weeds and grasses.\n" +
+                    "▪ Netting and handpicking the bugs reduce their numbers.\n" +
+                    "▪ Putting attractants such as arasan or anything with an odor like dead snails or rats can easily capture rice bugs in the field.\n" +
+                    "▪ Coarse-grain and bearded cultivars may be resistant to the rice bugs\n" +
+                    "\n" +
+                    "B. Chemical Methods:\n" +
+                    "▪ ETL: 5 bugs/100 ear heads at flowering and 16 bugs/100 ear heads from milky stage to grain maturity \n" +
+                    "▪ When the bug is seen in large numbers apply one of the following insecticides at 25 kg/ha twice, the first during flowering and second a week later. \n" +
+                    "▪ KKM dust formulation consists of 10% of Acorus calamus rhizome powder and 90% of fly ash. This dust formulation repels the rice earhead bug. \n" +
+                    "▪ Since the occurrence of the bug coincides with the flowering stage, application of the insecticide may be done either before 9 a.m. or after 3 p.m. so that fertilization of the flowers is not adversely affected. \n" +
+                    "▪ Spray any one of the following twice\n" +
+                    "▪ Fenthion 100 EC @ 500 ml/ha (or) Malathion 50 EC @ 500 ml/ha \n" +
+                    "\n" +
+                    "C. Biological Methods:\n" +
+                    "▪ Among the biological control agents, small wasps parasitize the eggs and the meadow grasshoppers prey on them.\n" +
+                    "▪ Both the adults and nymphs are preys to spiders, coccinellid beetles and dragonflies.\n" +
+                    "▪ A fungus infects both nymphs and adults.\n" +
+                    "\n" +
+                    "D. Botanical Methods:\n" +
+                    "Use any one of the following:\n" +
+                    "▪ Neem seed kernel extract 5%@25kg/ha\n" +
+                    "▪ Notchi leaf powder extract 5%\n" +
+                    "▪ Ipomoea leaf powder extract 5%\n" +
+                    "▪ Prosopis leaf powder extract 5%");
 
             int flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE;
             s1.setSpan(new StyleSpan(Typeface.BOLD), 0, s1.length(), flag);
