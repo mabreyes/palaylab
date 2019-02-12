@@ -56,7 +56,7 @@ public class DiseasesDefinition extends AppCompatActivity {
                 "▪  seed soaking for 8 hours in ceresan (0.1%) and treat with Streptocyclin (3g in 1 liter);\n" +
                 "▪ Spray neem oil 3% or NSKE 5%\n" +
                 "▪ Spray fresh cow dung extract for the control of bacterial blight. Dissolve 20 g cow dung in one liter of water; allow to settle and sieve. Use supernatant liquid. (starting from initial appearance of the disease and another at fortnightly interval)\n" +
-                "\n" +
+                "\n"+
                 "B. Cultural Methods\n" +
                 "▪ Grow Tolerant varieties (IR 20 IR 72, PONMANI, TKM 6).\n" +
                 "▪ Secure disease free seed\n" +
