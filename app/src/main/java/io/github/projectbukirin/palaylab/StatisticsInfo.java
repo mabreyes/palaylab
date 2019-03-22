@@ -1,4 +1,4 @@
-package io.github.projectbukirin.smartrice;
+package io.github.projectbukirin.palaylab;
 
 public class StatisticsInfo {
     private int id;

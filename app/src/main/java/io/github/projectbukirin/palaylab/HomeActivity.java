@@ -1,4 +1,4 @@
-package io.github.projectbukirin.smartrice;
+package io.github.projectbukirin.palaylab;
 
 import android.content.Intent;
 import android.os.Handler;

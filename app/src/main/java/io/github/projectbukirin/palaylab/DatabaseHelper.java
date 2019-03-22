@@ -1,4 +1,4 @@
-package io.github.projectbukirin.smartrice;
+package io.github.projectbukirin.palaylab;
 
 import android.content.ContentValues;
 import android.content.Context;

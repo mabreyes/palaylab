@@ -1,4 +1,4 @@
-package io.github.projectbukirin.smartrice;
+package io.github.projectbukirin.palaylab;
 
 import android.app.Activity;
 import android.support.annotation.NonNull;
