@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.projectbukirin.smartrice">
+    package="io.github.projectbukirin.palaylab">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -23,7 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="io.github.projectbukirin.smartrice.HomeActivity"
+            android:name="io.github.projectbukirin.palaylab.HomeActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,22 +32,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="io.github.projectbukirin.smartrice.MainActivity"
+            android:name="io.github.projectbukirin.palaylab.MainActivity"
             android:screenOrientation="portrait"></activity>
-        <activity android:name="io.github.projectbukirin.smartrice.Diseases" />
-        <activity android:name="io.github.projectbukirin.smartrice.Pest" />
-        <activity android:name="io.github.projectbukirin.smartrice.Results" />
-        <activity android:name="io.github.projectbukirin.smartrice.Statistics" />
-        <activity android:name="io.github.projectbukirin.smartrice.DiseasesDefinition" />
-        <activity android:name="io.github.projectbukirin.smartrice.DiseasesDefinition$DiseaseDefinition2" />
-        <activity android:name="io.github.projectbukirin.smartrice.DiseasesDefinition$DiseaseDefinition3" />
-        <activity android:name="io.github.projectbukirin.smartrice.DiseasesDefinition$DiseaseDefinition4" />
-        <activity android:name="io.github.projectbukirin.smartrice.PestsDefinition" />
-        <activity android:name="io.github.projectbukirin.smartrice.PestsDefinition$PestDefinition2" />
-        <activity android:name="io.github.projectbukirin.smartrice.PestsDefinition$PestDefinition3" />
-        <activity android:name="io.github.projectbukirin.smartrice.PestsDefinition$PestDefinition4" />
-        <activity android:name="io.github.projectbukirin.smartrice.PestsDefinition$PestDefinition5"></activity>
-        <activity android:name="io.github.projectbukirin.smartrice.About"></activity>
+        <activity android:name="io.github.projectbukirin.palaylab.Diseases" />
+        <activity android:name="io.github.projectbukirin.palaylab.Pest" />
+        <activity android:name="io.github.projectbukirin.palaylab.Results" />
+        <activity android:name="io.github.projectbukirin.palaylab.Statistics" />
+        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition" />
+        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition2" />
+        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition3" />
+        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition4" />
+        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition" />
+        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition2" />
+        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition3" />
+        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition4" />
+        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition5"></activity>
+        <activity android:name="io.github.projectbukirin.palaylab.About"></activity>
     </application>
 
 </manifest>

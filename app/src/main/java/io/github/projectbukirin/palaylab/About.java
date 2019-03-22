@@ -1,4 +1,4 @@
-package io.github.projectbukirin.smartrice;
+package io.github.projectbukirin.palaylab;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
