@@ -17,6 +17,8 @@
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="50dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         android:layout_marginTop="110dp"/>
 
     <ImageButton
@@ -56,6 +58,8 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="110dp"
         android:background="@drawable/border"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
         />
 
     <ListView

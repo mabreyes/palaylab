@@ -242,19 +242,28 @@
 
             <ImageView
                 android:id="@+id/logo"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
                 android:layout_below="@+id/list"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
+                android:src="@drawable/pwt"/>
+
+            <ImageView
+                android:id="@+id/logopowered"
+                android:layout_width="wrap_content"
+                android:layout_height="130dp"
+                android:layout_below="@+id/logo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
                 android:src="@drawable/tensorflow"/>
 
             <TextView
                 android:id="@+id/TensorFlow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/logo"
+                android:layout_below="@id/logopowered"
                 android:fontFamily="@font/circularbook"
                 android:layout_marginTop="10dp"
                 android:textColor="#115533"
@@ -287,7 +296,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
-                android:text="© 2018 Project Bukirin"
+                android:text="© 2019 Project Bukirin"
                 android:textColor="#115533"
                 android:textSize="12dp"
                 android:layout_marginLeft="15dp"/>

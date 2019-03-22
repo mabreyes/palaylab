@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SmartRice</string>
+    <string name="app_name">PalayLab</string>
     <string name="action_settings">Settings</string>
     <string name="error_message_no_more_space">
         Your storage is unavailable.</string>
@@ -17,5 +17,5 @@
     <string name="url_androidwave">https://androidwave.com/</string>
     <string name="url_androidwave_android">https://androidwave.com/category/android/</string>
     <string name="message">This is an Open Source project. Contribute to this project by visiting
-        <a href="https://github.com/marcreyesph/smartrice-mobile/">https://github.com/marcreyesph/smartrice-mobile/</a></string>
+        <a href="https://github.com/marcreyesph/palaylab-mobile/">https://github.com/marcreyesph/palaylab-mobile/</a></string>
 </resources>
