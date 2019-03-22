@@ -10,9 +10,9 @@
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
         android:layout_centerInParent="true"
-        app:srcCompat="@drawable/smartrice" />
+        app:srcCompat="@drawable/palaylab" />
 
 </RelativeLayout>

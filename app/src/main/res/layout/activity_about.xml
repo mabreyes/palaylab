@@ -248,7 +248,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/poweredbytensorflow"/>
+                android:src="@drawable/pwt"/>
 
             <ImageView
                 android:id="@+id/logopowered"
