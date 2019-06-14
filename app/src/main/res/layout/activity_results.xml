@@ -90,7 +90,7 @@
         android:text="Capture"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_above="@id/btnDetectObjectCam"/>
 
     <Button
@@ -107,11 +107,11 @@
         android:text="Detect Again"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnDetectSelectImage"
-        android:layout_width="190dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="360dp"
@@ -123,7 +123,7 @@
         android:text="Select Image"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,7 +148,7 @@
         android:text="Use Existing Image"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnDetectObjectFromCam"
@@ -166,5 +166,5 @@
         android:text="Detect"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 </RelativeLayout>

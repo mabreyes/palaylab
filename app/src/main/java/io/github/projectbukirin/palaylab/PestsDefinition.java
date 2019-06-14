@@ -123,8 +123,8 @@ public class PestsDefinition extends AppCompatActivity {
         String count = String.valueOf(db.countInfo("Army Worm"));
         String thisWeek = String.valueOf(db.countThisWeek("Army Worm"));
 
-        textViewDetection.setText(count + " Detections");
-        detectionText.setText(thisWeek + " This Week");
+        textViewDetection.setText(count + "\nDetections");
+        detectionText.setText(thisWeek + "\nThis Week");
 
     }
 
@@ -254,8 +254,8 @@ public class PestsDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Golden Apple Snail"));
             String thisWeek = String.valueOf(db.countThisWeek("Golden Apple Snail"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
@@ -398,8 +398,8 @@ public class PestsDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Green Leafhopper"));
             String thisWeek = String.valueOf(db.countThisWeek("Green Leafhopper"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
@@ -515,8 +515,8 @@ public class PestsDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Black Bug"));
             String thisWeek = String.valueOf(db.countThisWeek("Black Bug"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
@@ -650,8 +650,8 @@ public class PestsDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Ear Bug"));
             String thisWeek = String.valueOf(db.countThisWeek("Ear Bug"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 

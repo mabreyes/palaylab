@@ -132,8 +132,8 @@ public class DiseasesDefinition extends AppCompatActivity {
 
         String thisWeek = String.valueOf(db.countThisWeek("Bacterial Leaf Blight"));
 
-        textViewDetection.setText(count + " Detections");
-        detectionText.setText(thisWeek + " This Week");
+        textViewDetection.setText(count + "\nDetections");
+        detectionText.setText(thisWeek + "\nThis Week");
 
     }
 
@@ -260,8 +260,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Blast"));
             String thisWeek = String.valueOf(db.countThisWeek("Blast"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
@@ -386,8 +386,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Sheath Blight"));
             String thisWeek = String.valueOf(db.countThisWeek("Sheath Blight"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
@@ -531,8 +531,8 @@ public class DiseasesDefinition extends AppCompatActivity {
             String count = String.valueOf(db.countInfo("Tungro"));
             String thisWeek = String.valueOf(db.countThisWeek("Tungro"));
 
-            textViewDetection.setText(count + " Detections");
-            detectionText.setText(thisWeek + " This Week");
+            textViewDetection.setText(count + "\nDetections");
+            detectionText.setText(thisWeek + "\nThis Week");
 
         }
 
