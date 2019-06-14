@@ -20,16 +20,16 @@
             android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:letterSpacing="-0.04"
+            android:letterSpacing="-0.03"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
-            android:paddingLeft="5dp"
+            android:paddingLeft="15dp"
             android:text="TextView"
-            android:textSize="25sp"
+            android:textSize="21sp"
             android:textColor="#115533"
-            android:fontFamily="@font/circularblack"/>
+            android:fontFamily="@font/gorditabold"/>
 
         <TextView
             android:id="@+id/tvdescription"
@@ -37,26 +37,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvname"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="45dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:layout_weight="1"
-            android:paddingLeft="5dp"
+            android:paddingLeft="15dp"
             android:textSize="15sp"
             android:text="TextView"
-            android:fontFamily="@font/circularbook"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/tvdescription"
-            android:layout_alignParentTop="true"
-            android:layout_toEndOf="@id/imageView"
-            android:layout_toRightOf="@+id/imageView"
-            android:paddingLeft="5dp"
-            android:text="LEARN MORE"
-            android:textColor="#429448"
-            android:textSize="13dp"
-            android:layout_marginTop="61dp"
-            android:fontFamily="@font/circularmedium"/>
+            android:fontFamily="@font/gorditaregular"/>
+
     </RelativeLayout>
 </LinearLayout>

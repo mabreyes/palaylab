@@ -99,12 +99,12 @@ public class DiseasesDefinition extends AppCompatActivity {
         s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
         s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
-        s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
-        ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
-        s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
-        s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
-        s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
-        s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
+        s1.setSpan(new TypefaceSpan("gorditabold"), 0, s1.length(), flag);
+        ss1.setSpan(new TypefaceSpan("gorditamedium"), 0, ss1.length(), flag);
+        s2.setSpan(new TypefaceSpan("gorditabold"), 0, s2.length(), flag);
+        s3.setSpan(new TypefaceSpan("gorditaregular"), 0, s3.length(), flag);
+        s4.setSpan(new TypefaceSpan("gorditabold"), 0, s4.length(), flag);
+        s5.setSpan(new TypefaceSpan("gorditabold"), 0, s5.length(), flag);
 
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(s1);
@@ -228,12 +228,12 @@ public class DiseasesDefinition extends AppCompatActivity {
             s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
             s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
-            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
-            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
-            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
-            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
-            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
-            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
+            s1.setSpan(new TypefaceSpan("gorditabold"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("gorditamedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("gorditabold"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("gorditaregular"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("gorditabold"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("gorditabold"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -354,12 +354,12 @@ public class DiseasesDefinition extends AppCompatActivity {
             s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
             s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
-            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
-            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
-            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
-            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
-            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
-            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
+            s1.setSpan(new TypefaceSpan("gorditabold"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("gorditamedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("gorditabold"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("gorditaregular"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("gorditabold"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("gorditabold"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);
@@ -499,12 +499,12 @@ public class DiseasesDefinition extends AppCompatActivity {
             s7.setSpan(new StyleSpan(Typeface.NORMAL), 0, s7.length(), flag);
             s7.setSpan(new RelativeSizeSpan(1.5f), 0, s7.length(), flag);
 
-            s1.setSpan(new TypefaceSpan("circularblack"), 0, s1.length(), flag);
-            ss1.setSpan(new TypefaceSpan("circularmedium"), 0, ss1.length(), flag);
-            s2.setSpan(new TypefaceSpan("circularblack"), 0, s2.length(), flag);
-            s3.setSpan(new TypefaceSpan("circularbook"), 0, s3.length(), flag);
-            s4.setSpan(new TypefaceSpan("circularblack"), 0, s4.length(), flag);
-            s5.setSpan(new TypefaceSpan("circularblack"), 0, s5.length(), flag);
+            s1.setSpan(new TypefaceSpan("gorditabold"), 0, s1.length(), flag);
+            ss1.setSpan(new TypefaceSpan("gorditamedium"), 0, ss1.length(), flag);
+            s2.setSpan(new TypefaceSpan("gorditabold"), 0, s2.length(), flag);
+            s3.setSpan(new TypefaceSpan("gorditaregular"), 0, s3.length(), flag);
+            s4.setSpan(new TypefaceSpan("gorditabold"), 0, s4.length(), flag);
+            s5.setSpan(new TypefaceSpan("gorditabold"), 0, s5.length(), flag);
 
             SpannableStringBuilder builder = new SpannableStringBuilder();
             builder.append(s1);

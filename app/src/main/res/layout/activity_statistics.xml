@@ -22,7 +22,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:text="Statistics"
@@ -48,7 +48,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="25dp"
-                android:fontFamily="@font/circularblack"
+                android:fontFamily="@font/gorditabold"
                 android:text="Total Detections"
                 android:textColor="#115533"/>
 
@@ -71,7 +71,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="25dp"
-                android:fontFamily="@font/circularblack"
+                android:fontFamily="@font/gorditabold"
                 android:text="This Week"
                 android:layout_below="@id/barchart"
                 android:textColor="#115533"/>
@@ -95,7 +95,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="25dp"
-                android:fontFamily="@font/circularblack"
+                android:fontFamily="@font/gorditabold"
                 android:text="Disease Detections"
                 android:layout_below="@+id/thisWeekChart"
                 android:textColor="#115533"/>
@@ -134,7 +134,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="Disease"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -148,7 +148,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="This Week"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -162,7 +162,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="Total"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -179,7 +179,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Bacterial Blight"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -193,7 +193,7 @@
                             android:id="@+id/blbThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -207,7 +207,7 @@
                             android:id="@+id/blbTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -223,7 +223,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Blast"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -237,7 +237,7 @@
                             android:id="@+id/rbThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -251,7 +251,7 @@
                             android:id="@+id/rbTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -267,7 +267,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Sheath Blight"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -281,7 +281,7 @@
                             android:id="@+id/sbThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -295,7 +295,7 @@
                             android:id="@+id/sbTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -311,7 +311,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Tungro"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -325,7 +325,7 @@
                             android:id="@+id/tunThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -339,7 +339,7 @@
                             android:id="@+id/tunTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -355,7 +355,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
                 android:textSize="25dp"
-                android:fontFamily="@font/circularblack"
+                android:fontFamily="@font/gorditabold"
                 android:text="Pest Detections"
                 android:layout_below="@+id/tableView"
                 android:textColor="#115533"/>
@@ -394,7 +394,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="Pests"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -408,7 +408,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="This Week"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -422,7 +422,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularblack"
+                            android:fontFamily="@font/gorditabold"
                             android:text="Total"
                             android:textColor="#115533"
                             android:textSize="20dp" />
@@ -439,7 +439,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Army Worm"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -453,7 +453,7 @@
                             android:id="@+id/awThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -467,7 +467,7 @@
                             android:id="@+id/awTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -483,7 +483,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Golden Apple Snail"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -497,7 +497,7 @@
                             android:id="@+id/gasThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -511,7 +511,7 @@
                             android:id="@+id/gasTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -527,7 +527,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Green Leafhopper"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -541,7 +541,7 @@
                             android:id="@+id/glhThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -555,7 +555,7 @@
                             android:id="@+id/glhTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -571,7 +571,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Black Bug"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -585,7 +585,7 @@
                             android:id="@+id/rbbThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -599,7 +599,7 @@
                             android:id="@+id/rbbTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -615,7 +615,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Ear Bug"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -629,7 +629,7 @@
                             android:id="@+id/rebThisWeek"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Total"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -643,7 +643,7 @@
                             android:id="@+id/rebTotalDetections"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/circularbook"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="This Week"
                             android:textSize="15dp" />
                     </RelativeLayout>
@@ -660,7 +660,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/roundbutton"
-                android:fontFamily="@font/circularblack"
+                android:fontFamily="@font/gorditabold"
                 android:paddingLeft="30dp"
                 android:paddingRight="30dp"
                 android:text="Clear Data"
