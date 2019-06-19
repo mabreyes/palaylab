@@ -11,7 +11,7 @@ import android.widget.ListView;
 public class Diseases extends AppCompatActivity {
 
     ListView list;
-    String[] diseasename = {"Bacterial Blight","Rice Blast","Sheath Blight","Tungro"};
+    String[] diseasename = {"Bacterial Leaf Blight","Rice Blast","Sheath Blight","Tungro"};
     String[] desc= {"Disease","Disease","Disease","Disease"};
     Integer[] imgid={R.drawable.bacterialblight,R.drawable.riceblast,R.drawable.sheathblight,R.drawable.tungro};
 

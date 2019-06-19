@@ -79,7 +79,7 @@
                 android:padding="10dp"
                 android:text="Detections"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 android:layout_marginRight="10dp"/>
 
@@ -91,7 +91,7 @@
                 android:layout_weight="1"
                 android:textColor="#115533"
                 android:padding="10dp"
-                android:textSize="20dp"
+                android:textSize="12dp"
                 android:textStyle="bold"
                 android:text="This Week"
                 android:gravity="center"
