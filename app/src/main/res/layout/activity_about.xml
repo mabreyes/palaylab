@@ -296,7 +296,7 @@
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="30dp"
                 android:layout_centerHorizontal="true"
-                android:text="© 2019 Project Bukirin"
+                android:text="© 2019 Project Bukirin\nv1.0.1 October 2020"
                 android:textColor="#115533"
                 android:textSize="12dp"
                 android:layout_marginLeft="15dp"/>
