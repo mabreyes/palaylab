@@ -28,7 +28,7 @@
         android:text="Diseases"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"/>
 

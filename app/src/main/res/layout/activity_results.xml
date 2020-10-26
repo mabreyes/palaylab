@@ -41,7 +41,7 @@
         android:text="Detect"
         android:textSize="30dp"
         android:textColor="#FFFFFF"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingStart="10dp"
         android:paddingEnd="10dp"
         android:layout_marginBottom="200dp"/>
@@ -84,13 +84,13 @@
         android:layout_marginTop="29dp"
         android:layout_marginBottom="90dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="Capture"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_above="@id/btnDetectObjectCam"/>
 
     <Button
@@ -101,29 +101,29 @@
         android:layout_marginTop="360dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="Detect Again"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnDetectSelectImage"
-        android:layout_width="190dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="360dp"
         android:layout_marginBottom="10dp"
         android:background="@drawable/roundbutton"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="Select Image"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -142,13 +142,13 @@
         android:layout_marginTop="29dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/roundbuttonaccent"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="Use Existing Image"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/btnDetectObjectFromCam"
@@ -160,11 +160,11 @@
         android:layout_marginTop="29dp"
         android:layout_marginBottom="30dp"
         android:background="@drawable/roundbuttonaccent"
-        android:fontFamily="@font/circularblack"
+        android:fontFamily="@font/gorditabold"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="Detect"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"/>
+        android:textSize="18sp"/>
 </RelativeLayout>

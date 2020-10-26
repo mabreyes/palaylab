@@ -67,7 +67,7 @@ public class TensorFlowImageClassifier implements Classifier {
         long endTime = SystemClock.uptimeMillis();
         String runTime = String.valueOf(endTime - startTime);
 
-        Log.d(TAG, "recognizeImage: " + runTime + "ms");
+        Log.d(TAG, "recognizeImageInInterpreter: " + runTime + "ms");
         return getSortedResult(result);
     }
 
