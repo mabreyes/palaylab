@@ -2,8 +2,8 @@ package io.github.projectbukirin.palaylab;
 
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.SpannableStringBuilder;
