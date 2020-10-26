@@ -10,4 +10,4 @@ This repository contains the source codes of the mobile application for SmartRic
 
 If you need our help or just something you need to ask about us, feel free to contact the maintainers above and we will be glad to respond to your request.
 
-&copy; 2018-2019 Project Bukirin. All Rights Reserved.
+&copy; 2020 Project Bukirin. All Rights Reserved.
