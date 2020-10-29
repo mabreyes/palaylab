@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "370820746159",
+    "firebase_url": "https://palaylab-users-prod-01.firebaseio.com",
+    "project_id": "palaylab-users-prod-01",
+    "storage_bucket": "palaylab-users-prod-01.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:370820746159:android:eb7a5f476ef457df663d5a",
+        "android_client_info": {
+          "package_name": "io.github.projectbukirin.palaylab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "370820746159-uvsbbt0jb2b188ibm2ab7tpv2e82ti2v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_bz2SyQqucWeaNMQw-48LCOHm94j9fHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "370820746159-uvsbbt0jb2b188ibm2ab7tpv2e82ti2v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
