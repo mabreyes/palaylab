@@ -4,7 +4,7 @@ jobs:
     working_directory: ~/repo
     docker:
       # Android the primary container
-      - image: circleci/android:api-26-alpha
+      - image: circleci/android:api-28-alpha
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
@@ -21,10 +21,10 @@ jobs:
           paths:
             - ~/.gradle
           key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-  test_api_v25:
+  test_api_v28:
     working_directory: ~/repo
     docker:
-        - image: circleci/android:api-26-alpha
+        - image: circleci/android:api-28-alpha
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
@@ -55,10 +55,10 @@ jobs:
           destination: reports
       - store_test_results:
           path: app/build/test-results
-  test_api_v16:
+  test_api_v23:
       working_directory: ~/repo
       docker:
-          - image: circleci/android@sha256:5cdc8626cc6f13efe5ed982cdcdb432b0472f8740fed8743a6461e025ad6cdfc
+          - image: circleci/android:api-23-alpha
       environment:
         JVM_OPTS: -Xmx3200m
       steps:
@@ -89,10 +89,10 @@ jobs:
             destination: reports
         - store_test_results:
             path: app/build/test-results
-  screenshot_api_16:
+  screenshot_api_28:
         working_directory: ~/repo
         docker:
-            - image: circleci/android:api-26-alpha
+            - image: circleci/android:api-28-alpha
         environment:
           JVM_OPTS: -Xmx3200m
         steps:
@@ -144,7 +144,7 @@ jobs:
     working_directory: ~/repo
     docker:
       # Android the primary container
-      - image: circleci/android:api-26-alpha
+      - image: circleci/android:api-28-alpha
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
@@ -182,6 +182,6 @@ workflows:
   build_test_and_deploy:
     jobs:
       - build
-      - test_api_v25
-      - test_api_v16
-      - screenshot_api_16
+      - test_api_v28
+      - test_api_v23
+      - screenshot_api_28
