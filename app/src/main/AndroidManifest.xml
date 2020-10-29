@@ -24,7 +24,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="io.github.projectbukirin.palaylab.LoginActivity"
+            android:name="io.github.projectbukirin.palaylab.HomeActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,17 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="io.github.projectbukirin.palaylab.LoginActivity" />
         <activity android:name="io.github.projectbukirin.palaylab.SignupActivity" />
         <activity android:name="io.github.projectbukirin.palaylab.ForgotPasswordActivity" />
-<!--        <activity-->
-<!--            android:name="io.github.projectbukirin.palaylab.HomeActivity"-->
-<!--            android:theme="@style/AppTheme">-->
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
-<!--        </activity>-->
         <activity
             android:name="io.github.projectbukirin.palaylab.MainActivity"
             android:screenOrientation="portrait"></activity>
