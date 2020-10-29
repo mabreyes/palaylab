@@ -182,3 +182,6 @@ workflows:
   build_test_and_deploy:
     jobs:
       - build
+      - test_api_v25
+      - test_api_v16
+      - screenshot_api_16
