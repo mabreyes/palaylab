@@ -33,6 +33,9 @@ jobs:
           name: Accept licenses
           command: yes | sdkmanager --licenses || true
       - run:
+          name: Install dependencies
+          command: apt install libgles2-mesa --yes
+      - run:
           name: Setup emulator
           command: sdkmanager "system-images;android-25;google_apis;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-25;google_apis;armeabi-v7a"
       - run:
@@ -66,6 +69,9 @@ jobs:
       - run:
           name: Accept licenses
           command: yes | sdkmanager --licenses || true
+      - run:
+          name: Install dependencies
+          command: apt install libgles2-mesa --yes
       - run:
           name: Setup emulator
           command: sdkmanager "system-images;android-16;default;armeabi-v7a" && echo "no" | avdmanager create avd -n test -k "system-images;android-16;default;armeabi-v7a"
