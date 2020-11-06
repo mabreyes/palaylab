@@ -3,7 +3,6 @@ jobs:
   build:
     working_directory: ~/repo
     parallelism: 1
-    shell: /bin/bash --login
     docker:
       - image: circleci/android:api-28-alpha
     steps:
@@ -18,6 +17,12 @@ jobs:
           keys:
             # This branch if available
             - v1-dep-{{ .Branch }}-
+      - run:
+          name: Accept licenses
+          command: yes | sdkmanager --licenses || true
+      - run:
+          name: Download Dependencies
+          command: ./gradlew androidDependencies
       # Save dependency cache
       - save_cache:
           key: v1-dep-{{ .Branch }}-{{ epoch }}
