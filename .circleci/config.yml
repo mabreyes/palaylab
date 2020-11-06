@@ -7,11 +7,7 @@ jobs:
       - image: circleci/android:api-28-alpha
     steps:
       # Machine Setup
-      #   If you break your build into multiple jobs with workflows, you will probably want to do the parts of this that are relevant in each
-      # The following `checkout` command checks out your code to your working directory. In 1.0 we did this implicitly. In 2.0 you can choose where in the course of a job your code should be checked out.
       - checkout
-      # Dependencies
-      #   This would typically go in either a build or a build-and-test job when using workflows
       # Restore the dependency cache
       - restore_cache:
           keys:
@@ -27,8 +23,6 @@ jobs:
       - save_cache:
           key: v1-dep-{{ .Branch }}-{{ epoch }}
           paths:
-            # This is a broad list of cache paths to include many possible development environments
-            # You can probably delete some of these entries
             - vendor/bundle
             - ~/virtualenvs
             - ~/.m2
@@ -41,10 +35,7 @@ jobs:
             - ~/.android
             - ~/android
       # Test
-      #   This would typically be a build job when using workflows, possibly combined with build
-      # This is based on your 1.0 configuration file or project settings
       - run: ./gradlew build
-      - run: ./gradlew jacocoTestReport
       # Teardown
       - store_artifacts:
           name: Store test reports
@@ -58,7 +49,3 @@ jobs:
           name: Store Lint report
           path: app/build/reports/lint-results.html
           destination: lint
-      - store_artifacts:
-          name: Store Jacoco report
-          path: app/build/reports/jacoco
-          destination: tests
