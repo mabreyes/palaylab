@@ -47,172 +47,34 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/developer"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Project Bukirin Developers"
-                android:textColor="#115533"
-                android:textSize="20dp"
+            <Button
+                android:id="@+id/update_pass_btn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/update_pass"
                 android:fontFamily="@font/gorditabold"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"/>
-            <ImageView
-                android:id="@+id/ricky"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ricky"
-                android:layout_below="@+id/developer"/>
+                android:textColor="#ffffff"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/roundbutton"
+                app:layout_constraintBottom_toTopOf="@+id/logout_btn"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <TextView
-                android:id="@+id/rickyinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/developer"
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@+id/ricky"
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/logout"
+                android:background="@drawable/roundbuttonaccent"
                 android:fontFamily="@font/gorditabold"
-                android:text="Ricky D Bantonare"
-                android:textColor="#115533"
-                android:textSize="15dp"
-                android:layout_marginLeft="15dp"
-                android:paddingTop="10dp"/>
-            <TextView
-                android:id="@+id/rickycourse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/rickyinfo"
-                android:layout_toRightOf="@+id/ricky"
-                android:fontFamily="@font/gorditamedium"
-                android:text="BS Computer Science"
-                android:textColor="#115533"
-                android:textSize="10dp"
-                android:layout_marginLeft="15dp"/>
+                android:textColor="#ffffff"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/update_pass_btn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageView
-                android:id="@+id/paul"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_below="@+id/marc"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/paul"/>
 
-            <TextView
-                android:id="@+id/marcinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:textColor="#115533"
-                android:fontFamily="@font/gorditabold"
-                android:textSize="15dp"
-                android:text="Marc Anthony B Reyes"
-                android:layout_toRightOf="@+id/ricky"
-                android:layout_below="@id/rickycourse"
-                android:layout_marginLeft="15dp"
-                android:paddingTop="10dp"/>
-
-            <TextView
-                android:id="@+id/marccourse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/marcinfo"
-                android:layout_toRightOf="@+id/ricky"
-                android:fontFamily="@font/gorditamedium"
-                android:text="BS Computer Science"
-                android:textColor="#115533"
-                android:textSize="10dp"
-                android:layout_marginLeft="15dp"/>
-
-            <ImageView
-                android:id="@+id/marc"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_below="@+id/ricky"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/marc"/>
-
-            <TextView
-                android:id="@+id/paulinfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:textColor="#115533"
-                android:fontFamily="@font/gorditabold"
-                android:textSize="15dp"
-                android:text="Paul Arnold M Simbajon"
-                android:layout_toRightOf="@+id/ricky"
-                android:layout_below="@id/marccourse"
-                android:layout_marginLeft="15dp"
-                android:paddingTop="10dp"/>
-
-            <TextView
-                android:id="@+id/paulcourse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/paulinfo"
-                android:layout_toRightOf="@+id/ricky"
-                android:fontFamily="@font/gorditamedium"
-                android:text="BS Computer Science"
-                android:textColor="#115533"
-                android:textSize="10dp"
-                android:layout_marginLeft="15dp"
-                />
-
-            <TextView
-                android:id="@+id/adviser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Adviser"
-                android:textColor="#115533"
-                android:textSize="20dp"
-                android:fontFamily="@font/gorditabold"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="30dp"
-                android:layout_below="@+id/paul"/>
-
-            <ImageView
-                android:id="@+id/maam"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_below="@+id/adviser"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/maam"/>
-
-            <TextView
-                android:id="@+id/maaminfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:textColor="#115533"
-                android:fontFamily="@font/gorditabold"
-                android:textSize="15dp"
-                android:text="Cristina Amor T Cajilla, MIT"
-                android:layout_toRightOf="@+id/ricky"
-                android:layout_below="@id/adviser"
-                android:layout_marginLeft="15dp"
-                android:paddingTop="10dp"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/maaminfo"
-                android:layout_toRightOf="@+id/ricky"
-                android:fontFamily="@font/gorditamedium"
-                android:text="Thesis Adviser"
-                android:textColor="#115533"
-                android:textSize="10dp"
-                android:layout_marginLeft="15dp"
-                />
             <TextView
                 android:id="@+id/acknowledgement"
                 android:layout_width="wrap_content"
@@ -223,7 +85,7 @@
                 android:fontFamily="@font/gorditabold"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:layout_below="@+id/maam"/>
+                android:layout_below="@+id/logout_btn"/>
 
             <TextView
                 android:id="@+id/list"

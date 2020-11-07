@@ -12,9 +12,6 @@ import com.google.firebase.auth.FirebaseAuth
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    private lateinit var logoutBtn: Button
-    private lateinit var updatePass: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         auth = FirebaseAuth.getInstance()
@@ -38,21 +35,6 @@ class MainActivity : AppCompatActivity() {
         button4.setOnClickListener { statisticsActivity() }
         val imageButton = findViewById<View>(R.id.about) as ImageButton
         imageButton.setOnClickListener { aboutActivity() }
-
-        logoutBtn = findViewById(R.id.logout_btn)
-        updatePass = findViewById(R.id.update_pass_btn)
-
-        logoutBtn.setOnClickListener{
-            FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-        updatePass.setOnClickListener{
-            val intent = Intent(this, UpdatePassword::class.java)
-            startActivity(intent)
-        }
 
         /* Helper code snippets. Don't remove this for now
 
