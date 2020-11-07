@@ -18,10 +18,10 @@
     <string name="url_androidwave_android">https://androidwave.com/category/android/</string>
     <string name="message">This is an Open Source project. Contribute to this project by visiting
         <a href="https://github.com/marcreyesph/palaylab-mobile/">https://github.com/marcreyesph/palaylab-mobile/</a></string>
-    <string name="email_hint">E-mail Hint</string>
-    <string name="get_password_link">Get Password Link</string>
+    <string name="email_hint">E-mail</string>
+    <string name="get_password_link">Reset Password</string>
     <string name="back">Back</string>
-    <string name="password_hint">Password Hint</string>
+    <string name="password_hint">Password</string>
     <string name="login_btn">Login</string>
     <string name="signup_btn">Sign Up</string>
     <string name="new_password">New Password</string>
