@@ -3,6 +3,8 @@ package io.github.projectbukirin.palaylab
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.LinkMovementMethod
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
@@ -29,8 +31,10 @@ class About : AppCompatActivity() {
         }
 
         setContentView(R.layout.activity_about)
-        val imageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        imageButton.setOnClickListener { backActivity() }
+        setSupportActionBar(findViewById(R.id.toolbar_about))
+
+        supportActionBar?.title = "About"
+
         val textView = findViewById<View>(R.id.link) as TextView
         textView.movementMethod = LinkMovementMethod.getInstance()
 
@@ -53,6 +57,22 @@ class About : AppCompatActivity() {
     fun backActivity() {
         finish()
     }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
+    }
+
 
     override fun onBackPressed() {
         finish()

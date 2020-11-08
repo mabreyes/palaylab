@@ -2,38 +2,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg2"
+    android:background="#E1E1E1"
     android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <ImageButton
-            android:id="@+id/about"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="25dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="20dp"
-            android:background="#00000000"
-            android:tint="#FFFFFF"
-            app:srcCompat="@drawable/outline_info_white_36" />
-
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/gorditabold"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="Home"
-            android:textColor="#FFFFFF"
-            android:textSize="30dp" />
     </RelativeLayout>
 
 

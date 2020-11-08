@@ -6,31 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".Diseases"
     android:orientation="vertical"
-    android:background="@drawable/bg2">
+    android:background="#E1E1E1">
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/baseline_arrow_back_white_48" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="Diseases"
-        android:textSize="30dp"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/gorditabold"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_diseases"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <ListView
         android:divider="#00000000"

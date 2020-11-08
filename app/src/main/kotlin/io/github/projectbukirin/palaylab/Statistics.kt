@@ -2,6 +2,8 @@ package io.github.projectbukirin.palaylab
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.ImageButton
@@ -38,8 +40,10 @@ class Statistics : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_statistics)
-        val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        androidImageButton.setOnClickListener { backActivity() }
+
+        setSupportActionBar(findViewById(R.id.toolbar_statistics))
+        supportActionBar?.title = "Statistics"
+
         val db = DatabaseHelper(this)
         val armyWormData = db.countInfo("Army Worm")
         val bacterialLeafBlightData = db.countInfo("Bacterial Leaf Blight")
@@ -218,6 +222,24 @@ class Statistics : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            true
+        }
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
 
     override fun onBackPressed() {
         val intent = Intent(this@Statistics, MainActivity::class.java)

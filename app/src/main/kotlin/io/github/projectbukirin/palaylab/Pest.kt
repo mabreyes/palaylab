@@ -2,6 +2,8 @@ package io.github.projectbukirin.palaylab
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ImageButton
@@ -17,6 +19,10 @@ class Pest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pest)
+
+        setSupportActionBar(findViewById(R.id.toolbar_pests))
+        supportActionBar?.title = "Pests"
+
         list = findViewById<View>(R.id.pestitem) as ListView
         val customListview = CustomListView(this, pestename, desc, imgid)
         list!!.adapter = customListview
@@ -49,14 +55,30 @@ class Pest : AppCompatActivity() {
                 }
             }
         }
-        val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        androidImageButton.setOnClickListener { backActivity() }
     }
 
     fun backActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            val intent = Intent(this, About::class.java)
+            startActivity(intent)
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
 
     override fun onBackPressed() {
         val intent = Intent(this@Pest, MainActivity::class.java)

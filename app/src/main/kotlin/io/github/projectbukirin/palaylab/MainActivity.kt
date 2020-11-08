@@ -2,12 +2,14 @@ package io.github.projectbukirin.palaylab
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -25,6 +27,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         setContentView(R.layout.activity_main)
+        setSupportActionBar(findViewById(R.id.toolbar_main))
+
+        supportActionBar?.title = "Home"
+
         val button = findViewById<View>(R.id.button) as Button
         button.setOnClickListener { diseaseActivity() }
         val button1 = findViewById<View>(R.id.button1) as Button
@@ -33,8 +39,6 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener { resultsActivity() }
         val button4 = findViewById<View>(R.id.button4) as Button
         button4.setOnClickListener { statisticsActivity() }
-        val imageButton = findViewById<View>(R.id.about) as ImageButton
-        imageButton.setOnClickListener { aboutActivity() }
 
         /* Helper code snippets. Don't remove this for now
 
@@ -80,6 +84,26 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this@MainActivity, About::class.java)
         startActivity(intent)
     }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            aboutActivity()
+            true
+        }
+
+        else -> {
+            // If we got here, the user's action was not recognized.
+            // Invoke the superclass to handle it.
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
+
 
     override fun onBackPressed() {
         val a = Intent(Intent.ACTION_MAIN)
