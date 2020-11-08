@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -42,6 +41,7 @@ class Statistics : AppCompatActivity() {
         setContentView(R.layout.activity_statistics)
 
         setSupportActionBar(findViewById(R.id.toolbar_statistics))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Statistics"
 
         val db = DatabaseHelper(this)
@@ -241,8 +241,8 @@ class Statistics : AppCompatActivity() {
     }
 
 
-    override fun onBackPressed() {
-        val intent = Intent(this@Statistics, MainActivity::class.java)
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

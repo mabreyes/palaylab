@@ -21,6 +21,7 @@ class Pest : AppCompatActivity() {
         setContentView(R.layout.activity_pest)
 
         setSupportActionBar(findViewById(R.id.toolbar_pests))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Pests"
 
         list = findViewById<View>(R.id.pestitem) as ListView
@@ -80,8 +81,8 @@ class Pest : AppCompatActivity() {
     }
 
 
-    override fun onBackPressed() {
-        val intent = Intent(this@Pest, MainActivity::class.java)
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

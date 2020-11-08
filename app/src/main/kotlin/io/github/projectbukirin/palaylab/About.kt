@@ -32,7 +32,7 @@ class About : AppCompatActivity() {
 
         setContentView(R.layout.activity_about)
         setSupportActionBar(findViewById(R.id.toolbar_about))
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "About"
 
         val textView = findViewById<View>(R.id.link) as TextView
@@ -74,7 +74,8 @@ class About : AppCompatActivity() {
     }
 
 
-    override fun onBackPressed() {
+    override fun onSupportNavigateUp(): Boolean {
         finish()
+        return true
     }
 }

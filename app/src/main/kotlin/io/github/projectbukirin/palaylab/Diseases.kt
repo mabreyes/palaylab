@@ -21,7 +21,7 @@ class Diseases : AppCompatActivity() {
         setContentView(R.layout.activity_diseases)
 
         setSupportActionBar(findViewById(R.id.toolbar_diseases))
-
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Diseases"
 
         list = findViewById<View>(R.id.disease_list) as ListView
@@ -75,8 +75,8 @@ class Diseases : AppCompatActivity() {
         return true
     }
 
-    override fun onBackPressed() {
-        val intent = Intent(this@Diseases, MainActivity::class.java)
-        startActivity(intent)
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
