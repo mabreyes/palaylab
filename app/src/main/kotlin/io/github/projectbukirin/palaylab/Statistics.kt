@@ -225,6 +225,8 @@ class Statistics : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_settings -> {
+            val intent = Intent(this, About::class.java)
+            startActivity(intent)
             true
         }
 
