@@ -20,7 +20,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/toolbar_about"
-        android:padding="5dp">
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -136,8 +137,9 @@
                 android:fontFamily="@font/gorditaregular"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="30dp"
+                android:gravity="center"
                 android:layout_centerHorizontal="true"
-                android:text="© 2019 Project Bukirin\nv1.0.1 October 2020"
+                android:text="© 2019 Project Bukirin\nv1.1.0 November 2020"
                 android:textColor="#115533"
                 android:textSize="12dp"
                 android:layout_marginLeft="15dp"/>
