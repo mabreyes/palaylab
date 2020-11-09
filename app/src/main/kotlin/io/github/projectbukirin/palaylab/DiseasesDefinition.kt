@@ -1,5 +1,6 @@
 package io.github.projectbukirin.palaylab
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -10,6 +11,8 @@ import android.text.method.ScrollingMovementMethod
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
 import android.text.style.StyleSpan
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
@@ -24,6 +27,11 @@ class DiseasesDefinition : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_definition)
+
+        setSupportActionBar(findViewById(R.id.toolbar_definition))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Bacterial Leaf Blight"
+
         val viewPager = findViewById<ViewPager>(R.id.viewpager)
         val diseasesViewPager = DiseasesViewPager(this)
         viewPager.adapter = diseasesViewPager
@@ -127,12 +135,26 @@ class DiseasesDefinition : AppCompatActivity() {
         detectionText!!.text = counterDetectionsTW
     }
 
-    fun backActivity() {
-        finish()
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            val intent = Intent(this, About::class.java)
+            startActivity(intent)
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
     }
 
-    override fun onBackPressed() {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
         finish()
+        return true
     }
 
     class DiseaseDefinition2 : AppCompatActivity() {
@@ -142,6 +164,11 @@ class DiseasesDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Rice Blast"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val diseasesViewPager = DiseasesViewPager2(this)
             viewPager.adapter = diseasesViewPager
@@ -246,12 +273,26 @@ class DiseasesDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 
@@ -262,6 +303,11 @@ class DiseasesDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Sheath Blight"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val diseasesViewPager = DiseasesViewPager3(this)
             viewPager.adapter = diseasesViewPager
@@ -362,12 +408,26 @@ class DiseasesDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 
@@ -378,6 +438,11 @@ class DiseasesDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Tungro"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val diseasesViewPager = DiseasesViewPager4(this)
             viewPager.adapter = diseasesViewPager
@@ -489,12 +554,26 @@ class DiseasesDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 }

@@ -1,5 +1,6 @@
 package io.github.projectbukirin.palaylab
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -10,6 +11,8 @@ import android.text.method.ScrollingMovementMethod
 import android.text.style.ForegroundColorSpan
 import android.text.style.RelativeSizeSpan
 import android.text.style.StyleSpan
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
@@ -24,6 +27,11 @@ class PestsDefinition : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_definition)
+
+        setSupportActionBar(findViewById(R.id.toolbar_definition))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Army Worm"
+
         val viewPager = findViewById<ViewPager>(R.id.viewpager)
         val pestsViewPager = PestsViewPager(this)
         viewPager.adapter = pestsViewPager
@@ -117,12 +125,26 @@ class PestsDefinition : AppCompatActivity() {
         detectionText!!.text = counterDetectionsTW
     }
 
-    fun backActivity() {
-        finish()
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            val intent = Intent(this, About::class.java)
+            startActivity(intent)
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
     }
 
-    override fun onBackPressed() {
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
         finish()
+        return true
     }
 
     class PestDefinition2 : AppCompatActivity() {
@@ -132,6 +154,11 @@ class PestsDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Golden Apple Snail"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val pestsViewPager = PestViewPager2(this)
             viewPager.adapter = pestsViewPager
@@ -220,8 +247,6 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Golden Apple Snail").toString()
             val thisWeek = db.countThisWeek("Golden Apple Snail").toString()
@@ -235,12 +260,26 @@ class PestsDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 
@@ -251,6 +290,11 @@ class PestsDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Green Leafhopper"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val pestsViewPager = PestViewPager3(this)
             viewPager.adapter = pestsViewPager
@@ -366,12 +410,26 @@ class PestsDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 
@@ -382,6 +440,11 @@ class PestsDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Rice Black Bug"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val pestsViewPager = PestViewPager4(this)
             viewPager.adapter = pestsViewPager
@@ -469,12 +532,26 @@ class PestsDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 
@@ -485,6 +562,11 @@ class PestsDefinition : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            setSupportActionBar(findViewById(R.id.toolbar_definition))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Rice Ear Bug"
+
             val viewPager = findViewById<ViewPager>(R.id.viewpager)
             val pestsViewPager = PestViewPager5(this)
             viewPager.adapter = pestsViewPager
@@ -588,12 +670,26 @@ class PestsDefinition : AppCompatActivity() {
             detectionText!!.text = counterDetectionsTW
         }
 
-        fun backActivity() {
-            finish()
+        override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+            R.id.action_settings -> {
+                val intent = Intent(this, About::class.java)
+                startActivity(intent)
+                true
+            }
+
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
 
-        override fun onBackPressed() {
+        override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+            menuInflater.inflate(R.menu.settings_actionbar, menu)
+            return true
+        }
+
+        override fun onSupportNavigateUp(): Boolean {
             finish()
+            return true
         }
     }
 }

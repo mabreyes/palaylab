@@ -58,11 +58,6 @@ class Pest : AppCompatActivity() {
         }
     }
 
-    fun backActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
-    }
-
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.action_settings -> {
             val intent = Intent(this, About::class.java)

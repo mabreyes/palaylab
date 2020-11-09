@@ -54,10 +54,6 @@ class About : AppCompatActivity() {
         }
     }
 
-    fun backActivity() {
-        finish()
-    }
-
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.settings_actionbar, menu)
         return true
