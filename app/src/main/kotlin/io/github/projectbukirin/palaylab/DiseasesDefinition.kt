@@ -114,8 +114,6 @@ class DiseasesDefinition : AppCompatActivity() {
         builder.append(s7)
         textView!!.text = builder
         textView!!.movementMethod = ScrollingMovementMethod()
-        val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        androidImageButton.setOnClickListener { backActivity() }
         val db = DatabaseHelper(this)
         val count = db.countInfo("Bacterial Leaf Blight").toString()
         val thisWeek = db.countThisWeek("Bacterial Leaf Blight").toString()
@@ -235,8 +233,6 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Blast").toString()
             val thisWeek = db.countThisWeek("Blast").toString()
@@ -353,8 +349,6 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Sheath Blight").toString()
             val thisWeek = db.countThisWeek("Sheath Blight").toString()
@@ -482,8 +476,6 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Tungro").toString()
             val thisWeek = db.countThisWeek("Tungro").toString()

@@ -104,8 +104,6 @@ class PestsDefinition : AppCompatActivity() {
         builder.append(s7)
         textView!!.text = builder
         textView!!.movementMethod = ScrollingMovementMethod()
-        val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        androidImageButton.setOnClickListener { backActivity() }
         val db = DatabaseHelper(this)
         val count = db.countInfo("Army Worm").toString()
         val thisWeek = db.countThisWeek("Army Worm").toString()
@@ -355,8 +353,6 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Green Leafhopper").toString()
             val thisWeek = db.countThisWeek("Green Leafhopper").toString()
@@ -460,8 +456,6 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Black Bug").toString()
             val thisWeek = db.countThisWeek("Black Bug").toString()
@@ -581,8 +575,6 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-            androidImageButton.setOnClickListener { backActivity() }
             val db = DatabaseHelper(this)
             val count = db.countInfo("Ear Bug").toString()
             val thisWeek = db.countThisWeek("Ear Bug").toString()
