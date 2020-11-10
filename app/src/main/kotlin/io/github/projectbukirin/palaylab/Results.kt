@@ -6,6 +6,8 @@ import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import android.provider.MediaStore
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
@@ -36,6 +38,11 @@ class Results : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
+
+        setSupportActionBar(findViewById(R.id.toolbar_results))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Detect"
+
         cameraView = findViewById(R.id.cameraView)
         imageViewResult = findViewById(R.id.imageViewResult)
         btnDetectObject = findViewById(R.id.btnDetectObject)
@@ -44,8 +51,6 @@ class Results : AppCompatActivity() {
         btnDetectSelectImage = findViewById(R.id.btnDetectSelectImage)
         btnDetectObjectFromCam = findViewById(R.id.btnDetectObjectFromCam)
         listView = findViewById(R.id.listView)
-        val androidImageButton = findViewById<View>(R.id.imageButton3) as ImageButton
-        androidImageButton.setOnClickListener { backActivity() }
         textView = findViewById(R.id.textView3)
         btnDetectObject2?.visibility = View.INVISIBLE
         imageViewResult?.visibility = View.INVISIBLE
@@ -170,7 +175,9 @@ class Results : AppCompatActivity() {
             listView?.visibility = View.VISIBLE
             btnDetectObject?.visibility = View.INVISIBLE
             btnDetectObjectCam?.visibility = View.INVISIBLE
-            textView?.text = "Results"
+            setSupportActionBar(findViewById(R.id.toolbar_results))
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.title = "Results"
             btnDetectObject2?.visibility = View.VISIBLE
         })
         btnDetectObjectCam?.setOnClickListener(View.OnClickListener {
@@ -321,9 +328,24 @@ class Results : AppCompatActivity() {
         recreate()
     }
 
-    fun backActivity() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_actionbar, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.action_settings -> {
+            true
+        }
+
+        else -> {
+            super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     override fun onResume() {
