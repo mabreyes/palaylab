@@ -8,7 +8,9 @@ import android.view.View
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ImageButton
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import io.github.projectbukirin.palaylab.PestsDefinition.*
 
 class Pest : AppCompatActivity() {
@@ -16,9 +18,20 @@ class Pest : AppCompatActivity() {
     var pestename: Array<String?> = arrayOf("Army Worm", "Golden Apple Snail", "Green Leafhopper", "Rice Black Bug", "Rice Ear Bug")
     var desc: Array<String?> = arrayOf("Pest", "Pest", "Pest", "Pest", "Pest")
     var imgid: Array<Int?> = arrayOf(R.drawable.armyworm, R.drawable.goldenapplesnail, R.drawable.greenleafhopper, R.drawable.riceblackbug, R.drawable.riceearbug)
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_pest)
+
+        auth = FirebaseAuth.getInstance()
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        }
 
         setSupportActionBar(findViewById(R.id.toolbar_pests))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

@@ -1,5 +1,6 @@
 package io.github.projectbukirin.palaylab
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
@@ -23,6 +24,14 @@ class UpdatePassword : AppCompatActivity() {
         setContentView(R.layout.activity_update_password)
 
         auth = FirebaseAuth.getInstance()
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        }
 
         passwordEt = findViewById(R.id.password_edt_text)
 

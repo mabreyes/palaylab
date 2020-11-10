@@ -51,4 +51,6 @@ class ForgotPasswordActivity : AppCompatActivity() {
             }
         }
     }
+    override fun onBackPressed() {
+    }
 }

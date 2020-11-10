@@ -12,6 +12,7 @@ import android.view.View
 import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import com.wonderkiln.camerakit.*
 import io.github.projectbukirin.palaylab.DiseasesDefinition.*
 import io.github.projectbukirin.palaylab.PestsDefinition.*
@@ -35,9 +36,20 @@ class Results : AppCompatActivity() {
     private var cameraView: CameraView? = null
     private var listView: ListView? = null
     private var textView: TextView? = null
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
+
+        auth = FirebaseAuth.getInstance()
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else {
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        }
 
         setSupportActionBar(findViewById(R.id.toolbar_results))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

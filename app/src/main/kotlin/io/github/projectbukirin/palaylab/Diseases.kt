@@ -8,10 +8,13 @@ import android.view.View
 import android.widget.AdapterView.OnItemClickListener
 import android.widget.ImageButton
 import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import io.github.projectbukirin.palaylab.DiseasesDefinition.*
 
 class Diseases : AppCompatActivity() {
+    private lateinit var auth: FirebaseAuth
     var list: ListView? = null
     var diseasename: Array<String?> = arrayOf("Bacterial Leaf Blight", "Rice Blast", "Sheath Blight", "Tungro")
     var desc: Array<String?> = arrayOf("Disease", "Disease", "Disease", "Disease")
@@ -19,6 +22,16 @@ class Diseases : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_diseases)
+
+        auth = FirebaseAuth.getInstance()
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else{
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        }
 
         setSupportActionBar(findViewById(R.id.toolbar_diseases))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

@@ -16,17 +16,30 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
+import com.google.firebase.auth.FirebaseAuth
 import io.github.projectbukirin.palaylab.DiseasesViewPager.*
 
 class DiseasesDefinition : AppCompatActivity() {
     var textView: TextView? = null
     var textViewDetection: TextView? = null
     var detectionText: TextView? = null
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_definition)
+
+        auth = FirebaseAuth.getInstance()
+
+        if(auth.currentUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        } else{
+            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        }
 
         setSupportActionBar(findViewById(R.id.toolbar_definition))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -161,9 +174,20 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            auth = FirebaseAuth.getInstance()
+
+            if(auth.currentUser == null){
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+            }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -300,9 +324,20 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            auth = FirebaseAuth.getInstance()
+
+            if(auth.currentUser == null){
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else{
+                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+            }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -435,9 +470,20 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_definition)
+
+            auth = FirebaseAuth.getInstance()
+
+            if(auth.currentUser == null){
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+            }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
             supportActionBar?.setDisplayHomeAsUpEnabled(true)
