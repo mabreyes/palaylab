@@ -23,6 +23,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.ValueEventListener
 
 class Results : AppCompatActivity() {
     private var classifier: Classifier? = null
@@ -37,6 +42,9 @@ class Results : AppCompatActivity() {
     private var listView: ListView? = null
     private var textView: TextView? = null
     private lateinit var auth: FirebaseAuth
+    private lateinit var dbReference: DatabaseReference
+    private lateinit var firebaseDatabase: FirebaseDatabase
+    private var userId: String = ""
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_results)
@@ -50,6 +58,10 @@ class Results : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
         }
+
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        dbReference = firebaseDatabase.getReference("palaylab-users-prod-01")
+        val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
 
         setSupportActionBar(findViewById(R.id.toolbar_results))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -102,11 +114,15 @@ class Results : AppCompatActivity() {
                     if (listItems.size != 0) {
                         stringNames[i] = listItems[i]["disease_name"]
                         stringConfidence[i] = listItems[i]["confidence"]
+                        val dStringConfidence: String? = stringConfidence[i]
+                        val _dStringConfidence = dStringConfidence?.dropLast(1)
+                        val fStringConfidence = _dStringConfidence?.toFloat()
                         val current = listItems[i]["disease_name"]
                         val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                         val date = Date()
                         val dateToday = dateFormat.format(date)
                         db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
+                        createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), fStringConfidence!!)
                         if (current == "Army Worm") {
                             intImage[i] = R.drawable.armyworm
                         } else if (current == "Bacterial Leaf Blight") {
@@ -244,11 +260,15 @@ class Results : AppCompatActivity() {
                 if (listItems.size != 0) {
                     stringNames[i] = listItems[i]["disease_name"]
                     stringConfidence[i] = listItems[i]["confidence"]
+                    val dStringConfidence: String? = stringConfidence[i]
+                    val _dStringConfidence = dStringConfidence?.dropLast(1)
+                    val fStringConfidence = _dStringConfidence?.toFloat()
                     val current = listItems[i]["disease_name"]
                     val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                     val date = Date()
                     val dateToday = dateFormat.format(date)
                     db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
+                    createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), fStringConfidence!!)
                     if (current == "Army Worm") {
                         intImage[i] = R.drawable.armyworm
                     } else if (current == "Bacterial Leaf Blight") {
@@ -334,6 +354,11 @@ class Results : AppCompatActivity() {
                 e.printStackTrace()
             }
         }
+    }
+
+    private fun createPrediction(uuid: String, detectionName: String, detectionDate: String, detectionConfidence: Float) {
+        val prediction = PredictionsInfo(uuid, detectionName, detectionDate, detectionConfidence)
+        dbReference.child(userId).setValue(prediction)
     }
 
     fun Restart() {
