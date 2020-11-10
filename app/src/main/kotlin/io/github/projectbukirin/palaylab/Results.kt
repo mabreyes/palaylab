@@ -13,6 +13,8 @@ import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.wonderkiln.camerakit.*
 import io.github.projectbukirin.palaylab.DiseasesDefinition.*
 import io.github.projectbukirin.palaylab.PestsDefinition.*
@@ -23,11 +25,6 @@ import java.text.SimpleDateFormat
 import java.util.*
 import java.util.concurrent.Executor
 import java.util.concurrent.Executors
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.ValueEventListener
 
 class Results : AppCompatActivity() {
     private var classifier: Classifier? = null
@@ -62,6 +59,8 @@ class Results : AppCompatActivity() {
         firebaseDatabase = FirebaseDatabase.getInstance()
         dbReference = firebaseDatabase.getReference("palaylab-users-prod-01")
         val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
+
+        val timeStamp = System.currentTimeMillis() / 1000
 
         setSupportActionBar(findViewById(R.id.toolbar_results))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -122,7 +121,7 @@ class Results : AppCompatActivity() {
                         val date = Date()
                         val dateToday = dateFormat.format(date)
                         db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
-                        createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), fStringConfidence!!)
+                        createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), timeStamp, fStringConfidence!!)
                         if (current == "Army Worm") {
                             intImage[i] = R.drawable.armyworm
                         } else if (current == "Bacterial Leaf Blight") {
@@ -268,7 +267,7 @@ class Results : AppCompatActivity() {
                     val date = Date()
                     val dateToday = dateFormat.format(date)
                     db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
-                    createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), fStringConfidence!!)
+                    createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), timeStamp, fStringConfidence!!)
                     if (current == "Army Worm") {
                         intImage[i] = R.drawable.armyworm
                     } else if (current == "Bacterial Leaf Blight") {
@@ -356,10 +355,10 @@ class Results : AppCompatActivity() {
         }
     }
 
-    private fun createPrediction(uuid: String, detectionName: String, detectionDate: String, detectionConfidence: Float) {
+    private fun createPrediction(uuid: String, detectionName: String, detectionDate: String, detectionTimeStamp: Long, detectionConfidence: Float) {
         val predictionsRef = dbReference.child("predictions")
         val newPredictionsRef = predictionsRef.push()
-        val prediction = PredictionsInfo(uuid, detectionName, detectionDate, detectionConfidence)
+        val prediction = PredictionsInfo(uuid, detectionName, detectionDate, detectionTimeStamp, detectionConfidence)
         newPredictionsRef.setValue(prediction)
     }
 
