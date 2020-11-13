@@ -63,7 +63,7 @@
                 android:fontFamily="@font/gorditamedium"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="Detections"
+                android:text="Total"
                 android:textColor="#FFFFFF"
                 android:textSize="12dp"
                 android:textStyle="bold"
