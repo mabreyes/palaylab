@@ -174,6 +174,7 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -199,6 +200,7 @@ class DiseasesDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Rice Blast\n")
             val ss1 = SpannableString("Disease\n\n")
             val s2 = SpannableString("About\n")
@@ -284,17 +286,14 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Blast").toString()
-            val thisWeek = db.countThisWeek("Blast").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Blast", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Blast", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Blast", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -324,6 +323,7 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -349,6 +349,7 @@ class DiseasesDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Sheath Blight\n")
             val ss1 = SpannableString("Disease\n\n")
             val s2 = SpannableString("About\n")
@@ -430,17 +431,14 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Sheath Blight").toString()
-            val thisWeek = db.countThisWeek("Sheath Blight").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Sheath Blight", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Sheath Blight", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Sheath Blight", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -470,6 +468,7 @@ class DiseasesDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -495,6 +494,7 @@ class DiseasesDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Tungro\n")
             val ss1 = SpannableString("Disease\n\n")
             val s2 = SpannableString("About\n")
@@ -587,17 +587,14 @@ class DiseasesDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Tungro").toString()
-            val thisWeek = db.countThisWeek("Tungro").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Tungro", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Tungro", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Tungro", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

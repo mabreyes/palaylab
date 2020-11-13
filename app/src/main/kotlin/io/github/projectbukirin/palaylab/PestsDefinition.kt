@@ -26,6 +26,7 @@ class PestsDefinition : AppCompatActivity() {
     var textView: TextView? = null
     var textViewDetection: TextView? = null
     var detectionText: TextView? = null
+    var detectionToday: TextView? = null
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +52,7 @@ class PestsDefinition : AppCompatActivity() {
         textView = findViewById<View>(R.id.definition) as TextView
         textViewDetection = findViewById<View>(R.id.detection) as TextView
         detectionText = findViewById<View>(R.id.detectionText) as TextView
+        detectionToday = findViewById<View>(R.id.detectionToday) as TextView
         val s1 = SpannableString("Army Worm\n")
         val ss1 = SpannableString("Infestation\n\n")
         val s2 = SpannableString("About\n")
@@ -125,17 +127,14 @@ class PestsDefinition : AppCompatActivity() {
         builder.append(s7)
         textView!!.text = builder
         textView!!.movementMethod = ScrollingMovementMethod()
-        val db = DatabaseHelper(this)
-        val count = db.countInfo("Army Worm").toString()
-        val thisWeek = db.countThisWeek("Army Worm").toString()
-        val counterDetections = SpannableString.valueOf("$count\nTotal")
-        counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-        counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-        val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-        counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-        counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-        textViewDetection!!.text = counterDetections
-        detectionText!!.text = counterDetectionsTW
+        val predictionCounterTotal = PredictionCounter("Army Worm", textViewDetection!!)
+        predictionCounterTotal.getPredictionTotal()
+
+        val predictionCounterThisWeek = PredictionCounter("Army Worm", detectionText!!)
+        predictionCounterThisWeek.getPredictionThisWeek()
+
+        val predictionCounterToday = PredictionCounter("Army Worm", detectionToday!!)
+        predictionCounterToday.getPredictionToday()
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -310,6 +309,7 @@ class PestsDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -335,6 +335,7 @@ class PestsDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Green Leafhopper\n")
             val ss1 = SpannableString("Infestation\n\n")
             val s2 = SpannableString("About\n")
@@ -431,17 +432,14 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Green Leafhopper").toString()
-            val thisWeek = db.countThisWeek("Green Leafhopper").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Green Leafhopper", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Green Leafhopper", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Green Leafhopper", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -471,6 +469,7 @@ class PestsDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -496,6 +495,7 @@ class PestsDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Rice Black Bug\n")
             val ss1 = SpannableString("Infestation\n\n")
             val s2 = SpannableString("About\n")
@@ -564,17 +564,14 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Black Bug").toString()
-            val thisWeek = db.countThisWeek("Black Bug").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Black Bug", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Black Bug", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Black Bug", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
@@ -604,6 +601,7 @@ class PestsDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -629,6 +627,7 @@ class PestsDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Rice Ear Bug\n")
             val ss1 = SpannableString("Infestation\n\n")
             val s2 = SpannableString("About\n")
@@ -713,17 +712,14 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Ear Bug").toString()
-            val thisWeek = db.countThisWeek("Ear Bug").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Ear Bug", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Ear Bug", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Ear Bug", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
