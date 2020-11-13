@@ -6,13 +6,21 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
+    private lateinit var dbReference: DatabaseReference
+    private lateinit var firebaseDatabase: FirebaseDatabase
+    private var userId: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,24 +48,43 @@ class MainActivity : AppCompatActivity() {
         val button4 = findViewById<View>(R.id.button4) as Button
         button4.setOnClickListener { statisticsActivity() }
 
-        /* Helper code snippets. Don't remove this for now
+//        Helper code snippets. Don't remove this for now
+//
+//        DatabaseHelper db = new DatabaseHelper(this);
+//
+//        List<StatisticsInfo> list = db.getAllInfo();
+//
+//        db.deleteInfo(list.get(0));
+//
+//        *for (int i=0; i<4; i++) {
+//            db.deleteInfo(list.get(i));
+//        }
 
-        DatabaseHelper db = new DatabaseHelper(this);
+        var textResult = findViewById<View>(R.id.textResult) as TextView;
 
-        List<StatisticsInfo> list = db.getAllInfo();
+//        textResult.setText(db.getAllInfo().toString());
+//
+//        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
+//
 
-        db.deleteInfo(list.get(0));
+        firebaseDatabase = FirebaseDatabase.getInstance()
+        dbReference = firebaseDatabase.getReference("palaylab-users-prod-01")
+        val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
 
-        *for (int i=0; i<4; i++) {
-            db.deleteInfo(list.get(i));
-        }
+        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
+        val date = Date()
+        val dateToday = dateFormat.format(date)
 
-        TextView textResult = (TextView) findViewById(R.id.textResult);
+        val query: Query = dbReference.child("predictions").orderByChild("uuid").equalTo(userId)
+        query.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                textResult.text = snapshot.childrenCount.toString()
+            }
 
-        textResult.setText(db.getAllInfo().toString());
-
-        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
-        */
+            override fun onCancelled(error: DatabaseError) {
+                TODO("Not yet implemented")
+            }
+        })
     }
 
     fun diseaseActivity() {
