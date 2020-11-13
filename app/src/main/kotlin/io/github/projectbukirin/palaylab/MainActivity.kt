@@ -78,7 +78,17 @@ class MainActivity : AppCompatActivity() {
         val query: Query = dbReference.child("predictions").orderByChild("uuid").equalTo(userId)
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                textResult.text = snapshot.childrenCount.toString()
+                var ctr = 0
+                for (ds in snapshot.getChildren()) {
+                    val dName = ds.child("detectionName").getValue<String>(String::class.java)
+                    val dDate = ds.child("detectionDate").getValue<String>(String::class.java)
+                    if (dName == "Golden Apple Snail" && dDate == dateToday) {
+                        ctr++
+                    }
+                    else {
+                    }
+                }
+                textResult.text = ctr.toString()
             }
 
             override fun onCancelled(error: DatabaseError) {
