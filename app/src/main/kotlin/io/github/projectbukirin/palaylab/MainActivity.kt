@@ -66,35 +66,8 @@ class MainActivity : AppCompatActivity() {
 //
 //        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
 //
-
-        firebaseDatabase = FirebaseDatabase.getInstance()
-        dbReference = firebaseDatabase.getReference("palaylab-users-prod-01")
-        val userId: String? = FirebaseAuth.getInstance().currentUser?.uid
-
-        val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
-        val date = Date()
-        val dateToday = dateFormat.format(date)
-
-        val query: Query = dbReference.child("predictions").orderByChild("uuid").equalTo(userId)
-        query.addValueEventListener(object : ValueEventListener {
-            override fun onDataChange(snapshot: DataSnapshot) {
-                var ctr = 0
-                for (ds in snapshot.getChildren()) {
-                    val dName = ds.child("detectionName").getValue<String>(String::class.java)
-                    val dDate = ds.child("detectionDate").getValue<String>(String::class.java)
-                    if (dName == "Golden Apple Snail" && dDate == dateToday) {
-                        ctr++
-                    }
-                    else {
-                    }
-                }
-                textResult.text = ctr.toString()
-            }
-
-            override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
-            }
-        })
+        val predictionCounter = PredictionCounter("Golden Apple Snail", textResult)
+        predictionCounter.getPredictionTotal()
     }
 
     fun diseaseActivity() {
