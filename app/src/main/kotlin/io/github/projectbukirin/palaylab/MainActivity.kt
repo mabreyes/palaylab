@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
 //        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
 //
         val predictionCounter = PredictionCounter("Golden Apple Snail", textResult)
-        predictionCounter.getPredictionTotal()
+        predictionCounter.getPredictionToday()
     }
 
     fun diseaseActivity() {
