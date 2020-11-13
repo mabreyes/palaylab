@@ -164,6 +164,7 @@ class PestsDefinition : AppCompatActivity() {
         var textView: TextView? = null
         var textViewDetection: TextView? = null
         var detectionText: TextView? = null
+        var detectionToday: TextView? = null
         private lateinit var auth: FirebaseAuth
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
@@ -189,6 +190,7 @@ class PestsDefinition : AppCompatActivity() {
             textView = findViewById<View>(R.id.definition) as TextView
             textViewDetection = findViewById<View>(R.id.detection) as TextView
             detectionText = findViewById<View>(R.id.detectionText) as TextView
+            detectionToday = findViewById<View>(R.id.detectionToday) as TextView
             val s1 = SpannableString("Golden Apple Snail\n")
             val ss1 = SpannableString("Infestation\n\n")
             val s2 = SpannableString("About\n")
@@ -271,17 +273,14 @@ class PestsDefinition : AppCompatActivity() {
             builder.append(s7)
             textView!!.text = builder
             textView!!.movementMethod = ScrollingMovementMethod()
-            val db = DatabaseHelper(this)
-            val count = db.countInfo("Golden Apple Snail").toString()
-            val thisWeek = db.countThisWeek("Golden Apple Snail").toString()
-            val counterDetections = SpannableString.valueOf("$count\nTotal")
-            counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-            counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-            val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-            counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-            counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-            textViewDetection!!.text = counterDetections
-            detectionText!!.text = counterDetectionsTW
+            val predictionCounterTotal = PredictionCounter("Golden Apple Snail", textViewDetection!!)
+            predictionCounterTotal.getPredictionTotal()
+
+            val predictionCounterThisWeek = PredictionCounter("Golden Apple Snail", detectionText!!)
+            predictionCounterThisWeek.getPredictionThisWeek()
+
+            val predictionCounterToday = PredictionCounter("Golden Apple Snail", detectionToday!!)
+            predictionCounterToday.getPredictionToday()
         }
 
         override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

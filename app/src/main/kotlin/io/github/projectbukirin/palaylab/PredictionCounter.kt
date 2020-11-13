@@ -1,5 +1,10 @@
 package io.github.projectbukirin.palaylab
 
+import android.graphics.Typeface
+import android.text.SpannableString
+import android.text.Spanned
+import android.text.style.RelativeSizeSpan
+import android.text.style.StyleSpan
 import android.widget.TextView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -16,6 +21,7 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
     private val dateToday = dateFormat.format(date)
     private val query: Query = dbReference.child("predictions").orderByChild("uuid").equalTo(userId)
 
+
     fun getPredictionToday() {
         query.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
@@ -28,7 +34,10 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
                     } else {
                     }
                 }
-                textViewId.text = ctr.toString()
+                val counterDetectionsToday = SpannableString.valueOf("$ctr\nToday")
+                counterDetectionsToday.setSpan(RelativeSizeSpan(3f), 0, ctr.toString().length, 0)
+                counterDetectionsToday.setSpan(StyleSpan(Typeface.BOLD), 0, ctr.toString().length, 0)
+                textViewId.text = counterDetectionsToday
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -48,7 +57,11 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
                     } else {
                     }
                 }
-                textViewId.text = ctr.toString()
+                val flag = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
+                val counterDetections = SpannableString.valueOf("$ctr\nTotal")
+                counterDetections.setSpan(RelativeSizeSpan(3f), 0, ctr.toString().length, flag)
+                counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, ctr.toString().length, flag)
+                textViewId.text = counterDetections
             }
 
             override fun onCancelled(error: DatabaseError) {
@@ -84,7 +97,10 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
                     } else {
                     }
                 }
-                textViewId.text = ctr.toString()
+                val counterDetectionsTW = SpannableString.valueOf("$ctr\nThis Week")
+                counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, ctr.toString().length, 0)
+                counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, ctr.toString().length, 0)
+                textViewId.text = counterDetectionsTW
             }
 
             override fun onCancelled(error: DatabaseError) {

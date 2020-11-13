@@ -26,6 +26,7 @@ class DiseasesDefinition : AppCompatActivity() {
     var textView: TextView? = null
     var textViewDetection: TextView? = null
     var detectionText: TextView? = null
+    var detectionToday: TextView? = null
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,6 +52,7 @@ class DiseasesDefinition : AppCompatActivity() {
         textView = findViewById<View>(R.id.definition) as TextView
         textViewDetection = findViewById<View>(R.id.detection) as TextView
         detectionText = findViewById<View>(R.id.detectionText) as TextView
+        detectionToday = findViewById<View>(R.id.detectionToday) as TextView
         val s1 = SpannableString("Bacterial Leaf Blight\n")
         val ss1 = SpannableString("Disease\n\n")
         val s2 = SpannableString("About\n")
@@ -135,17 +137,15 @@ class DiseasesDefinition : AppCompatActivity() {
         builder.append(s7)
         textView!!.text = builder
         textView!!.movementMethod = ScrollingMovementMethod()
-        val db = DatabaseHelper(this)
-        val count = db.countInfo("Bacterial Leaf Blight").toString()
-        val thisWeek = db.countThisWeek("Bacterial Leaf Blight").toString()
-        val counterDetections = SpannableString.valueOf("$count\nTotal")
-        counterDetections.setSpan(RelativeSizeSpan(3f), 0, count.length, flag)
-        counterDetections.setSpan(StyleSpan(Typeface.BOLD), 0, count.length, flag)
-        val counterDetectionsTW = SpannableString.valueOf("$thisWeek\nThis Week")
-        counterDetectionsTW.setSpan(RelativeSizeSpan(3f), 0, thisWeek.length, 0)
-        counterDetectionsTW.setSpan(StyleSpan(Typeface.BOLD), 0, thisWeek.length, 0)
-        textViewDetection!!.text = counterDetections
-        detectionText!!.text = counterDetectionsTW
+
+        val predictionCounterTotal = PredictionCounter("Bacterial Leaf Blight", textViewDetection!!)
+        predictionCounterTotal.getPredictionTotal()
+
+        val predictionCounterThisWeek = PredictionCounter("Bacterial Leaf Blight", detectionText!!)
+        predictionCounterThisWeek.getPredictionThisWeek()
+
+        val predictionCounterToday = PredictionCounter("Bacterial Leaf Blight", detectionToday!!)
+        predictionCounterToday.getPredictionToday()
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
