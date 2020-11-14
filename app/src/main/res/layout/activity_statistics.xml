@@ -16,27 +16,25 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar_statistics"
         android:minHeight="?actionBarSize"
+        app:tabBackground="@color/colorMain"
         app:tabGravity="fill"
         app:tabIndicatorColor="#FFFFFF"
         app:tabIndicatorHeight="4dp"
-        app:tabBackground="@color/colorMain"
-        android:layout_below="@id/toolbar_statistics"
-        app:tabTextColor="#FFFFFF"
-        app:tabMode="fixed">
-    </com.google.android.material.tabs.TabLayout>
+        app:tabMode="fixed"
+        app:tabTextColor="#FFFFFF"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_below="@id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.viewpager.widget.ViewPager>
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"/>
 
 </RelativeLayout>
