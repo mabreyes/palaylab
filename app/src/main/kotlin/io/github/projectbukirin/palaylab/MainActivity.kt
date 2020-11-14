@@ -58,19 +58,13 @@ class MainActivity : AppCompatActivity() {
 //            db.deleteInfo(list.get(i));
 //        }
 
-        var textResult = findViewById<View>(R.id.textResult) as TextView;
+//        var textResult = findViewById<View>(R.id.textResult) as TextView;
 
 //        textResult.setText(db.getAllInfo().toString());
 //
 //        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
 
 //
-        val countPred = PredictionCounterText("Golden Apple Snail")
-        countPred.getPredictionToday(object : CounterCallback<Int> {
-            override fun callback(data: Int) {
-                textResult.text = data.toString()
-            }
-        })
     }
 
     fun diseaseActivity() {
