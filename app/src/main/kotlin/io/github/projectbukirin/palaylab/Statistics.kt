@@ -36,8 +36,8 @@ class Statistics : AppCompatActivity() {
         val viewPager = findViewById<View>(R.id.viewPager) as ViewPager
         val tabLayout = findViewById<View>(R.id.tabLayout) as TabLayout
         val adapter = TabAdapter(supportFragmentManager)
-        adapter.addFragment(DiseaseStatisticsFragment(), "Tab 1")
-        adapter.addFragment(PestStatisticsFragment(), "Tab 2")
+        adapter.addFragment(DiseaseStatisticsFragment(), "Diseases")
+        adapter.addFragment(PestStatisticsFragment(), "Pests")
         viewPager.setAdapter(adapter)
         tabLayout.setupWithViewPager(viewPager)
     }
