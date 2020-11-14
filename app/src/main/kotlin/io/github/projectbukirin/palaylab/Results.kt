@@ -358,7 +358,7 @@ class Results : AppCompatActivity() {
     private fun createPrediction(uuid: String, detectionName: String, detectionDate: String, detectionTimeStamp: Long, detectionConfidence: Float) {
         val predictionsRef = dbReference.child("predictions")
         val newPredictionsRef = predictionsRef.push()
-        val prediction = PredictionsInfo(uuid, detectionName, detectionDate, detectionTimeStamp, detectionConfidence)
+        val prediction = PredictionInfo(uuid, detectionName, detectionDate, detectionTimeStamp, detectionConfidence)
         newPredictionsRef.setValue(prediction)
     }
 

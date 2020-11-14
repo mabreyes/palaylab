@@ -3,7 +3,7 @@ import com.google.firebase.database.IgnoreExtraProperties
 import java.util.*
 
 @IgnoreExtraProperties
-data class PredictionsInfo (
+data class PredictionInfo (
     var uuid: String? = "",
     var detectionName: String? = "",
     var detectionDate: String? = "",
