@@ -57,7 +57,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical">
 
                             <!--View to display the yellow color icon-->
@@ -78,7 +78,7 @@
                         <!--Linear layout to display Python-->
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -100,7 +100,7 @@
                         <!--Linear layout to display C++-->
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -122,7 +122,7 @@
                         <!--Linear layout to display Java-->
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
@@ -143,7 +143,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="15dp"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:layout_marginTop="5dp">
 
