@@ -16,14 +16,17 @@ class PestStatisticsFragment : Fragment() {
     var aGoldenAppleSnail: TextView? = null
     var aGreenLeafhopper: TextView? = null
     var aRiceBlackBug: TextView? = null
+    var aRiceEarBug: TextView? = null
     var tArmyWorm: TextView? = null
     var tGoldenAppleSnail: TextView? = null
     var tGreenLeafhopper: TextView? = null
     var tRiceBlackBug: TextView? = null
+    var tRiceEarBug: TextView? = null
     var wArmyWorm: TextView? = null
     var wGoldenAppleSnail: TextView? = null
     var wGreenLeafhopper: TextView? = null
     var wRiceBlackBug: TextView? = null
+    var wRiceEarBug: TextView? = null
     var pieChartPest: PieChart? = null
     private lateinit var auth: FirebaseAuth
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -41,14 +44,17 @@ class PestStatisticsFragment : Fragment() {
         aGoldenAppleSnail = view?.findViewById(R.id.aGoldenAppleSnail) as TextView
         aGreenLeafhopper = view?.findViewById(R.id.aGreenLeafhopper) as TextView
         aRiceBlackBug = view?.findViewById(R.id.aRiceBlackBug) as TextView
+        aRiceEarBug = view?.findViewById(R.id.aRiceEarBug) as TextView
         tArmyWorm = view?.findViewById(R.id.tArmyWorm) as TextView
         tGoldenAppleSnail = view?.findViewById(R.id.tGoldenAppleSnail) as TextView
         tGreenLeafhopper = view?.findViewById(R.id.tGreenLeafhopper) as TextView
         tRiceBlackBug = view?.findViewById(R.id.tRiceBlackBug) as TextView
+        tRiceEarBug = view?.findViewById(R.id.tRiceEarBug) as TextView
         wArmyWorm = view?.findViewById(R.id.wArmyWorm) as TextView
         wGoldenAppleSnail = view?.findViewById(R.id.wGoldenAppleSnail) as TextView
         wGreenLeafhopper = view?.findViewById(R.id.wGreenLeafhopper) as TextView
         wRiceBlackBug = view?.findViewById(R.id.wRiceBlackBug) as TextView
+        wRiceEarBug = view?.findViewById(R.id.wRiceEarBug) as TextView
         pieChartPest = view?.findViewById(R.id.pieChartPest)
 
         // Creating a method setData()
@@ -82,6 +88,13 @@ class PestStatisticsFragment : Fragment() {
             }
         })
 
+        val vARiceEarBug = PredictionCounterText("Ear Bug")
+        vARiceEarBug.getPredictionTotal(object : CounterCallback<Int> {
+            override fun callback(data: Int) {
+                aRiceEarBug!!.text = data.toString()
+            }
+        })
+
         val vArmyWorm = PredictionCounterText("Army Worm")
         vArmyWorm.getPredictionToday(object : CounterCallback<Int> {
             override fun callback(data: Int) {
@@ -110,6 +123,13 @@ class PestStatisticsFragment : Fragment() {
             }
         })
 
+        val vRiceEarBug = PredictionCounterText("Ear Bug")
+        vRiceEarBug.getPredictionToday(object : CounterCallback<Int> {
+            override fun callback(data: Int) {
+                tRiceEarBug!!.text = data.toString()
+            }
+        })
+
         val vWArmyWorm = PredictionCounterText("Army Worm")
         vWArmyWorm.getPredictionThisWeek(object : CounterCallback<Int> {
             override fun callback(data: Int) {
@@ -135,6 +155,13 @@ class PestStatisticsFragment : Fragment() {
         vWRiceBlackBug.getPredictionThisWeek(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 wRiceBlackBug!!.text = data.toString()
+            }
+        })
+
+        val vWRiceEarBug = PredictionCounterText("Ear Bug")
+        vWRiceEarBug.getPredictionThisWeek(object : CounterCallback<Int> {
+            override fun callback(data: Int) {
+                wRiceEarBug!!.text = data.toString()
             }
         })
 

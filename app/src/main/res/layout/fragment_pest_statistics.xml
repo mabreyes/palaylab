@@ -150,7 +150,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="305dp"
                 android:layout_below="@+id/cardViewGraph"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -319,13 +319,49 @@
 
                     </RelativeLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_two"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Rice Ear Bug"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/aRiceEarBug"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="305dp"
                 android:layout_below="@+id/detailsPest"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -493,13 +529,49 @@
 
                     </RelativeLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_two"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Rice Ear Bug"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/tRiceEarBug"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="305dp"
                 android:layout_below="@+id/detailsToday"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -658,6 +730,42 @@
                             android:layout_height="wrap_content"
                             android:text="0"
                             android:id="@+id/wRiceBlackBug"
+                            android:textAlignment="textEnd"
+                            android:textSize="18sp"
+                            android:textColor="@color/color_one"
+                            android:textStyle="bold"
+                            android:fontFamily="sans-serif-light"
+                            android:layout_alignParentRight="true"/>
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/color_two"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Rice Ear Bug"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:id="@+id/wRiceEarBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
                             android:textColor="@color/color_one"
