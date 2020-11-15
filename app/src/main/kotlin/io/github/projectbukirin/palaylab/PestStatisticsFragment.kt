@@ -37,9 +37,6 @@ class PestStatisticsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        // Link those objects with their
-        // respective id's that
-        // we have given in .XML file
         aArmyWorm = view?.findViewById(R.id.aArmyWorm) as TextView
         aGoldenAppleSnail = view?.findViewById(R.id.aGoldenAppleSnail) as TextView
         aGreenLeafhopper = view?.findViewById(R.id.aGreenLeafhopper) as TextView
@@ -57,13 +54,14 @@ class PestStatisticsFragment : Fragment() {
         wRiceEarBug = view?.findViewById(R.id.wRiceEarBug) as TextView
         pieChartPest = view?.findViewById(R.id.pieChartPest)
 
-        // Creating a method setData()
-        // to set the text in text view and pie chart
-        // Set the percentage of language used
         val vAArmyWorm = PredictionCounterText("Army Worm")
         vAArmyWorm.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aArmyWorm!!.text = data.toString()
+                pieChartPest!!.addPieSlice(
+                        PieModel(
+                                "Army Worm", data.toFloat(),
+                                Color.parseColor("#173F5F")))
             }
         })
 
@@ -71,6 +69,10 @@ class PestStatisticsFragment : Fragment() {
         vAGoldenAppleSnail.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aGoldenAppleSnail!!.text = data.toString()
+                pieChartPest!!.addPieSlice(
+                        PieModel(
+                                "Golden Apple Snail", data.toFloat(),
+                                Color.parseColor("#20639B")))
             }
         })
 
@@ -78,6 +80,10 @@ class PestStatisticsFragment : Fragment() {
         vAGreenLeafhopper.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aGreenLeafhopper!!.text = data.toString()
+                pieChartPest!!.addPieSlice(
+                        PieModel(
+                                "Green Leafhopper", data.toFloat(),
+                                Color.parseColor("#3CAEA3")))
             }
         })
 
@@ -85,6 +91,10 @@ class PestStatisticsFragment : Fragment() {
         vARiceBlackBug.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aRiceBlackBug!!.text = data.toString()
+                pieChartPest!!.addPieSlice(
+                        PieModel(
+                                "Rice Black Bug", data.toFloat(),
+                                Color.parseColor("#F6D55C")))
             }
         })
 
@@ -92,6 +102,10 @@ class PestStatisticsFragment : Fragment() {
         vARiceEarBug.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aRiceEarBug!!.text = data.toString()
+                pieChartPest!!.addPieSlice(
+                        PieModel(
+                                "Rice Ear Bug", data.toFloat(),
+                                Color.parseColor("#ED553B")))
             }
         })
 
@@ -165,25 +179,6 @@ class PestStatisticsFragment : Fragment() {
             }
         })
 
-        // Set the data and color to the pie chart
-        pieChartPest!!.addPieSlice(
-                PieModel(
-                        "Army Worm", tArmyWorm!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#FFA726")))
-        pieChartPest!!.addPieSlice(
-                PieModel(
-                        "Golden Apple Snail", tGoldenAppleSnail!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#66BB6A")))
-        pieChartPest!!.addPieSlice(
-                PieModel(
-                        "Green Leafhopper", tGreenLeafhopper!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#EF5350")))
-        pieChartPest!!.addPieSlice(
-                PieModel(
-                        "Rice Black Bug", tRiceBlackBug!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#29B6F6")))
-
-        // To animate the pie chart
         pieChartPest!!.startAnimation()
     }
 }

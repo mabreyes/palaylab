@@ -58,6 +58,10 @@ class DiseaseStatisticsFragment : Fragment() {
         vABacterialLeafBlight.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aBacterialLeafBlight!!.text = data.toString()
+                pieChart!!.addPieSlice(
+                        PieModel(
+                                "Bacterial Leaf Blight", data.toFloat(),
+                                Color.parseColor("#173F5F")))
             }
         })
 
@@ -65,6 +69,10 @@ class DiseaseStatisticsFragment : Fragment() {
         vARiceBlast.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aRiceBlast!!.text = data.toString()
+                pieChart!!.addPieSlice(
+                        PieModel(
+                                "Rice Blast", data.toFloat(),
+                                Color.parseColor("#3CAEA3")))
             }
         })
 
@@ -72,6 +80,10 @@ class DiseaseStatisticsFragment : Fragment() {
         vASheathBlight.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aSheathBlight!!.text = data.toString()
+                pieChart!!.addPieSlice(
+                        PieModel(
+                                "Sheath Blight", data.toFloat(),
+                                Color.parseColor("#F6D55C")))
             }
         })
 
@@ -79,6 +91,10 @@ class DiseaseStatisticsFragment : Fragment() {
         vATungro.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
                 aTungro!!.text = data.toString()
+                pieChart!!.addPieSlice(
+                        PieModel(
+                                "Tungro", data.toFloat(),
+                                Color.parseColor("#ED553B")))
             }
         })
 
@@ -138,25 +154,6 @@ class DiseaseStatisticsFragment : Fragment() {
             }
         })
 
-        // Set the data and color to the pie chart
-        pieChart!!.addPieSlice(
-                PieModel(
-                        "Bacterial Leaf Blight", tBacterialLeafBlight!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#FFA726")))
-        pieChart!!.addPieSlice(
-                PieModel(
-                        "Rice Blast", tRiceBlast!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#66BB6A")))
-        pieChart!!.addPieSlice(
-                PieModel(
-                        "Sheath Blight", tSheathBlight!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#EF5350")))
-        pieChart!!.addPieSlice(
-                PieModel(
-                        "Tungro", tTungro!!.text.toString().toInt().toFloat(),
-                        Color.parseColor("#29B6F6")))
-
-        // To animate the pie chart
         pieChart!!.startAnimation()
     }
 }

@@ -64,13 +64,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/R"/>
+                                android:background="@color/color_armyworm"/>
 
                             <!--Text view to display R -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="R"
+                                android:text="Army Worm"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -86,13 +86,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/Python"/>
+                                android:background="@color/color_goldenapplesnail"/>
 
                             <!--Text view to display python text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Python"
+                                android:text="Golden Apple Snail"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -108,13 +108,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/CPP"/>
+                                android:background="@color/color_greenleafhopper"/>
 
                             <!--Text view to display C++ text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="C++"
+                                android:text="Green Leafhopper"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -130,13 +130,34 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/Java"/>
+                                android:background="@color/color_ricrblackbug"/>
 
                             <!--Text view to display Java text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Java"
+                                android:text="Rice Black Bug"
+                                android:paddingLeft="10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="15dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dp">
+
+                            <!--View to display the blue color icon-->
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_riceearbug"/>
+
+                            <!--Text view to display Java text -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rice Ear Bug"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>

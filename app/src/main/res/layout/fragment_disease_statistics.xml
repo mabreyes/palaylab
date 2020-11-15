@@ -64,13 +64,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/R"/>
+                                android:background="@color/color_bacterialleafblight"/>
 
                             <!--Text view to display R -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="R"
+                                android:text="Bacterial Leaf Blight"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -86,13 +86,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/Python"/>
+                                android:background="@color/color_riceblast"/>
 
                             <!--Text view to display python text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Python"
+                                android:text="Rice Blast"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -108,13 +108,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/CPP"/>
+                                android:background="@color/color_sheathblight"/>
 
                             <!--Text view to display C++ text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="C++"
+                                android:text="Sheath Blight"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -130,13 +130,13 @@
                             <View
                                 android:layout_width="15dp"
                                 android:layout_height="match_parent"
-                                android:background="@color/Java"/>
+                                android:background="@color/color_tungro"/>
 
                             <!--Text view to display Java text -->
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Java"
+                                android:text="Tungro"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
