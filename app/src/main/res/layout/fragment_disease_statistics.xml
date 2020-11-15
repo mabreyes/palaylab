@@ -150,7 +150,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="270dp"
                 android:layout_below="@+id/cardViewGraph"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -194,7 +194,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Bacterial Leaf Blight"
                             android:textSize="18sp"/>
 
@@ -205,9 +205,9 @@
                             android:id="@+id/aBacterialLeafBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_bacterialleafblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -230,7 +230,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Blast"
                             android:textSize="18sp"/>
 
@@ -240,10 +240,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceblast"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -266,7 +266,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Sheath Blight"
                             android:textSize="18sp"/>
 
@@ -277,9 +277,9 @@
                             android:id="@+id/aSheathBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_sheathblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -301,7 +301,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Tungro"
                             android:textSize="18sp"/>
 
@@ -312,9 +312,9 @@
                             android:id="@+id/aTungro"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_tungro"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -368,7 +368,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Bacterial Leaf Blight"
                             android:textSize="18sp"/>
 
@@ -379,9 +379,9 @@
                             android:id="@+id/tBacterialLeafBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_bacterialleafblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -404,7 +404,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Blast"
                             android:textSize="18sp"/>
 
@@ -414,10 +414,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceblast"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -440,7 +440,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Sheath Blight"
                             android:textSize="18sp"/>
 
@@ -451,9 +451,9 @@
                             android:id="@+id/tSheathBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_sheathblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -475,7 +475,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Tungro"
                             android:textSize="18sp"/>
 
@@ -486,9 +486,9 @@
                             android:id="@+id/tTungro"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_tungro"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -542,7 +542,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Bacterial Leaf Blight"
                             android:textSize="18sp"/>
 
@@ -553,9 +553,9 @@
                             android:id="@+id/wBacterialLeafBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_bacterialleafblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -578,7 +578,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Blast"
                             android:textSize="18sp"/>
 
@@ -588,10 +588,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceblast"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -614,7 +614,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Sheath Blight"
                             android:textSize="18sp"/>
 
@@ -625,9 +625,9 @@
                             android:id="@+id/wSheathBlight"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_sheathblight"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -649,7 +649,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Tungro"
                             android:textSize="18sp"/>
 
@@ -660,9 +660,9 @@
                             android:id="@+id/wTungro"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_tungro"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>

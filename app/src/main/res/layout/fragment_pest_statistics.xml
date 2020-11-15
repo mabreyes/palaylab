@@ -92,7 +92,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Golden Apple Snail"
+                                android:text="Golden Apple\nSnail"
                                 android:paddingLeft="10dp"/>
 
                         </LinearLayout>
@@ -171,7 +171,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="305dp"
+                android:layout_height="315dp"
                 android:layout_below="@+id/cardViewGraph"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -215,7 +215,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Army Worm"
                             android:textSize="18sp"/>
 
@@ -226,9 +226,9 @@
                             android:id="@+id/aArmyWorm"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_armyworm"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -251,7 +251,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Golden Apple Snail"
                             android:textSize="18sp"/>
 
@@ -261,10 +261,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_goldenapplesnail"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -287,7 +287,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Green Leafhopper"
                             android:textSize="18sp"/>
 
@@ -298,9 +298,9 @@
                             android:id="@+id/aGreenLeafhopper"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_greenleafhopper"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -322,7 +322,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Black Bug"
                             android:textSize="18sp"/>
 
@@ -333,9 +333,9 @@
                             android:id="@+id/aRiceBlackBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_ricrblackbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -358,7 +358,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Ear Bug"
                             android:textSize="18sp"/>
 
@@ -369,9 +369,9 @@
                             android:id="@+id/aRiceEarBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceearbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -382,7 +382,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="305dp"
+                android:layout_height="315dp"
                 android:layout_below="@+id/detailsPest"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -425,7 +425,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Army Worm"
                             android:textSize="18sp"/>
 
@@ -436,9 +436,9 @@
                             android:id="@+id/tArmyWorm"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_armyworm"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -461,7 +461,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Golden Apple Snail"
                             android:textSize="18sp"/>
 
@@ -471,10 +471,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_goldenapplesnail"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -497,7 +497,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Green Leafhopper"
                             android:textSize="18sp"/>
 
@@ -508,9 +508,9 @@
                             android:id="@+id/tGreenLeafhopper"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_greenleafhopper"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -532,7 +532,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Black Bug"
                             android:textSize="18sp"/>
 
@@ -543,9 +543,9 @@
                             android:id="@+id/tRiceBlackBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_ricrblackbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -568,7 +568,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Ear Bug"
                             android:textSize="18sp"/>
 
@@ -579,9 +579,9 @@
                             android:id="@+id/tRiceEarBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceearbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -592,7 +592,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="305dp"
+                android:layout_height="315dp"
                 android:layout_below="@+id/detailsToday"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -635,7 +635,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Army Worm"
                             android:textSize="18sp"/>
 
@@ -646,9 +646,9 @@
                             android:id="@+id/wArmyWorm"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_armyworm"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
                     </RelativeLayout>
 
@@ -671,7 +671,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Golden Apple Snail"
                             android:textSize="18sp"/>
 
@@ -681,10 +681,10 @@
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:text="0"
                             android:textAlignment="textEnd"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_goldenapplesnail"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -707,7 +707,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Green Leafhopper"
                             android:textSize="18sp"/>
 
@@ -718,9 +718,9 @@
                             android:id="@+id/wGreenLeafhopper"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_greenleafhopper"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -742,7 +742,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Black Bug"
                             android:textSize="18sp"/>
 
@@ -753,9 +753,9 @@
                             android:id="@+id/wRiceBlackBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_ricrblackbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
@@ -778,7 +778,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditaregular"
                             android:text="Rice Ear Bug"
                             android:textSize="18sp"/>
 
@@ -789,9 +789,9 @@
                             android:id="@+id/wRiceEarBug"
                             android:textAlignment="textEnd"
                             android:textSize="18sp"
-                            android:textColor="@color/color_one"
+                            android:textColor="@color/color_riceearbug"
                             android:textStyle="bold"
-                            android:fontFamily="sans-serif-light"
+                            android:fontFamily="@font/gorditabold"
                             android:layout_alignParentRight="true"/>
 
                     </RelativeLayout>
