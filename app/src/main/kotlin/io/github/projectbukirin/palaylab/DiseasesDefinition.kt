@@ -38,8 +38,7 @@ class DiseasesDefinition : AppCompatActivity() {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        } else{
-            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+        } else {
         }
 
         setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -187,7 +186,6 @@ class DiseasesDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -335,8 +333,7 @@ class DiseasesDefinition : AppCompatActivity() {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
-            } else{
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
+            } else {
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -481,7 +478,6 @@ class DiseasesDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))

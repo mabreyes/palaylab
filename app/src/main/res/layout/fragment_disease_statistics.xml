@@ -325,7 +325,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="270dp"
                 android:layout_below="@+id/details"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
@@ -499,7 +499,7 @@
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="260dp"
+                android:layout_height="270dp"
                 android:layout_below="@+id/detailsToday"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"

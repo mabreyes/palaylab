@@ -30,7 +30,6 @@ class UpdatePassword : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
         }
 
         passwordEt = findViewById(R.id.password_edt_text)

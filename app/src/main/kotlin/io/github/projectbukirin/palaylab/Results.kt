@@ -53,7 +53,6 @@ class Results : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
         }
 
         firebaseDatabase = FirebaseDatabase.getInstance()

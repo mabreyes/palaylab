@@ -39,7 +39,6 @@ class PestsDefinition : AppCompatActivity() {
             startActivity(intent)
             finish()
         } else {
-            Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
         }
 
         setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -176,7 +175,6 @@ class PestsDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -322,7 +320,6 @@ class PestsDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -482,7 +479,6 @@ class PestsDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))
@@ -614,7 +610,6 @@ class PestsDefinition : AppCompatActivity() {
                 startActivity(intent)
                 finish()
             } else {
-                Toast.makeText(this, "Already logged in", Toast.LENGTH_LONG).show()
             }
 
             setSupportActionBar(findViewById(R.id.toolbar_definition))

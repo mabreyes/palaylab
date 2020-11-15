@@ -34,9 +34,6 @@ class DiseaseStatisticsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        // Link those objects with their
-        // respective id's that
-        // we have given in .XML file
         aBacterialLeafBlight = view?.findViewById(R.id.aBacterialLeafBlight) as TextView
         aRiceBlast = view?.findViewById(R.id.aRiceBlast) as TextView
         aSheathBlight = view?.findViewById(R.id.aSheathBlight) as TextView
@@ -51,9 +48,6 @@ class DiseaseStatisticsFragment : Fragment() {
         wTungro = view?.findViewById(R.id.wTungro) as TextView
         pieChart = view?.findViewById(R.id.piechart)
 
-        // Creating a method setData()
-        // to set the text in text view and pie chart
-        // Set the percentage of language used
         val vABacterialLeafBlight = PredictionCounterText("Bacterial Leaf Blight")
         vABacterialLeafBlight.getPredictionTotal(object : CounterCallback<Int> {
             override fun callback(data: Int) {
