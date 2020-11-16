@@ -18,6 +18,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext: Context = InstrumentationRegistry.getTargetContext()
-        Assert.assertEquals("io.github.projectbukirin.palaylab", appContext.packageName)
+        Assert.assertEquals("xyz.marcreyes.palaylab.app", appContext.packageName)
     }
 }

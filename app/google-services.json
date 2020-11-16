@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:370820746159:android:eb7a5f476ef457df663d5a",
+        "mobilesdk_app_id": "1:370820746159:android:31a8fcd821d4c202663d5a",
         "android_client_info": {
-          "package_name": "io.github.projectbukirin.palaylab"
+          "package_name": "xyz.marcreyes.palaylab.app"
         }
       },
       "oauth_client": [
