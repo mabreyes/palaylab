@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1"
+    android:versionName="1.1.0"
     package="xyz.marcreyes.palaylab.app">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -37,8 +40,8 @@
         <activity android:name="xyz.marcreyes.palaylab.app.ForgotPasswordActivity" />
         <activity
             android:name="xyz.marcreyes.palaylab.app.MainActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name="xyz.marcreyes.palaylab.app.UpdatePassword"></activity>
+            android:screenOrientation="portrait"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.UpdatePassword"/>
         <activity android:name="xyz.marcreyes.palaylab.app.Diseases" />
         <activity android:name="xyz.marcreyes.palaylab.app.Pest" />
         <activity android:name="xyz.marcreyes.palaylab.app.Results" />
@@ -51,8 +54,8 @@
         <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition2" />
         <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition3" />
         <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition4" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition5"></activity>
-        <activity android:name="xyz.marcreyes.palaylab.app.About"></activity>
+        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition5"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.About"/>
     </application>
 
 </manifest>
