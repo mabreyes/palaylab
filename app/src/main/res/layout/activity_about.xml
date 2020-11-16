@@ -14,7 +14,7 @@
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,11 +31,11 @@
                 android:id="@+id/update_pass_btn"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="@string/update_pass"
-                android:fontFamily="@font/gorditabold"
-                android:textColor="#ffffff"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/roundbutton"
+                android:fontFamily="@font/gorditabold"
+                android:text="@string/update_pass"
+                android:textColor="#ffffff"
                 app:layout_constraintBottom_toTopOf="@+id/logout_btn"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -44,12 +44,12 @@
                 android:id="@+id/logout_btn"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
-                android:text="@string/logout"
+                android:layout_below="@+id/update_pass_btn"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/roundbuttonaccent"
                 android:fontFamily="@font/gorditabold"
+                android:text="@string/logout"
                 android:textColor="#ffffff"
-                android:layout_marginTop="20dp"
-                android:layout_below="@+id/update_pass_btn"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -59,27 +59,26 @@
                 android:id="@+id/acknowledgement"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Acknowledgements"
-                android:textColor="#115533"
-                android:textSize="20dp"
-                android:fontFamily="@font/gorditabold"
+                android:layout_below="@+id/logout_btn"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:layout_below="@+id/logout_btn"/>
+                android:fontFamily="@font/gorditabold"
+                android:text="Acknowledgements"
+                android:textColor="#115533"
+                android:textSize="20dp" />
 
             <TextView
                 android:id="@+id/list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/acknowledgement"
-                android:fontFamily="@font/gorditaregular"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/gorditaregular"
                 android:text="TensorFlow Research Cloud\nOpol Municipal Agricultural Office\nDepartment of Agriculture Regional Field Office 10\nPhilRice Agusan del Norte and\nPhilRice Database and Management Portal (DBMP)"
                 android:textColor="#115533"
-                android:textSize="12dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"
-                />
+                android:textSize="12dp" />
 
 
             <ImageView
@@ -90,7 +89,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="30dp"
-                android:src="@drawable/pwt"/>
+                android:src="@drawable/pwt" />
 
             <ImageView
                 android:id="@+id/logopowered"
@@ -99,49 +98,48 @@
                 android:layout_below="@+id/logo"
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="10dp"
-                android:src="@drawable/tensorflow"/>
+                android:src="@drawable/tensorflow" />
 
             <TextView
                 android:id="@+id/TensorFlow"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/logopowered"
-                android:fontFamily="@font/gorditaregular"
-                android:layout_marginTop="10dp"
-                android:textColor="#115533"
-                android:text="This project is a proud part of TensorFlow Research Cloud initiative providing free Google Cloud Platform TPU usage to researchers and students everywhere in the world to expand the Machine Learning frontier."
-                android:textSize="12dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                />
+                android:fontFamily="@font/gorditaregular"
+                android:text="This project is a proud part of TensorFlow Research Cloud initiative providing free Google Cloud Platform TPU usage to researchers and students everywhere in the world to expand the Machine Learning frontier."
+                android:textColor="#115533"
+                android:textSize="12dp" />
 
             <TextView
                 android:id="@+id/link"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/TensorFlow"
-                android:fontFamily="@font/gorditaregular"
-                android:layout_marginTop="20dp"
-                android:text="@string/message"
-                android:linksClickable="true"
-                android:textColor="#115533"
-                android:textSize="12dp"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="15dp"/>
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:fontFamily="@font/gorditaregular"
+                android:linksClickable="true"
+                android:text="@string/message"
+                android:textColor="#115533"
+                android:textSize="12dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/link"
-                android:fontFamily="@font/gorditaregular"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="60dp"
                 android:layout_marginBottom="30dp"
+                android:fontFamily="@font/gorditaregular"
                 android:gravity="center"
-                android:layout_centerHorizontal="true"
                 android:text="© 2019 Project Bukirin\nv1.1.0 November 2020"
                 android:textColor="#115533"
-                android:textSize="12dp"
-                android:layout_marginLeft="15dp"/>
+                android:textSize="12dp" />
 
 
         </RelativeLayout>

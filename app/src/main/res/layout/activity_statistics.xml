@@ -29,12 +29,12 @@
         app:tabIndicatorColor="#FFFFFF"
         app:tabIndicatorHeight="4dp"
         app:tabMode="fixed"
-        app:tabTextColor="#FFFFFF"/>
+        app:tabTextColor="#FFFFFF" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/tabLayout"/>
+        android:layout_below="@id/tabLayout" />
 
 </RelativeLayout>
