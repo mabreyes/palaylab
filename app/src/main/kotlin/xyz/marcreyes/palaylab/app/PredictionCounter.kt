@@ -27,8 +27,8 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var ctr = 0
                 for (ds in snapshot.children) {
-                    val dName = ds.child("detectionName").getValue<String>(String::class.java)
-                    val dDate = ds.child("detectionDate").getValue<String>(String::class.java)
+                    val dName = ds.child("detectionName").getValue(String::class.java)
+                    val dDate = ds.child("detectionDate").getValue(String::class.java)
                     if (dName == detectionName && dDate == dateToday) {
                         ctr++
                     } else {
@@ -51,7 +51,7 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var ctr = 0
                 for (ds in snapshot.children) {
-                    val dName = ds.child("detectionName").getValue<String>(String::class.java)
+                    val dName = ds.child("detectionName").getValue(String::class.java)
                     if (dName == detectionName) {
                         ctr++
                     } else {
@@ -75,8 +75,8 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
             override fun onDataChange(snapshot: DataSnapshot) {
                 var ctr = 0
                 for (ds in snapshot.children) {
-                    val dName = ds.child("detectionName").getValue<String>(String::class.java)
-                    val dDate = ds.child("detectionDate").getValue<String>(String::class.java)
+                    val dName = ds.child("detectionName").getValue(String::class.java)
+                    val dDate = ds.child("detectionDate").getValue(String::class.java)
 
                     val currentCalendar = Calendar.getInstance()
                     val week = currentCalendar[Calendar.WEEK_OF_YEAR]
