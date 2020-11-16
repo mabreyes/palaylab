@@ -77,20 +77,16 @@ class PredictionCounter(val detectionName: String, val textViewId: TextView) {
                 for (ds in snapshot.children) {
                     val dName = ds.child("detectionName").getValue<String>(String::class.java)
                     val dDate = ds.child("detectionDate").getValue<String>(String::class.java)
-                    val ddd: Date = SimpleDateFormat("yyyy-MM-dd").parse(dDate)
-                    val c = Calendar.getInstance()
-                    c.firstDayOfWeek = Calendar.MONDAY
 
-                    c[Calendar.DAY_OF_WEEK] = Calendar.MONDAY
-                    c[Calendar.HOUR_OF_DAY] = 0
-                    c[Calendar.MINUTE] = 0
-                    c[Calendar.SECOND] = 0
-                    c[Calendar.MILLISECOND] = 0
+                    val currentCalendar = Calendar.getInstance()
+                    val week = currentCalendar[Calendar.WEEK_OF_YEAR]
+                    val year = currentCalendar[Calendar.YEAR]
+                    val targetCalendar = Calendar.getInstance()
+                    targetCalendar.time = SimpleDateFormat("yyyy-MM-dd").parse(dDate)
+                    val targetWeek = targetCalendar[Calendar.WEEK_OF_YEAR]
+                    val targetYear = targetCalendar[Calendar.YEAR]
 
-                    val monday = c.time
-                    val nextMonday = Date(monday.time + 7 * 24 * 60 * 60 * 1000)
-
-                    val isThisWeek = ddd.after(monday) && ddd.before(nextMonday)
+                    val isThisWeek = week == targetWeek && year == targetYear
 
                     if (dName == detectionName && isThisWeek) {
                         ctr++
