@@ -192,7 +192,8 @@
                         android:textSize="23sp"
                         android:textStyle="bold"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/colorMain"/>
 
                     <!--View to display the line-->
                     <View
@@ -402,7 +403,8 @@
                         android:textSize="23sp"
                         android:textStyle="bold"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/colorMain" />
 
                     <!--View to display the line-->
                     <View
@@ -612,7 +614,8 @@
                         android:textSize="23sp"
                         android:textStyle="bold"
                         android:layout_marginLeft="25dp"
-                        android:layout_marginTop="20dp"/>
+                        android:layout_marginTop="20dp"
+                        android:textColor="@color/colorMain"/>
 
                     <!--View to display the line-->
                     <View
