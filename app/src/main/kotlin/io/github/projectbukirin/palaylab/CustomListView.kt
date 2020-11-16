@@ -19,7 +19,7 @@ class CustomListView(private val context: Activity, private val name: Array<Stri
         } else {
             viewHolder = r.tag as ViewHolder
         }
-        imgid[position]?.let { viewHolder!!.ivw.setImageResource(it) }
+        imgid[position]?.let { viewHolder.ivw.setImageResource(it) }
         viewHolder.tvw1.text = name[position]
         viewHolder.tvw2.text = desc[position]
         return r!!

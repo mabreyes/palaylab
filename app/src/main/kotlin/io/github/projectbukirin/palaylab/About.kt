@@ -7,9 +7,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 
@@ -23,11 +21,11 @@ class About : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
-        }else{
+        } else {
         }
 
         setContentView(R.layout.activity_about)
@@ -41,14 +39,14 @@ class About : AppCompatActivity() {
         logoutBtn = findViewById(R.id.logout_btn)
         updatePass = findViewById(R.id.update_pass_btn)
 
-        logoutBtn.setOnClickListener{
+        logoutBtn.setOnClickListener {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        updatePass.setOnClickListener{
+        updatePass.setOnClickListener {
             val intent = Intent(this, UpdatePassword::class.java)
             startActivity(intent)
         }

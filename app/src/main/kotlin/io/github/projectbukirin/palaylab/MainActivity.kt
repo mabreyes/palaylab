@@ -6,8 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Button
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -24,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -108,7 +106,6 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.settings_actionbar, menu)
         return true
     }
-
 
 
     override fun onBackPressed() {

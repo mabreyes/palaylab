@@ -8,7 +8,7 @@ import com.github.mikephil.charting.components.XAxis
 import com.github.mikephil.charting.data.*
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.utils.ColorTemplate
-import java.util.ArrayList
+import java.util.*
 
 class DisplayChart {
     fun barChart(barChart: BarChart, arrayList: ArrayList<BarEntry>, xAxisValues: ArrayList<String>) {

@@ -5,14 +5,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 
 
-// Import the required libraries
 class Statistics : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +18,7 @@ class Statistics : AppCompatActivity() {
         setContentView(R.layout.activity_statistics)
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -37,7 +35,7 @@ class Statistics : AppCompatActivity() {
         val adapter = TabAdapter(supportFragmentManager)
         adapter.addFragment(DiseaseStatisticsFragment(), "Diseases")
         adapter.addFragment(PestStatisticsFragment(), "Pests")
-        viewPager.setAdapter(adapter)
+        viewPager.adapter = adapter
         tabLayout.setupWithViewPager(viewPager)
     }
 

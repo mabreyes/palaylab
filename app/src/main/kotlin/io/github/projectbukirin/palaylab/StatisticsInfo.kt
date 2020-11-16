@@ -6,7 +6,7 @@ class StatisticsInfo {
     var detectionDate: String? = null
     var detectionConfidence: String? = null
 
-    constructor() {}
+    constructor()
     constructor(detectionName: String?, detectionDate: String?, detectionConfidence: String?) : super() {
         this.detectionName = detectionName
         this.detectionDate = detectionDate

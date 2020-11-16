@@ -14,9 +14,7 @@ import android.text.style.StyleSpan
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.ImageButton
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.firebase.auth.FirebaseAuth
@@ -34,7 +32,7 @@ class PestsDefinition : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -170,7 +168,7 @@ class PestsDefinition : AppCompatActivity() {
 
             auth = FirebaseAuth.getInstance()
 
-            if(auth.currentUser == null){
+            if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -315,7 +313,7 @@ class PestsDefinition : AppCompatActivity() {
 
             auth = FirebaseAuth.getInstance()
 
-            if(auth.currentUser == null){
+            if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -474,7 +472,7 @@ class PestsDefinition : AppCompatActivity() {
 
             auth = FirebaseAuth.getInstance()
 
-            if(auth.currentUser == null){
+            if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
@@ -605,7 +603,7 @@ class PestsDefinition : AppCompatActivity() {
 
             auth = FirebaseAuth.getInstance()
 
-            if(auth.currentUser == null){
+            if (auth.currentUser == null) {
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()

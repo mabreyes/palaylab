@@ -9,8 +9,11 @@ import android.provider.MediaStore
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
 import android.widget.AdapterView.OnItemClickListener
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.ListView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -48,7 +51,7 @@ class Results : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -229,7 +232,7 @@ class Results : AppCompatActivity() {
             btnDetectObjectFromCam?.visibility = View.INVISIBLE
             btnDetectSelectImage?.visibility = View.INVISIBLE
             textView?.text = "Results"
-            var bitmap = (imageViewResult?.getDrawable() as BitmapDrawable).bitmap
+            var bitmap = (imageViewResult?.drawable as BitmapDrawable).bitmap
             bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false)
             imageViewResult?.setImageBitmap(bitmap)
             val results = classifier!!.recognizeImage(bitmap)

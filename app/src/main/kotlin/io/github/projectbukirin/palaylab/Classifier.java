@@ -2,11 +2,17 @@ package io.github.projectbukirin.palaylab;
 
 
 import android.graphics.Bitmap;
+
 import org.apache.commons.lang3.text.WordUtils;
+
 import java.util.List;
 
 
 public interface Classifier {
+
+    List<Recognition> recognizeImage(Bitmap bitmap);
+
+    void close();
 
     class Recognition {
         /**
@@ -26,7 +32,7 @@ public interface Classifier {
         private final Float confidence;
 
         public Recognition(
-        final String id, final String title, final Float confidence) {
+                final String id, final String title, final Float confidence) {
             this.id = id;
             this.title = title;
             this.confidence = confidence;
@@ -47,9 +53,6 @@ public interface Classifier {
         @Override
         public String toString() {
             String resultString = "";
-            /*if (id != null) {
-                resultString += "[" + id + "] ";
-            }*/
 
             if (title != null) {
                 resultString += WordUtils.capitalizeFully(title) + ",";
@@ -62,9 +65,4 @@ public interface Classifier {
             return resultString.trim();
         }
     }
-
-
-    List<Recognition> recognizeImage(Bitmap bitmap);
-
-    void close();
 }

@@ -41,9 +41,9 @@ class LoginActivity : AppCompatActivity() {
             var email: String = emailEt.text.toString()
             var password: String = passwordEt.text.toString()
 
-            if(TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
+            if (TextUtils.isEmpty(email) || TextUtils.isEmpty(password)) {
                 Toast.makeText(this@LoginActivity, "Please fill all the fields", Toast.LENGTH_LONG).show()
-            } else{
+            } else {
                 auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this, OnCompleteListener { task ->
                     if (task.isSuccessful) {
                         Toast.makeText(this, "Successfully Logged In", Toast.LENGTH_LONG).show()
@@ -57,17 +57,18 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-        signupBtn.setOnClickListener{
+        signupBtn.setOnClickListener {
             val intent = Intent(this, SignupActivity::class.java)
             startActivity(intent)
             finish()
         }
 
-        resetPasswordTv.setOnClickListener{
+        resetPasswordTv.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
             startActivity(intent)
         }
     }
+
     override fun onBackPressed() {
     }
 }

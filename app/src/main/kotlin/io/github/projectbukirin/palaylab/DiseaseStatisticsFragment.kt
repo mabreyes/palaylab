@@ -34,19 +34,19 @@ class DiseaseStatisticsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        aBacterialLeafBlight = view?.findViewById(R.id.aBacterialLeafBlight) as TextView
-        aRiceBlast = view?.findViewById(R.id.aRiceBlast) as TextView
-        aSheathBlight = view?.findViewById(R.id.aSheathBlight) as TextView
-        aTungro = view?.findViewById(R.id.aTungro) as TextView
-        tBacterialLeafBlight = view?.findViewById(R.id.tBacterialLeafBlight) as TextView
-        tRiceBlast = view?.findViewById(R.id.tRiceBlast) as TextView
-        tSheathBlight = view?.findViewById(R.id.tSheathBlight) as TextView
-        tTungro = view?.findViewById(R.id.tTungro) as TextView
-        wBacterialLeafBlight = view?.findViewById(R.id.wBacterialLeafBlight) as TextView
-        wRiceBlast = view?.findViewById(R.id.wRiceBlast) as TextView
-        wSheathBlight = view?.findViewById(R.id.wSheathBlight) as TextView
-        wTungro = view?.findViewById(R.id.wTungro) as TextView
-        pieChart = view?.findViewById(R.id.piechart)
+        aBacterialLeafBlight = view.findViewById(R.id.aBacterialLeafBlight) as TextView
+        aRiceBlast = view.findViewById(R.id.aRiceBlast) as TextView
+        aSheathBlight = view.findViewById(R.id.aSheathBlight) as TextView
+        aTungro = view.findViewById(R.id.aTungro) as TextView
+        tBacterialLeafBlight = view.findViewById(R.id.tBacterialLeafBlight) as TextView
+        tRiceBlast = view.findViewById(R.id.tRiceBlast) as TextView
+        tSheathBlight = view.findViewById(R.id.tSheathBlight) as TextView
+        tTungro = view.findViewById(R.id.tTungro) as TextView
+        wBacterialLeafBlight = view.findViewById(R.id.wBacterialLeafBlight) as TextView
+        wRiceBlast = view.findViewById(R.id.wRiceBlast) as TextView
+        wSheathBlight = view.findViewById(R.id.wSheathBlight) as TextView
+        wTungro = view.findViewById(R.id.wTungro) as TextView
+        pieChart = view.findViewById(R.id.piechart)
 
         val vABacterialLeafBlight = PredictionCounterText("Bacterial Leaf Blight")
         vABacterialLeafBlight.getPredictionTotal(object : CounterCallback<Int> {

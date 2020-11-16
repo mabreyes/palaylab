@@ -1,12 +1,12 @@
 package io.github.projectbukirin.palaylab
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
 
@@ -25,7 +25,7 @@ class UpdatePassword : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        if(auth.currentUser == null){
+        if (auth.currentUser == null) {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
@@ -37,11 +37,11 @@ class UpdatePassword : AppCompatActivity() {
         changePasswordBtn = findViewById(R.id.reset_pass_btn)
         back = findViewById(R.id.back_btn)
 
-        back.setOnClickListener{
+        back.setOnClickListener {
             finish()
         }
 
-        changePasswordBtn.setOnClickListener{
+        changePasswordBtn.setOnClickListener {
             var password: String = passwordEt.text.toString()
             if (TextUtils.isEmpty(password)) {
                 Toast.makeText(this, "Please enter password", Toast.LENGTH_LONG).show()

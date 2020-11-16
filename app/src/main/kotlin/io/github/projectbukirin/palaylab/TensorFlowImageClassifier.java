@@ -43,9 +43,9 @@ public class TensorFlowImageClassifier implements Classifier {
     }
 
     public static Classifier create(AssetManager assetManager,
-    String modelPath,
-    String labelPath,
-    int inputSize) throws IOException {
+                                    String modelPath,
+                                    String labelPath,
+                                    int inputSize) throws IOException {
 
         TensorFlowImageClassifier classifier = new TensorFlowImageClassifier();
         classifier.interpreter = new Interpreter(classifier.loadModelFile(assetManager, modelPath));
@@ -104,13 +104,13 @@ public class TensorFlowImageClassifier implements Classifier {
         bitmap.getPixels(intValues, 0, bitmap.getWidth(), 0, 0, bitmap.getWidth(), bitmap.getHeight());
         int pixel = 0;
         for (int i = 0; i < inputSize; ++i) {
-        for (int j = 0; j < inputSize; ++j) {
-        final int val = intValues[pixel++];
-        byteBuffer.putFloat((((val >> 16) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
-        byteBuffer.putFloat((((val >> 8) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
-        byteBuffer.putFloat((((val) & 0xFF)-IMAGE_MEAN)/IMAGE_STD);
-    }
-    }
+            for (int j = 0; j < inputSize; ++j) {
+                final int val = intValues[pixel++];
+                byteBuffer.putFloat((((val >> 16) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
+                byteBuffer.putFloat((((val >> 8) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
+                byteBuffer.putFloat((((val) & 0xFF) - IMAGE_MEAN) / IMAGE_STD);
+            }
+        }
         return byteBuffer;
     }
 
@@ -118,30 +118,30 @@ public class TensorFlowImageClassifier implements Classifier {
     private List<Recognition> getSortedResult(float[][] labelProbArray) {
 
         PriorityQueue<Recognition> pq =
-        new PriorityQueue<>(
-                MAX_RESULTS,
-        new Comparator<Recognition>() {
-            @Override
-            public int compare(Recognition lhs, Recognition rhs) {
-                return Float.compare(rhs.getConfidence(), lhs.getConfidence());
-            }
-        });
+                new PriorityQueue<>(
+                        MAX_RESULTS,
+                        new Comparator<Recognition>() {
+                            @Override
+                            public int compare(Recognition lhs, Recognition rhs) {
+                                return Float.compare(rhs.getConfidence(), lhs.getConfidence());
+                            }
+                        });
 
         for (int i = 0; i < labelList.size(); ++i) {
-        float confidence = (labelProbArray[0][i] * 100) / 127.0f;
-        if (confidence > THRESHOLD) {
-            pq.add(new Recognition("" + i,
-                    labelList.size() > i ? labelList.get(i) : "unknown",
-            confidence));
+            float confidence = (labelProbArray[0][i] * 100) / 127.0f;
+            if (confidence > THRESHOLD) {
+                pq.add(new Recognition("" + i,
+                        labelList.size() > i ? labelList.get(i) : "unknown",
+                        confidence));
 
+            }
         }
-    }
 
         final ArrayList<Recognition> recognitions = new ArrayList<>();
         int recognitionsSize = Math.min(pq.size(), MAX_RESULTS);
         for (int i = 0; i < recognitionsSize; ++i) {
-        recognitions.add(pq.poll());
-    }
+            recognitions.add(pq.poll());
+        }
 
         return recognitions;
     }

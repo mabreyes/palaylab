@@ -5,7 +5,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
-        android:id="@+id/pestFragmentScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -600,8 +599,7 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginBottom="20dp"
                 android:elevation="10dp"
-                app:cardCornerRadius="10dp"
-                android:id="@+id/detailsWeek">
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"

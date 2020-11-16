@@ -9,7 +9,6 @@
 
 
     <ImageView
-        android:id="@+id/imageView4"
         android:layout_width="210dp"
         android:layout_height="210dp"
         android:layout_centerInParent="true"

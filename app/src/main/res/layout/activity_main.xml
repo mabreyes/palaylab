@@ -158,9 +158,7 @@
             </RelativeLayout>
         </TableRow>
 
-        <TextView
-            android:id="@+id/textResult"
-            android:layout_height="20dp" />
+        <TextView android:layout_height="20dp" />
 
     </TableLayout>
 

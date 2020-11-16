@@ -1,10 +1,5 @@
 package io.github.projectbukirin.palaylab
 
-import android.graphics.Typeface
-import android.text.SpannableString
-import android.text.Spanned
-import android.text.style.RelativeSizeSpan
-import android.text.style.StyleSpan
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import java.text.DateFormat

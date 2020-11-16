@@ -37,22 +37,22 @@ class PestStatisticsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         auth = FirebaseAuth.getInstance()
 
-        aArmyWorm = view?.findViewById(R.id.aArmyWorm) as TextView
-        aGoldenAppleSnail = view?.findViewById(R.id.aGoldenAppleSnail) as TextView
-        aGreenLeafhopper = view?.findViewById(R.id.aGreenLeafhopper) as TextView
-        aRiceBlackBug = view?.findViewById(R.id.aRiceBlackBug) as TextView
-        aRiceEarBug = view?.findViewById(R.id.aRiceEarBug) as TextView
-        tArmyWorm = view?.findViewById(R.id.tArmyWorm) as TextView
-        tGoldenAppleSnail = view?.findViewById(R.id.tGoldenAppleSnail) as TextView
-        tGreenLeafhopper = view?.findViewById(R.id.tGreenLeafhopper) as TextView
-        tRiceBlackBug = view?.findViewById(R.id.tRiceBlackBug) as TextView
-        tRiceEarBug = view?.findViewById(R.id.tRiceEarBug) as TextView
-        wArmyWorm = view?.findViewById(R.id.wArmyWorm) as TextView
-        wGoldenAppleSnail = view?.findViewById(R.id.wGoldenAppleSnail) as TextView
-        wGreenLeafhopper = view?.findViewById(R.id.wGreenLeafhopper) as TextView
-        wRiceBlackBug = view?.findViewById(R.id.wRiceBlackBug) as TextView
-        wRiceEarBug = view?.findViewById(R.id.wRiceEarBug) as TextView
-        pieChartPest = view?.findViewById(R.id.pieChartPest)
+        aArmyWorm = view.findViewById(R.id.aArmyWorm) as TextView
+        aGoldenAppleSnail = view.findViewById(R.id.aGoldenAppleSnail) as TextView
+        aGreenLeafhopper = view.findViewById(R.id.aGreenLeafhopper) as TextView
+        aRiceBlackBug = view.findViewById(R.id.aRiceBlackBug) as TextView
+        aRiceEarBug = view.findViewById(R.id.aRiceEarBug) as TextView
+        tArmyWorm = view.findViewById(R.id.tArmyWorm) as TextView
+        tGoldenAppleSnail = view.findViewById(R.id.tGoldenAppleSnail) as TextView
+        tGreenLeafhopper = view.findViewById(R.id.tGreenLeafhopper) as TextView
+        tRiceBlackBug = view.findViewById(R.id.tRiceBlackBug) as TextView
+        tRiceEarBug = view.findViewById(R.id.tRiceEarBug) as TextView
+        wArmyWorm = view.findViewById(R.id.wArmyWorm) as TextView
+        wGoldenAppleSnail = view.findViewById(R.id.wGoldenAppleSnail) as TextView
+        wGreenLeafhopper = view.findViewById(R.id.wGreenLeafhopper) as TextView
+        wRiceBlackBug = view.findViewById(R.id.wRiceBlackBug) as TextView
+        wRiceEarBug = view.findViewById(R.id.wRiceEarBug) as TextView
+        pieChartPest = view.findViewById(R.id.pieChartPest)
 
         val vAArmyWorm = PredictionCounterText("Army Worm")
         vAArmyWorm.getPredictionTotal(object : CounterCallback<Int> {
