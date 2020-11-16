@@ -356,7 +356,7 @@ class Results : AppCompatActivity() {
             val imageUri = data!!.data
             val inputStream: InputStream
             try {
-                inputStream = contentResolver.openInputStream(imageUri)
+                inputStream = contentResolver.openInputStream(imageUri!!)!!
                 val image = BitmapFactory.decodeStream(inputStream)
                 imageViewResult!!.setImageBitmap(image)
             } catch (e: FileNotFoundException) {
