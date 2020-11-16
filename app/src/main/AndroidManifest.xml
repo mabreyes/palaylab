@@ -27,7 +27,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="xyz.marcreyes.palaylab.app.HomeActivity"
+            android:name="xyz.marcreyes.palaylab.app.Main.HomeActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,27 +35,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="xyz.marcreyes.palaylab.app.LoginActivity" />
-        <activity android:name="xyz.marcreyes.palaylab.app.SignupActivity" />
-        <activity android:name="xyz.marcreyes.palaylab.app.ForgotPasswordActivity" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.LoginActivity" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.SignupActivity" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.ForgotPasswordActivity" />
         <activity
-            android:name="xyz.marcreyes.palaylab.app.MainActivity"
+            android:name="xyz.marcreyes.palaylab.app.Main.MainActivity"
             android:screenOrientation="portrait"/>
-        <activity android:name="xyz.marcreyes.palaylab.app.UpdatePassword"/>
-        <activity android:name="xyz.marcreyes.palaylab.app.Diseases" />
-        <activity android:name="xyz.marcreyes.palaylab.app.Pest" />
-        <activity android:name="xyz.marcreyes.palaylab.app.Results" />
-        <activity android:name="xyz.marcreyes.palaylab.app.Statistics" />
-        <activity android:name="xyz.marcreyes.palaylab.app.DiseasesDefinition" />
-        <activity android:name="xyz.marcreyes.palaylab.app.DiseasesDefinition$DiseaseDefinition2" />
-        <activity android:name="xyz.marcreyes.palaylab.app.DiseasesDefinition$DiseaseDefinition3" />
-        <activity android:name="xyz.marcreyes.palaylab.app.DiseasesDefinition$DiseaseDefinition4" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition2" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition3" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition4" />
-        <activity android:name="xyz.marcreyes.palaylab.app.PestsDefinition$PestDefinition5"/>
-        <activity android:name="xyz.marcreyes.palaylab.app.About"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.UpdatePassword"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.Diseases" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.Pest" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Prediction.Results" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Statistics.Statistics" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition2" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition3" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition4" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition2" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition3" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition4" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition5"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.About.About"/>
     </application>
 
 </manifest>
