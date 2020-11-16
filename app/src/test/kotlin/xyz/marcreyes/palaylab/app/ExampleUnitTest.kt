@@ -1,4 +1,4 @@
-package io.github.projectbukirin.palaylab
+package xyz.marcreyes.palaylab.app
 
 import org.junit.Assert
 import org.junit.Test

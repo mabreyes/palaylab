@@ -1,4 +1,4 @@
-package io.github.projectbukirin.palaylab
+package xyz.marcreyes.palaylab.app
 
 import android.content.Context
 import androidx.test.InstrumentationRegistry
