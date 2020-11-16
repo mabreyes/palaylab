@@ -49,26 +49,6 @@ class MainActivity : AppCompatActivity() {
         button2.setOnClickListener { resultsActivity() }
         val button4 = findViewById<View>(R.id.button4) as Button
         button4.setOnClickListener { statisticsActivity() }
-
-//        Helper code snippets. Don't remove this for now
-//
-//        DatabaseHelper db = new DatabaseHelper(this);
-//
-//        List<StatisticsInfo> list = db.getAllInfo();
-//
-//        db.deleteInfo(list.get(0));
-//
-//        *for (int i=0; i<4; i++) {
-//            db.deleteInfo(list.get(i));
-//        }
-
-//        var textResult = findViewById<View>(R.id.textResult) as TextView;
-
-//        textResult.setText(db.getAllInfo().toString());
-//
-//        textResult.setText(String.valueOf(db.countThisWeek("Tungro")));
-
-//
     }
 
     fun diseaseActivity() {
@@ -103,8 +83,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         else -> {
-            // If we got here, the user's action was not recognized.
-            // Invoke the superclass to handle it.
             super.onOptionsItemSelected(item)
         }
     }
