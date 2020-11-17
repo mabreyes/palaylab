@@ -33,6 +33,11 @@ class UpdatePassword : AppCompatActivity() {
         } else {
         }
 
+        setSupportActionBar(findViewById(R.id.toolbar_updatepassword))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        supportActionBar?.title = "Update Password"
+
         passwordEt = findViewById(R.id.password_edt_text)
 
         changePasswordBtn = findViewById(R.id.reset_pass_btn)
@@ -60,5 +65,10 @@ class UpdatePassword : AppCompatActivity() {
                         })
             }
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

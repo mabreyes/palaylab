@@ -23,6 +23,12 @@ class ForgotPasswordActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_forgot_password)
 
+        setSupportActionBar(findViewById(R.id.toolbar_forgotpassword))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "Forgot Password"
+
+        auth = FirebaseAuth.getInstance()
+
         auth = FirebaseAuth.getInstance()
 
         emailEt = findViewById(R.id.email_edt_text)
@@ -53,6 +59,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

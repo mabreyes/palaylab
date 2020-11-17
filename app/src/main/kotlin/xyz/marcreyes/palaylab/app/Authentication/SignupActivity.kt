@@ -26,6 +26,11 @@ class SignupActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signup)
 
+        setSupportActionBar(findViewById(R.id.toolbar_signup))
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        supportActionBar?.title = "Sign Up"
+
         auth = FirebaseAuth.getInstance()
 
         emailEt = findViewById(R.id.email_edt_text)
@@ -61,6 +66,9 @@ class SignupActivity : AppCompatActivity() {
         }
     }
 
-    override fun onBackPressed() {
+    override fun onSupportNavigateUp(): Boolean {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        return true
     }
 }

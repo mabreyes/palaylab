@@ -5,7 +5,7 @@
         <a href="https://github.com/marcreyesph/palaylab-mobile/">https://github.com/marcreyesph/palaylab-mobile/</a></string>
     <string name="email_hint">E-mail</string>
     <string name="get_password_link">Reset Password</string>
-    <string name="back">Back</string>
+    <string name="back">Cancel</string>
     <string name="password_hint">Password</string>
     <string name="login_btn">Login</string>
     <string name="signup_btn">Sign Up</string>
