@@ -23,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar_statistics"
-        android:minHeight="?actionBarSize"
         app:tabBackground="@color/colorMain"
         app:tabGravity="fill"
         app:tabIndicatorColor="#FFFFFF"
