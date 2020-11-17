@@ -130,7 +130,6 @@ class Results : AppCompatActivity() {
                         val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                         val date = Date()
                         val dateToday = dateFormat.format(date)
-                        db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
                         createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), timeStamp, fStringConfidence!!)
                         if (current == "Army Worm") {
                             intImage[i] = R.drawable.armyworm
@@ -276,7 +275,6 @@ class Results : AppCompatActivity() {
                     val dateFormat: DateFormat = SimpleDateFormat("yyyy-MM-dd")
                     val date = Date()
                     val dateToday = dateFormat.format(date)
-                    db.addInfo(StatisticsInfo(stringNames[i], dateToday, stringConfidence[i]))
                     createPrediction(userId!!, stringNames[i].toString(), dateToday.toString(), timeStamp, fStringConfidence!!)
                     if (current == "Army Worm") {
                         intImage[i] = R.drawable.armyworm
