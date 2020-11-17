@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.github.projectbukirin.palaylab">
+    android:versionCode="1"
+    android:versionName="1.1.0"
+    package="xyz.marcreyes.palaylab.app">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -21,9 +24,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
         <activity
-            android:name="io.github.projectbukirin.palaylab.HomeActivity"
+            android:name="xyz.marcreyes.palaylab.app.Main.HomeActivity"
             android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,23 +35,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.LoginActivity" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.SignupActivity" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.ForgotPasswordActivity" />
         <activity
-            android:name="io.github.projectbukirin.palaylab.MainActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name="io.github.projectbukirin.palaylab.Diseases" />
-        <activity android:name="io.github.projectbukirin.palaylab.Pest" />
-        <activity android:name="io.github.projectbukirin.palaylab.Results" />
-        <activity android:name="io.github.projectbukirin.palaylab.Statistics" />
-        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition" />
-        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition2" />
-        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition3" />
-        <activity android:name="io.github.projectbukirin.palaylab.DiseasesDefinition$DiseaseDefinition4" />
-        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition" />
-        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition2" />
-        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition3" />
-        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition4" />
-        <activity android:name="io.github.projectbukirin.palaylab.PestsDefinition$PestDefinition5"></activity>
-        <activity android:name="io.github.projectbukirin.palaylab.About"></activity>
+            android:name="xyz.marcreyes.palaylab.app.Main.MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.Authentication.UpdatePassword"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.Diseases" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.Pest" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Prediction.Results" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Statistics.Statistics" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition2" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition3" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Disease.DiseasesDefinition$DiseaseDefinition4" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition2" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition3" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition4" />
+        <activity android:name="xyz.marcreyes.palaylab.app.Pest.PestsDefinition$PestDefinition5"/>
+        <activity android:name="xyz.marcreyes.palaylab.app.About.About"/>
     </application>
 
 </manifest>

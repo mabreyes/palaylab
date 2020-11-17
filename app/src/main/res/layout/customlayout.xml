@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/customshape">
@@ -14,23 +13,22 @@
             android:id="@+id/imageView"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:layout_weight="0.10"
-            />
+            android:layout_weight="0.10" />
 
         <TextView
             android:id="@+id/tvname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:letterSpacing="-0.036"
             android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
+            android:fontFamily="@font/gorditabold"
+            android:letterSpacing="-0.036"
             android:paddingLeft="10dp"
             android:text="TextView"
-            android:textSize="21sp"
             android:textColor="#115533"
-            android:fontFamily="@font/gorditabold"/>
+            android:textSize="21sp" />
 
         <TextView
             android:id="@+id/tvdescription"
@@ -42,10 +40,10 @@
             android:layout_toEndOf="@+id/imageView"
             android:layout_toRightOf="@+id/imageView"
             android:layout_weight="1"
+            android:fontFamily="@font/gorditaregular"
             android:paddingLeft="10dp"
-            android:textSize="15sp"
             android:text="TextView"
-            android:fontFamily="@font/gorditaregular"/>
+            android:textSize="15sp" />
 
     </RelativeLayout>
 </LinearLayout>

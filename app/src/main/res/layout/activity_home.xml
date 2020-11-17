@@ -5,11 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#115533"
-    tools:context=".HomeActivity">
+    tools:context=".Main.HomeActivity">
 
 
     <ImageView
-        android:id="@+id/imageView4"
         android:layout_width="210dp"
         android:layout_height="210dp"
         android:layout_centerInParent="true"

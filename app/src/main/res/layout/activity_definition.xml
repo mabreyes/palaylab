@@ -4,105 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DiseasesDefinition"
-    android:background="@drawable/bg2">
+    android:background="#E1E1E1"
+    tools:context=".Disease.DiseasesDefinition">
 
-    <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/baseline_arrow_back_white_48" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_definition"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="About"
-        android:textSize="30dp"
-        android:textColor="#FFFFFF"
-        android:fontFamily="@font/gorditabold"
-        android:paddingStart="10dp"
-        android:paddingEnd="10dp"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/textView3">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/textView3">
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="250dp">
+        android:layout_below="@+id/toolbar_definition">
 
-    </android.support.v4.view.ViewPager>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView3">
 
-    <TextView
-        android:id="@+id/definition"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=""
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_below="@+id/detectionStatistics"
-        android:textSize="10dp"
-        android:padding="10dp"
-        android:background="@drawable/customshape"
-        android:fontFamily="@font/gorditaregular"/>
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp">
 
-        <TableRow
-            android:layout_below="@id/viewpager"
-            android:id="@+id/detectionStatistics"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
-            <TextView
-                android:id="@+id/detection"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:background="@drawable/border1"
-                android:fontFamily="@font/gorditamedium"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="Detections"
-                android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                android:textStyle="bold"
-                android:layout_marginRight="10dp"/>
+            </androidx.viewpager.widget.ViewPager>
 
             <TextView
-                android:id="@+id/detectionText"
-                android:layout_gravity="center_vertical"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_weight="1"
-                android:textColor="#115533"
-                android:padding="10dp"
-                android:textSize="12dp"
-                android:textStyle="bold"
-                android:text="This Week"
-                android:gravity="center"
+                android:id="@+id/definition"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/detectionStatistics"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
                 android:background="@drawable/customshape"
-                android:fontFamily="@font/gorditamedium"
-                />
+                android:fontFamily="@font/gorditaregular"
+                android:padding="10dp"
+                android:text=""
+                android:textSize="10dp" />
 
-        </TableRow>
+            <TableRow
+                android:id="@+id/detectionStatistics"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewpager"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp">
+
+                <TextView
+                    android:id="@+id/detection"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/border1"
+                    android:fontFamily="@font/gorditamedium"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Total"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detectionToday"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/customshape"
+                    android:fontFamily="@font/gorditamedium"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Today"
+                    android:textColor="#115533"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detectionText"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/customshape"
+                    android:fontFamily="@font/gorditamedium"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="This Week"
+                    android:textColor="#115533"
+                    android:textSize="12dp"
+                    android:textStyle="bold" />
+
+            </TableRow>
 
 
-    </RelativeLayout>
+        </RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>
