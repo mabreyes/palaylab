@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var emailEt: EditText
     private lateinit var passwordEt: EditText
 
-//    private lateinit var signupBtn: Button
+    private lateinit var signupBtn: Button
     private lateinit var loginBtn: Button
 
     private lateinit var resetPasswordTv: TextView
@@ -32,7 +32,7 @@ class LoginActivity : AppCompatActivity() {
         emailEt = findViewById(R.id.email_edt_text)
         passwordEt = findViewById(R.id.pass_edt_text)
 
-//        signupBtn = findViewById(R.id.signup_btn)
+        signupBtn = findViewById(R.id.signup_btn)
         loginBtn = findViewById(R.id.login_btn)
 
         resetPasswordTv = findViewById(R.id.reset_pass_tv)
@@ -59,11 +59,11 @@ class LoginActivity : AppCompatActivity() {
             }
         }
 
-//        signupBtn.setOnClickListener {
-//            val intent = Intent(this, SignupActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+        signupBtn.setOnClickListener {
+            val intent = Intent(this, SignupActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         resetPasswordTv.setOnClickListener {
             val intent = Intent(this, ForgotPasswordActivity::class.java)
