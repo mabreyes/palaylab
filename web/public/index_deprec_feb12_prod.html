@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PalayLab &mdash; Available on Google Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="theme-color" content="#115533">
+    <meta property="og:title" content="PalayLab &mdash; Available on Google Play">
+    <meta property="og:description" content="An ML-powered mobile app for detecting rice plant diseases and pests. Now available on Google Play.">
+    <meta property="og:image" content="https://palaylab.marcreyes.xyz/og-image.png">
+    <meta property="og:url" content="https://palaylab.marcreyes.xyz">
+    <meta name="twitter:image" content="https://palaylab.marcreyes.xyz/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="gordita/style.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 90vw;
+            display: table;
+            color: #115533;
+            font-family: "Gordita", sans-serif;
+            background-color: #e1e1e1;
+            overflow-x: hidden;
+        }
+        
+        #content {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        a.button {
+            text-decoration: none;
+            color: #ffffff !important;
+            padding: 1em;
+            border: 1px solid #ffffff;
+        }
+        
+        .center {
+            float: right;
+            display: flex;
+            margin-left: -500px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        h1.hero {
+            letter-spacing: -1px;
+            font-weight: bold;
+            line-height: 1.7em;
+            margin: auto;
+            width: 60%;
+            padding: 10px;
+        }
+        
+        p.hero {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+        }
+        
+        .wrapper {
+            width: 50%;
+            margin: 0 auto;
+        }
+        
+        #form-container input {
+            font-family: 'Gordita', sans-serif;
+            font-size: 1em;
+            border: 2px solid #808080;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            outline: none;
+            color: #115533;
+            width: 100%;
+            background: none;
+            box-shadow: none;
+            font-weight: bold;
+        }
+        
+        #form-container input:focus {
+            border: 2px solid #115533;
+        }
+        
+        #form-container button {
+            font-family: 'Gordita', sans-serif;
+            font-size: 1em;
+            outline: none;
+            background-color: #115533;
+            color: #ffffff;
+            border: 2px solid #115533;
+            padding: 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        img.hero {
+            margin-bottom: -30px;
+        }
+        
+        p.hero.feature {
+            font-size: 12px;
+            color: #2e2e2e
+        }
+        
+        .feature img {
+            margin-left: 20px;
+        }
+        
+        button.button {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 15px;
+            border-radius: 7px;
+            background-color: #115533;
+            border: 0;
+            font-family: 'Gordita', sans-serif;
+            margin-top: 10px;
+            font-size: inherit;
+            cursor: pointer;
+            outline: none;
+            font-weight: bold;
+        }
+        
+        button.button:focus {
+            background-color: #011c0f;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-animation-name: fadeIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: fadeIn;
+            animation-duration: 0.4s
+        }
+        
+        .modal-content {
+            position: fixed;
+            bottom: 0;
+            background-color: #fefefe;
+            width: 100%;
+            -webkit-animation-name: slideIn;
+            -webkit-animation-duration: 0.4s;
+            animation-name: slideIn;
+            animation-duration: 0.4s
+        }
+        
+        .close {
+            color: #115533;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal-header {
+            padding: 2px 16px;
+            color: #115533;
+        }
+        
+        .modal-body {
+            padding: 2px 16px;
+        }
+        
+        .modal-footer {
+            padding: 2px 16px;
+            color: #115533;
+        }
+        
+        .modal-header h2 {
+            letter-spacing: -1px;
+            margin-bottom: 0;
+        }
+        
+        .modal-header p {
+            color: #2e2e2e;
+            margin-top: 0;
+        }
+        
+        .modal-footer span.success {
+            background-color: #1167b1;
+            padding: 10px;
+            color: #ffffff;
+            font-family: 'Gordita', sans-serif;
+            font-weight: normal !important;
+            border-radius: 5px;
+            font-size: 15px !important;
+            transition: opacity 1s;
+        }
+        
+        .modal-footer span.error {
+            background-color: #d5212e;
+            padding: 10px;
+            color: #ffffff;
+            font-family: 'Gordita', sans-serif;
+            font-family: 'Gordita', sans-serif;
+            font-weight: normal !important;
+            border-radius: 5px;
+            font-size: 15px !important;
+            transition: opacity 1s;
+        }
+        
+        @-webkit-keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+        
+        @keyframes slideIn {
+            from {
+                bottom: -300px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+        
+        @-webkit-keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0
+            }
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false" onselectstart="return false">
+    <a href="https://github.com/marcreyesph/palaylab-mobile" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#115533; color:#e1e1e1; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: octocat-wave 560ms ease-in-out
+        }
+        
+        @keyframes octocat-wave {
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+        
+        @media (max-width:926px) {
+            #form-container input {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            #form-container button {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .wrapper {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+            .github-corner .octo-arm {
+                animation: octocat-wave 560ms ease-in-out
+            }
+            h1.hero {
+                font-size: 2em;
+                width: 350px;
+                line-height: 1.5em;
+            }
+            p.hero {
+                width: 300px;
+            }
+            img.hero {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            h1.hero {
+                font-size: 1.6em;
+                width: 300px;
+                line-height: 1.5em;
+            }
+            p.hero {
+                width: 300px;
+            }
+            img.hero {
+                width: 100%;
+            }
+        }
+    </style>
+    <div id="content">
+        <img class="hero" src="portrait.png" alt="PalayLab" width="50%"><br>
+        <h1 class="hero">An ML-powered mobile app for detecting rice plant diseases and pests.</h1>
+        <p class="hero">Awarded as one of the Top 10 researches at the 2019 BPI-DOST Science Awards. Available in the Philippines. Rolling out to other locations soon.</p>
+        <button class="button" href="#" id="requestModalActivate">Request for an Account</button><br>
+        <a href="https://marcrey.es/g/palaylab"><img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get on Google Play" height="96"></a><br>
+        <p class="hero feature">2019 BPI-DOST Science Award as featured on</p>
+        <div class="feature">
+            <a href="https://radyo.inquirer.net/213805/xavier-ateneo-students-umani-ng-awards-sa-pagbuo-ng-makabuluhang-mobile-apps"><img src="ri9.png" alt="Radyo inquirer 990 AM" height="50" style="margin-left: 0 !important;"></a>
+            <a href="https://www.mindanaodailynews.com/news/nation/trending-news/xavier-ateneo-students-win-bpi-dost-science-awards"><img src="mdn.png" alt="Mindanao Daily News" height="50"></a>
+            <a href="https://www.philstar.com/pilipino-star-ngayon/bansa/2019/10/31/1964801/3-mag-aaral-pinarangalan-ng-bpi-dost-science-awards"><img src="pg.png" alt="Philstar Global" height="50"></a>
+            <a href="https://businessmirror.com.ph/2019/08/19/bpi-dost-recognize-phl-students-scientific-researches-innovations/"><img src="bm.png" alt="Business Mirror" height="50"></a>
+        </div>
+    </div>
+    <div id="requestAccount" class="modal">
+        <div class="modal-content">
+            <div class="wrapper">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Request for an Account</h2>
+                    <p>Sign Up is still disabled as of this release. Please note that your request may be waitlisted if all the slots were filled up. We will inform you via e-mail.</p>
+                </div>
+                <div class="modal-body">
+                    <div id="form-container">
+                        <form name="submit-to-google-sheet" class="pure-form">
+                            <input name="email" type="email" placeholder="Email" required>
+                            <input name="timestamp" type="hidden" id="currentTimestamp">
+                            <input name="firstName" type="text" placeholder="First Name" required>
+                            <input name="lastName" type="text" placeholder="Last Name" required>
+                            <input name="source" type="hidden" value="palaylab-main">
+                            <button type="submit">Submit Request</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <h3><span class="success" id="promptSuccess">Successfully submitted. Kindly wait for a response from us soon.</span></h3>
+                    <h3><span class="error" id="promptError">An error occurred. Please try again.</span></h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://wzrd.in/standalone/formdata-polyfill"></script>
+    <script src="https://wzrd.in/standalone/promise-polyfill@latest"></script>
+    <script src="https://wzrd.in/standalone/whatwg-fetch@latest"></script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/a/marcreyes.ph/macros/s/AKfycby3N0cpTHgEwxd4mf8LHQIqP_pIjoZ_u-FvzNIMYA/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        function fadeOutEffect(isSuccess) {
+            if (isSuccess) {
+                document.getElementById('promptSuccess').style.display = 'block'
+                var fadeTarget = document.getElementById("promptSuccess");
+                setTimeout(function() {
+                    document.getElementById('promptSuccess').style.display = 'none'
+                    form.reset()
+                }, 3000);
+            } else {
+                document.getElementById('promptError').style.display = 'block'
+                var fadeTarget = document.getElementById("promptError");
+                setTimeout(function() {
+                    document.getElementById('promptError').style.display = 'none'
+                }, 3000);
+            }
+
+        }
+
+        document.getElementById('currentTimestamp').value = new Date().getTime();
+        document.getElementById('promptSuccess').style.display = 'none';
+        document.getElementById('promptError').style.display = 'none';
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, {
+                    method: 'POST',
+                    body: new FormData(form)
+                })
+                .then(response => fadeOutEffect(true))
+                .catch(error => fadeOutEffect(false))
+        })
+    </script>
+
+    <script>
+        var modal = document.getElementById("requestAccount");
+
+        var btn = document.getElementById("requestModalActivate");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
