@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Gordita';
+    src: url('Gordita-Bold.eot');
+    src: url('Gordita-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Gordita-Bold.woff2') format('woff2'),
+        url('Gordita-Bold.woff') format('woff'),
+        url('Gordita-Bold.ttf') format('truetype'),
+        url('Gordita-Bold.svg#Gordita-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('Gordita-Medium.eot');
+    src: url('Gordita-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Gordita-Medium.woff2') format('woff2'),
+        url('Gordita-Medium.woff') format('woff'),
+        url('Gordita-Medium.ttf') format('truetype'),
+        url('Gordita-Medium.svg#Gordita-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url('Gordita-Regular.eot');
+    src: url('Gordita-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Gordita-Regular.woff2') format('woff2'),
+        url('Gordita-Regular.woff') format('woff'),
+        url('Gordita-Regular.ttf') format('truetype'),
+        url('Gordita-Regular.svg#Gordita-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
