@@ -99,7 +99,6 @@ class Results : AppCompatActivity() {
                 val results = classifier!!.recognizeImage(bitmap)
                 val listItems = ArrayList<HashMap<String, String>>()
                 var listItemData: HashMap<String, String>
-                val db = DatabaseHelper(this@Results)
                 for (i in results!!.indices) {
                     if (results.size != 0) {
                         listItemData = HashMap()
@@ -244,7 +243,6 @@ class Results : AppCompatActivity() {
             val results = classifier!!.recognizeImage(bitmap)
             val listItems = ArrayList<HashMap<String, String>>()
             var listItemData: HashMap<String, String>
-            val db = DatabaseHelper(this@Results)
             for (i in results!!.indices) {
                 if (results.isNotEmpty()) {
                     listItemData = HashMap()
