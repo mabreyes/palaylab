@@ -10,8 +10,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import xyz.marcreyes.palaylab.app.authentication.LoginActivity
 import xyz.marcreyes.palaylab.app.R
+import xyz.marcreyes.palaylab.app.authentication.LoginActivity
 import xyz.marcreyes.palaylab.app.authentication.UpdatePassword
 
 class About : AppCompatActivity() {

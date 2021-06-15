@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.FirebaseAuth
-import xyz.marcreyes.palaylab.app.main.MainActivity
 import xyz.marcreyes.palaylab.app.R
+import xyz.marcreyes.palaylab.app.main.MainActivity
 
 class LoginActivity : AppCompatActivity() {
 

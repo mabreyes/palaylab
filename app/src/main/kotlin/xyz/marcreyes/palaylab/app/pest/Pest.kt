@@ -9,11 +9,11 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import xyz.marcreyes.palaylab.app.R
 import xyz.marcreyes.palaylab.app.about.About
 import xyz.marcreyes.palaylab.app.authentication.LoginActivity
 import xyz.marcreyes.palaylab.app.custom.CustomListView
 import xyz.marcreyes.palaylab.app.pest.PestsDefinition.*
-import xyz.marcreyes.palaylab.app.R
 
 class Pest : AppCompatActivity() {
     var list: ListView? = null

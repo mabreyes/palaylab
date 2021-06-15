@@ -19,15 +19,14 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.wonderkiln.camerakit.*
+import xyz.marcreyes.palaylab.app.R
 import xyz.marcreyes.palaylab.app.authentication.LoginActivity
 import xyz.marcreyes.palaylab.app.custom.CustomListView
-import xyz.marcreyes.palaylab.app.database.DatabaseHelper
 import xyz.marcreyes.palaylab.app.database.PredictionInfo
 import xyz.marcreyes.palaylab.app.disease.DiseasesDefinition
 import xyz.marcreyes.palaylab.app.disease.DiseasesDefinition.*
 import xyz.marcreyes.palaylab.app.pest.PestsDefinition
 import xyz.marcreyes.palaylab.app.pest.PestsDefinition.*
-import xyz.marcreyes.palaylab.app.R
 import java.io.FileNotFoundException
 import java.io.InputStream
 import java.text.DateFormat

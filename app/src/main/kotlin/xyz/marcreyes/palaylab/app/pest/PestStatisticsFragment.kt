@@ -10,9 +10,9 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import org.eazegraph.lib.charts.PieChart
 import org.eazegraph.lib.models.PieModel
+import xyz.marcreyes.palaylab.app.R
 import xyz.marcreyes.palaylab.app.database.CounterCallback
 import xyz.marcreyes.palaylab.app.database.PredictionCounterText
-import xyz.marcreyes.palaylab.app.R
 
 class PestStatisticsFragment : Fragment() {
     var aArmyWorm: TextView? = null

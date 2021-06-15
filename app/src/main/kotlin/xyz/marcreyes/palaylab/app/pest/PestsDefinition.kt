@@ -18,12 +18,12 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.google.firebase.auth.FirebaseAuth
+import xyz.marcreyes.palaylab.app.R
 import xyz.marcreyes.palaylab.app.about.About
 import xyz.marcreyes.palaylab.app.authentication.LoginActivity
 import xyz.marcreyes.palaylab.app.custom.CustomTypefaceSpan
-import xyz.marcreyes.palaylab.app.pest.PestsViewPager.*
 import xyz.marcreyes.palaylab.app.database.PredictionCounter
-import xyz.marcreyes.palaylab.app.R
+import xyz.marcreyes.palaylab.app.pest.PestsViewPager.*
 
 class PestsDefinition : AppCompatActivity() {
     var textView: TextView? = null
