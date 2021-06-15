@@ -6,7 +6,7 @@ android {
     compileSdkVersion 30
     defaultConfig {
         applicationId "xyz.marcreyes.palaylab.app"
-        minSdkVersion 23
+        minSdkVersion 24
         targetSdkVersion 30
         versionCode 3
         versionName "1.1.0"
