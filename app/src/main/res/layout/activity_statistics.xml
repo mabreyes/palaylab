@@ -22,11 +22,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolbar_statistics"
+        android:elevation="4dp"
         app:tabBackground="@color/colorMain"
         app:tabGravity="fill"
         app:tabIndicatorColor="#FFFFFF"
         app:tabIndicatorHeight="4dp"
-        android:elevation="4dp"
         app:tabMode="fixed"
         app:tabTextColor="#FFFFFF" />
 

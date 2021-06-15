@@ -73,50 +73,50 @@
             android:fontFamily="@font/gorditamedium"
             android:text="Forgot password?" />
 
-<!--        <RelativeLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_centerVertical="true"-->
-<!--            android:layout_marginTop="16dp">-->
+        <!--        <RelativeLayout-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_centerVertical="true"-->
+        <!--            android:layout_marginTop="16dp">-->
 
-<!--            <TextView-->
-<!--                android:id="@+id/tvText"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                android:layout_marginRight="10dp"-->
-<!--                android:fontFamily="@font/gorditamedium"-->
-<!--                android:text="OR"-->
-<!--                android:textColor="#000000" />-->
+        <!--            <TextView-->
+        <!--                android:id="@+id/tvText"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:layout_centerInParent="true"-->
+        <!--                android:layout_marginLeft="10dp"-->
+        <!--                android:layout_marginRight="10dp"-->
+        <!--                android:fontFamily="@font/gorditamedium"-->
+        <!--                android:text="OR"-->
+        <!--                android:textColor="#000000" />-->
 
-<!--            <View-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="1dp"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_toLeftOf="@id/tvText"-->
-<!--                android:background="#000000" />-->
+        <!--            <View-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="1dp"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:layout_marginLeft="16dp"-->
+        <!--                android:layout_toLeftOf="@id/tvText"-->
+        <!--                android:background="#000000" />-->
 
-<!--            <View-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="1dp"-->
-<!--                android:layout_centerVertical="true"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_toRightOf="@id/tvText"-->
-<!--                android:background="#000000" />-->
+        <!--            <View-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="1dp"-->
+        <!--                android:layout_centerVertical="true"-->
+        <!--                android:layout_marginRight="16dp"-->
+        <!--                android:layout_toRightOf="@id/tvText"-->
+        <!--                android:background="#000000" />-->
 
-<!--        </RelativeLayout>-->
+        <!--        </RelativeLayout>-->
 
-<!--        <Button-->
-<!--            android:id="@+id/signup_btn"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="56dp"-->
-<!--            android:layout_marginTop="16dp"-->
-<!--            android:background="@drawable/roundbuttonaccent"-->
-<!--            android:fontFamily="@font/gorditabold"-->
-<!--            android:text="@string/signup_btn"-->
-<!--            android:textColor="#ffffff" />-->
+        <!--        <Button-->
+        <!--            android:id="@+id/signup_btn"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="56dp"-->
+        <!--            android:layout_marginTop="16dp"-->
+        <!--            android:background="@drawable/roundbuttonaccent"-->
+        <!--            android:fontFamily="@font/gorditabold"-->
+        <!--            android:text="@string/signup_btn"-->
+        <!--            android:textColor="#ffffff" />-->
 
     </LinearLayout>
 

@@ -20,7 +20,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var emailEt: EditText
     private lateinit var passwordEt: EditText
 
-//    private lateinit var signupBtn: Button
+    //    private lateinit var signupBtn: Button
     private lateinit var loginBtn: Button
 
     private lateinit var resetPasswordTv: TextView
